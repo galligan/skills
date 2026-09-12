@@ -55,6 +55,7 @@ Severity measures consequence. Improvement measures the proposed change's benefi
 - **Flag:** “Before every change, read all four architecture manuals,” including unrelated typo edits. **Do not flag:** a short routing index that loads each manual only for its applicable subsystem.
 - **Flag:** run an identical unchanged-head check again solely to satisfy a numeric pass count. **Do not flag:** rerun after a fix or perform an independent review that asks a distinct question.
 - **Flag:** “Always wait for approval before read-only research” after the user gave a concrete research scope. **Do not flag:** pause before an unauthorized send, deployment, deletion, or genuinely consequential missing choice.
+- **Flag:** ask the user to confirm an audit scope they already supplied. **Do not flag:** a scope chooser on a bare invocation when the answer changes which work is done; the current directory can inform a recommendation without selecting the audit.
 - **Do not flag:** a memory skill triggered by relevant prior context merely because many tasks benefit from it. Broad usefulness is not an over-trigger.
 - **Do not flag:** “address or discuss review comments” as a requirement to implement every comment. Read the exception before claiming a conflict.
 - Shell prefetch/import syntax runs only in supporting harnesses. Qualify impact unless the consuming runtime is established.

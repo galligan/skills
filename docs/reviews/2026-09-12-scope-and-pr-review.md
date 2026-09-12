@@ -21,7 +21,7 @@ Supporting files can explain a finding but do not become patch targets without a
 | Inconsistent normative vocabulary | Use ordinary direct prohibitions consistently in the repository partial. This is consistency cleanup, not a claim that capitalization alone caused bad behavior. |
 | Restore CI's combined command after the upstream fix | Publishing notes now call for verifying a released SET-535 fix before restoring `check --ci` with equivalent coverage. |
 
-The existing PR and coherent commits are retained so the active review and thread resolution remain attached to the reviewed work. The guideline about focused files is not a 300-line limit on an entire multi-file PR. No Graphite stack or history rewrite is introduced as part of these fixes.
+The PR and commit history remain intact pending the owner's decision about splitting or stacking. No history rewrite is part of these review fixes.
 
 The [Codex P1 thread](https://github.com/galligan/skills/pull/1#discussion_r3997668892) is addressed by the explicit project activation contract and the removal of hidden behavioral policy, rather than by an argument that intentional routing alone resolved the mismatch.
 
