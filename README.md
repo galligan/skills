@@ -4,74 +4,50 @@ A few skills for getting better work out of agents and better words out of them,
 
 ## What's in here 🔎
 
-- `minority-report`: Audit agent instructions for conflicts, unnecessary work, and unintended consequences.
-- `agentish-styleguide`: Write skills, prompts, and other agent instructions with clear behavior and boundaries.
-- `people-words`: Drop mannered prose while keeping the substance, technical detail, and your voice.
+- `minority-report`: Audit agent instructions for conflicts, unnecessary work, and unintended consequences. [SKILL.md](skills/minority-report/SKILL.md)
+- `agentish-styleguide`: Write skills, prompts, and other agent instructions with clear behavior and boundaries. [SKILL.md](skills/agentish-styleguide/SKILL.md)
+- `people-words`: Drop mannered prose while keeping the substance, technical detail, and your voice. [SKILL.md](skills/people-words/SKILL.md)
 
 [Meet the skills](docs/skills.md) for why each one exists, when to use it, and what to expect.
 
 ## Install a skill 📦
 
-Each directory under `skills/` is a complete bundle. You don't need Bun or Skillset to use one.
+```bash
+npx skills add galligan/skills --skill people-words
+```
 
-> These skills are currently in [PR #1](https://github.com/galligan/skills/pull/1). The examples below use `main` and apply once it merges. To try the preview, give your agent the PR link and ask it to install from that branch instead.
+Swap `people-words` for `minority-report` or `agentish-styleguide`. To browse the collection first:
 
-### Codex
+```bash
+npx skills add galligan/skills --list
+```
 
-Paste this into a local Codex session:
+Each skill is a complete bundle. You don't need Bun or Skillset to use one.
+
+### Or ask your agent
+
+**Codex or a local Codex task in ChatGPT desktop:** use the [built-in installer](https://learn.chatgpt.com/docs/build-skills#install-curated-skills-for-local-use).
 
 ```text
 $skill-installer Install people-words from https://github.com/galligan/skills/tree/main/skills/people-words
 ```
 
-Swap `people-words` for `minority-report` or `agentish-styleguide` throughout the prompt to choose another skill. Codex's [built-in installer](https://learn.chatgpt.com/docs/build-skills#install-curated-skills-for-local-use) accepts skills from other GitHub repositories. If the new skill doesn't appear, restart Codex.
-
-### ChatGPT desktop
-
-Open a local Codex task in the desktop app and paste:
-
-```text
-Use Skill Installer to install people-words from
-https://github.com/galligan/skills/tree/main/skills/people-words
-```
-
-You can find **Skill Installer** in the app's Skills list. OpenAI supports [standalone skills in the desktop app](https://learn.chatgpt.com/docs/build-skills). For ChatGPT on the web or mobile, installation goes through [plugins](https://learn.chatgpt.com/docs/plugins); this collection isn't packaged as a plugin yet.
-
-### Claude Code
-
-Paste this into Claude Code:
+**Claude Code:** ask it to download the bundle into its [native skills folder](https://code.claude.com/docs/en/skills#where-skills-live).
 
 ```text
 Install people-words from
 https://github.com/galligan/skills/tree/main/skills/people-words
-for my personal use in Claude Code. Download the complete skill directory,
-including its supporting files, into ~/.claude/skills/people-words without
-cloning the repo. If it's already installed, show me the differences
-before replacing it. Confirm where it landed and how to invoke it.
+into ~/.claude/skills/people-words. Include all supporting files without
+cloning the repo. Check with me before replacing an existing installation.
 ```
 
-Then try `/people-words`. Swap the skill name throughout the prompt to install either of the others. For a project-only install, use `.claude/skills/people-words` inside that project instead.
+Then invoke `/people-words` in Claude Code. Use `.claude/skills/people-words` for a project-only install. In either prompt, swap the skill name to choose another.
 
-Claude Code loads standalone skills from these [native skill folders](https://code.claude.com/docs/en/skills#where-skills-live). Its [`/plugin install` command](https://code.claude.com/docs/en/discover-plugins#install-plugins) is for packaged plugins; the prompt above installs the standalone bundle directly.
-
-### Prefer `npx skills`?
-
-That works too:
-
-```bash
-npx skills add galligan/skills --list
-npx skills add galligan/skills --skill people-words
-```
-
-Replace `people-words` with `minority-report` or `agentish-styleguide` as needed.
-
-### A note on requirements
-
-`people-words` and `agentish-styleguide` need no external tools. `minority-report` uses Python 3.10+ for discovery and `jsonschema` for validating and rendering reports. Its [skill instructions](skills/minority-report/SKILL.md) cover setup; installing the skill doesn't install Python dependencies.
+ChatGPT web and mobile use [plugins](https://learn.chatgpt.com/docs/plugins); this collection currently ships standalone skills.
 
 ## How these are made
 
-I use [Skillset](https://github.com/outfitter-dev/skillset) to author and build the collection. The source lives in `.skillset/`; the complete, installable versions land in `skills/`.
+I built [Skillset](https://github.com/outfitter-dev/skillset) to manage agent instructions and skills, and use it to author and build this collection. The source lives in `.skillset/`; the complete, installable versions land in `skills/`.
 
 Three references keep the instruction work grounded:
 
