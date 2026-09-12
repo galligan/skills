@@ -1,0 +1,4 @@
+interface:
+  display_name: "Minority Report"
+  short_description: "Audit agent instructions for conflicts and unintended consequences"
+  default_prompt: "Use $minority-report to produce the agent’s minority report on this project’s instructions, with evidence, ranked findings, proposed changes, consolidated JSON, and a Markdown report."

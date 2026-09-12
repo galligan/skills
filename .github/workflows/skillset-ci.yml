@@ -21,10 +21,8 @@ jobs:
       - run: bun install --frozen-lockfile --ignore-scripts
       - name: Check source and generated output
         run: |
+          bun run check
           git rev-parse --verify origin/main
           if git cat-file -e origin/main:skillset.yaml 2>/dev/null; then
-            bun run check:ci --since origin/main
-          else
-            # The initialization PR has no Skillset source on its base branch.
-            bun run check
+            bun run check:changes --since origin/main
           fi

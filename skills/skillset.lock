@@ -7,58 +7,116 @@
   "items": [
     {
       "fileModes": {
-        "audit-agent-instructions/LICENSE.txt": "0644",
-        "audit-agent-instructions/SKILL.md": "0644",
-        "audit-agent-instructions/agents/openai.yaml": "0644",
-        "audit-agent-instructions/references/consolidated.schema.json": "0644",
-        "audit-agent-instructions/references/discovery.md": "0644",
-        "audit-agent-instructions/references/output.md": "0644",
-        "audit-agent-instructions/references/review-rubric.md": "0644",
-        "audit-agent-instructions/references/review.schema.json": "0644",
-        "audit-agent-instructions/requirements.txt": "0644",
-        "audit-agent-instructions/scripts/consolidate.py": "0644",
-        "audit-agent-instructions/scripts/diffcheck.py": "0644",
-        "audit-agent-instructions/scripts/discover.py": "0644",
-        "audit-agent-instructions/scripts/ownership.py": "0644",
-        "audit-agent-instructions/scripts/provenance.py": "0644",
-        "audit-agent-instructions/scripts/render.py": "0644",
-        "audit-agent-instructions/scripts/validate.py": "0644",
-        "audit-agent-instructions/tests/test_discovery.py": "0644",
-        "audit-agent-instructions/tests/test_ownership.py": "0644",
-        "audit-agent-instructions/tests/test_reports.py": "0644"
+        "agentish-styleguide/LICENSE.txt": "0644",
+        "agentish-styleguide/SKILL.md": "0644",
+        "agentish-styleguide/agents/openai.yaml": "0644",
+        "agentish-styleguide/references/agentish.md": "0644",
+        "agentish-styleguide/references/instruction-placement.md": "0644",
+        "agentish-styleguide/references/instruction-selection.md": "0644"
       },
       "files": [
-        "audit-agent-instructions/LICENSE.txt",
-        "audit-agent-instructions/SKILL.md",
-        "audit-agent-instructions/agents/openai.yaml",
-        "audit-agent-instructions/references/consolidated.schema.json",
-        "audit-agent-instructions/references/discovery.md",
-        "audit-agent-instructions/references/output.md",
-        "audit-agent-instructions/references/review-rubric.md",
-        "audit-agent-instructions/references/review.schema.json",
-        "audit-agent-instructions/requirements.txt",
-        "audit-agent-instructions/scripts/consolidate.py",
-        "audit-agent-instructions/scripts/diffcheck.py",
-        "audit-agent-instructions/scripts/discover.py",
-        "audit-agent-instructions/scripts/ownership.py",
-        "audit-agent-instructions/scripts/provenance.py",
-        "audit-agent-instructions/scripts/render.py",
-        "audit-agent-instructions/scripts/validate.py",
-        "audit-agent-instructions/tests/test_discovery.py",
-        "audit-agent-instructions/tests/test_ownership.py",
-        "audit-agent-instructions/tests/test_reports.py"
+        "agentish-styleguide/LICENSE.txt",
+        "agentish-styleguide/SKILL.md",
+        "agentish-styleguide/agents/openai.yaml",
+        "agentish-styleguide/references/agentish.md",
+        "agentish-styleguide/references/instruction-placement.md",
+        "agentish-styleguide/references/instruction-selection.md"
       ],
       "kind": "standalone-skill",
-      "name": "audit-agent-instructions",
-      "outputHash": "sha256:a1a02e686cca326746b3f365bc502d50293a317e7cb91c46f892eed56622481a",
-      "outputPath": "audit-agent-instructions/SKILL.md",
-      "sourceHash": "sha256:095a6226ea3861523d18861e47964d78a1281a3f4ae9e0b3bc91cd8d1a41c413",
-      "sourcePath": ".skillset/skills/audit-agent-instructions/SKILL.md",
+      "name": "agentish-styleguide",
+      "outputHash": "sha256:ebfbb2b44e8a9a775231143d100f879fcc5699c6495e0def0a32973090021a9b",
+      "outputPath": "agentish-styleguide/SKILL.md",
+      "sourceHash": "sha256:0a11d12a9d0ef5f046362ee5282e363cad0f9a2c2076b0d7e512136d4810e0d6",
+      "sourcePath": ".skillset/skills/agentish-styleguide/SKILL.md",
+      "version": "0.1.0"
+    },
+    {
+      "fileModes": {
+        "minority-report/LICENSE.txt": "0644",
+        "minority-report/SKILL.md": "0644",
+        "minority-report/agents/openai.yaml": "0644",
+        "minority-report/references/agentish.md": "0644",
+        "minority-report/references/claude-fable.md": "0644",
+        "minority-report/references/consolidated.schema.json": "0644",
+        "minority-report/references/discovery.md": "0644",
+        "minority-report/references/gpt-6-astra.md": "0644",
+        "minority-report/references/instruction-placement.md": "0644",
+        "minority-report/references/instruction-selection.md": "0644",
+        "minority-report/references/model-review.md": "0644",
+        "minority-report/references/output.md": "0644",
+        "minority-report/references/review-rubric.md": "0644",
+        "minority-report/references/review.schema.json": "0644",
+        "minority-report/references/scope-selection.md": "0644",
+        "minority-report/requirements.txt": "0644",
+        "minority-report/scripts/consolidate.py": "0644",
+        "minority-report/scripts/diffcheck.py": "0644",
+        "minority-report/scripts/discover.py": "0644",
+        "minority-report/scripts/ownership.py": "0644",
+        "minority-report/scripts/provenance.py": "0644",
+        "minority-report/scripts/render.py": "0644",
+        "minority-report/scripts/validate.py": "0644",
+        "minority-report/tests/test_discovery.py": "0644",
+        "minority-report/tests/test_ownership.py": "0644",
+        "minority-report/tests/test_reports.py": "0644"
+      },
+      "files": [
+        "minority-report/LICENSE.txt",
+        "minority-report/SKILL.md",
+        "minority-report/agents/openai.yaml",
+        "minority-report/references/agentish.md",
+        "minority-report/references/claude-fable.md",
+        "minority-report/references/consolidated.schema.json",
+        "minority-report/references/discovery.md",
+        "minority-report/references/gpt-6-astra.md",
+        "minority-report/references/instruction-placement.md",
+        "minority-report/references/instruction-selection.md",
+        "minority-report/references/model-review.md",
+        "minority-report/references/output.md",
+        "minority-report/references/review-rubric.md",
+        "minority-report/references/review.schema.json",
+        "minority-report/references/scope-selection.md",
+        "minority-report/requirements.txt",
+        "minority-report/scripts/consolidate.py",
+        "minority-report/scripts/diffcheck.py",
+        "minority-report/scripts/discover.py",
+        "minority-report/scripts/ownership.py",
+        "minority-report/scripts/provenance.py",
+        "minority-report/scripts/render.py",
+        "minority-report/scripts/validate.py",
+        "minority-report/tests/test_discovery.py",
+        "minority-report/tests/test_ownership.py",
+        "minority-report/tests/test_reports.py"
+      ],
+      "kind": "standalone-skill",
+      "name": "minority-report",
+      "outputHash": "sha256:6152d64c2cff4653bbb65330028a8f3b66c2e3ed4c9fe226c02644bdf159cb13",
+      "outputPath": "minority-report/SKILL.md",
+      "sourceHash": "sha256:9473ccc4f3bef8030edfa2c555c23dc8b2045c36c0d1cf211cf898cac0625093",
+      "sourcePath": ".skillset/skills/minority-report/SKILL.md",
+      "version": "0.1.0"
+    },
+    {
+      "fileModes": {
+        "people-words/LICENSE.txt": "0644",
+        "people-words/SKILL.md": "0644",
+        "people-words/agents/openai.yaml": "0644"
+      },
+      "files": [
+        "people-words/LICENSE.txt",
+        "people-words/SKILL.md",
+        "people-words/agents/openai.yaml"
+      ],
+      "kind": "standalone-skill",
+      "name": "people-words",
+      "outputHash": "sha256:00cef02c714b8bc20c8b4101b373a735399f2244b7377fc16116c6f915fb1d84",
+      "outputPath": "people-words/SKILL.md",
+      "sourceHash": "sha256:fc6736d9423d0bb2c150ed296756ed9e3ee1b98d993191b8fe7beb7c2e5413aa",
+      "sourcePath": ".skillset/skills/people-words/SKILL.md",
       "version": "0.1.0"
     }
   ],
   "outputRoot": "skills",
-  "provenanceHash": "sha256:62b83fecfa8c1351ef7180b9627d55ee8fc1d1de490e9361862164cf2b9618c7",
+  "provenanceHash": "sha256:b7a580c74a7af5ef73a98a5fd3c8f2eaafa46b6edb8279f562f5cebd07fdc310",
   "renderResults": [
     {
       "destination": "skill",
@@ -84,90 +142,213 @@
       "outputs": [
         {
           "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/LICENSE.txt"
+          "path": "skills/agentish-styleguide/LICENSE.txt"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/SKILL.md"
+          "path": "skills/agentish-styleguide/SKILL.md"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/agents/openai.yaml"
+          "path": "skills/agentish-styleguide/agents/openai.yaml"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/references/consolidated.schema.json"
+          "path": "skills/agentish-styleguide/references/agentish.md"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/references/discovery.md"
+          "path": "skills/agentish-styleguide/references/instruction-placement.md"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/references/output.md"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/references/review-rubric.md"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/references/review.schema.json"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/requirements.txt"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/scripts/consolidate.py"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/scripts/diffcheck.py"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/scripts/discover.py"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/scripts/ownership.py"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/scripts/provenance.py"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/scripts/render.py"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/scripts/validate.py"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/tests/test_discovery.py"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/tests/test_ownership.py"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/tests/test_reports.py"
+          "path": "skills/agentish-styleguide/references/instruction-selection.md"
         }
       ],
       "schema": "skillset-render-result@1",
-      "sourcePath": ".skillset/skills/audit-agent-instructions/SKILL.md",
-      "sourceUnit": "skill:audit-agent-instructions",
+      "sourcePath": ".skillset/skills/agentish-styleguide/SKILL.md",
+      "sourceUnit": "skill:agentish-styleguide",
+      "status": "rendered",
+      "target": "codex"
+    },
+    {
+      "destination": "skill",
+      "evidence": [
+        {
+          "kind": "docs",
+          "ref": "docs/reference/features/skills.md"
+        },
+        {
+          "kind": "provider-schema",
+          "note": "sha256:eebe9ca02eec5263cd23ff3945b3d3301e0b57861af2d53c76bd620b83ae355b",
+          "ref": "codex-skill-metadata-schema",
+          "verifiedAt": "2026-06-23"
+        },
+        {
+          "kind": "provider-snapshot",
+          "note": "sha256:7e36cc613d0443fcae2963e276a7994d2b321b04471ae2a8941e290ed2654050",
+          "ref": "codex-skill",
+          "verifiedAt": "2026-06-23"
+        }
+      ],
+      "featureId": "standalone-skills",
+      "outputs": [
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/LICENSE.txt"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/SKILL.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/agents/openai.yaml"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/references/agentish.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/references/claude-fable.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/references/consolidated.schema.json"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/references/discovery.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/references/gpt-6-astra.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/references/instruction-placement.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/references/instruction-selection.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/references/model-review.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/references/output.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/references/review-rubric.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/references/review.schema.json"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/references/scope-selection.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/requirements.txt"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/scripts/consolidate.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/scripts/diffcheck.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/scripts/discover.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/scripts/ownership.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/scripts/provenance.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/scripts/render.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/scripts/validate.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/tests/test_discovery.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/tests/test_ownership.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/tests/test_reports.py"
+        }
+      ],
+      "schema": "skillset-render-result@1",
+      "sourcePath": ".skillset/skills/minority-report/SKILL.md",
+      "sourceUnit": "skill:minority-report",
+      "status": "rendered",
+      "target": "codex"
+    },
+    {
+      "destination": "skill",
+      "evidence": [
+        {
+          "kind": "docs",
+          "ref": "docs/reference/features/skills.md"
+        },
+        {
+          "kind": "provider-schema",
+          "note": "sha256:eebe9ca02eec5263cd23ff3945b3d3301e0b57861af2d53c76bd620b83ae355b",
+          "ref": "codex-skill-metadata-schema",
+          "verifiedAt": "2026-06-23"
+        },
+        {
+          "kind": "provider-snapshot",
+          "note": "sha256:7e36cc613d0443fcae2963e276a7994d2b321b04471ae2a8941e290ed2654050",
+          "ref": "codex-skill",
+          "verifiedAt": "2026-06-23"
+        }
+      ],
+      "featureId": "standalone-skills",
+      "outputs": [
+        {
+          "kind": "standalone-skill",
+          "path": "skills/people-words/LICENSE.txt"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/people-words/SKILL.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/people-words/agents/openai.yaml"
+        }
+      ],
+      "schema": "skillset-render-result@1",
+      "sourcePath": ".skillset/skills/people-words/SKILL.md",
+      "sourceUnit": "skill:people-words",
       "status": "rendered",
       "target": "codex"
     }
   ],
   "schemaVersion": 2,
   "selectedTargets": [
+    "claude",
     "codex"
   ],
   "skillsetMetadata": true,
