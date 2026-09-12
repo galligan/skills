@@ -1,0 +1,4 @@
+interface:
+  display_name: "People Words"
+  short_description: "Drop mannered prose and lead with substance"
+  default_prompt: "Use $people-words to restate your last response at my register, preserving the substance and technical precision."

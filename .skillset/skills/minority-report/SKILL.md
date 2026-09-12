@@ -1,6 +1,11 @@
 ---
 name: minority-report
 description: Produce an evidence-backed audit of agent instructions for conflicts, unnecessary work, and unintended consequences. Use when the user requests a systematic review of AGENTS.md, CLAUDE.md, skills, or linked guidance with ranked findings and proposed changes.
+resources:
+  references:
+    - shared:references/instruction-selection.md
+    - shared:references/instruction-placement.md
+    - shared:references/agentish.md
 ---
 
 # Minority Report
@@ -28,6 +33,8 @@ Follow prominent instruction references the helper cannot resolve. Use available
 ## Review and adjudicate
 
 Read [review-rubric.md](references/review-rubric.md) and [review.schema.json](references/review.schema.json) when starting a review. They define findings, ranking, and coverage. For a small scope, review directly. For substantial independent groups, use available authorized subagents with the same rubric/schema, explicit file assignments, and separate owned JSON outputs. Use the user's model preference when specified; no particular provider, model, or agent count is required.
+
+Use the [Instruction Selection](shared:references/instruction-selection.md), [Instruction Placement](shared:references/instruction-placement.md), and [Agentish](shared:references/agentish.md) only for the instruction-design checks routed by the rubric.
 
 Each reviewer accounts for every assigned file and writes a review JSON. Review all applicable instructions, not just scanner hits. Quote both sides of conflicts. Propose changes at the canonical source of generated guidance. Keep safety, authority, confirmation, and reduced-verification proposals marked `decision_required`, even when the proposal strengthens a safeguard.
 

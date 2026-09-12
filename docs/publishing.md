@@ -1,6 +1,6 @@
 # Publishing individual skills
 
-Author each complete skill under `.skillset/skills/<name>/`. Skillset generates the public counterpart under `skills/<name>/`; commit the generated output with its source. Consumers receive the skill directory and its scripts, references, schemas, and other supporting files.
+Author each skill under `.skillset/skills/<name>/`. Keep reusable conventions under `.skillset/shared/references/` and declare the files a skill needs through `resources`. Skillset generates the complete public counterpart under `skills/<name>/`; commit the generated output with its source. Consumers receive the skill directory and all declared supporting files.
 
 ## Build configuration
 
@@ -27,11 +27,17 @@ bun run check
 bun run skillset check --only outputs
 ```
 
-CI runs `bun run check` for source and generated-output validation, then `bun run check:changes --since origin/main` for skill change coverage. Released Skillset 0.26.1 also applies compiler-package Changesets rules in `check --ci`; those npm release rules do not apply to this skills-only repository.
+CI runs `bun run check` for source and generated-output validation, then `bun run check:changes --since origin/main` for skill change coverage. Released Skillset 0.26.1 also applies compiler-package Changesets rules in `check --ci`; those npm release rules do not apply to this skills-only repository. The upstream fix is tracked in [SET-535](https://linear.app/outfitter/issue/SET-535).
+
+Skillset identifies source units by selector. Renaming a skill is a removal plus an addition: record both selectors and commit removal of the old generated directory together with the new source, output, and lock. Refresh pending change evidence after source edits, then check against the PR base. For Minority Report, the rename record covers `skill:audit-agent-instructions` and `skill:minority-report`.
 
 Skillset owns the generated files through `skills/skillset.lock`. Its checks detect edits to generated files, while `skillset diff` previews changes from canonical source. Do not hand-edit or remove the lock to silence drift.
 
-The September 12, 2026 migration verified all 19 source files, including the full MIT license text, in the generated skill. Seventeen payload files were byte-identical; `SKILL.md` retained its body and `agents/openai.yaml` retained its values, with generated metadata and YAML normalization. Separate disposable fixtures verified generated-output and canonical-source drift detection. The repository has no parallel provider or plugin output directories.
+The generated Minority Report bundle contains 19 skill-local files and three declared shared references. Skillset copies the shared references into the installed skill, rewrites shared-resource links in `SKILL.md` to bundle-relative links, and tracks the resource content in `skills/skillset.lock`. Put `shared:` links in `SKILL.md`; version 0.26.1 does not rewrite those aliases inside skill-local supporting Markdown. No private repository access is needed to use them.
+
+Agentish contains its entrypoint, OpenAI metadata, full license, and the same three shared references: Instruction Selection, Instruction Placement, and Agentish. People Words contains only its entrypoint, OpenAI metadata, and full license. Neither new skill requires external tools or services for its guidance; project-specific editing and factual verification use available tools and sources.
+
+The September 12, 2026 validation checked payload completeness and link resolution. Separate disposable fixtures verified generated-output and canonical-source drift detection. The repository has no parallel provider or plugin output directories.
 
 ## Minority Report runtime and tests
 

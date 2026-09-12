@@ -12,6 +12,16 @@ Review instruction behavior, not prose style. Flag only distinct, substantive is
 
 A long file, strong imperative, mandatory test, safety boundary, or repeated reminder is not intrinsically a finding. Specialized expertise and useful operational invariants belong in skills. Judge whether wording forces irrelevant work or an incorrect decision. Avoid blanket recommendations to weaken testing, ask fewer questions, or remove safeguards.
 
+## Instruction design criteria
+
+When deciding whether a directive should remain, move, merge, or change, apply the **Instruction Selection**. State the proposed action and owning surface in `smallest_change`; do not create a record for every directive merely to populate a checklist.
+
+When a finding depends on where an instruction loads, consult **Instruction Placement**. Verify the consuming harness before claiming that a move reduces persistent context. Task-specific invariants may remain in the skill whose procedure needs them.
+
+When ambiguous wording changes a decision or action, apply the relevant **Agentish** criteria. Start with its minimal profile. Style nonconformance alone is not a finding; identify the concrete behavioral consequence.
+
+A preventive rule without historical incident evidence is unproven, not automatically unnecessary. Describe that uncertainty in `confidence_reason`. Preserve the evidence and decision requirements below when proposing changes to safeguards.
+
 ## Evidence and proposals
 
 Every finding requires a verbatim contiguous excerpt with 1-based inclusive line numbers; no ellipses or reconstructed wording. Use the map's exact canonical paths. For remote documents cite the snapshot path and `source_url`. Check the surrounding section and applicable root guidance. Describe potential consequences as conditional unless directly observed; do not invent token savings, timing, or failure rates.

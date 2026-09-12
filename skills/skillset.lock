@@ -7,11 +7,39 @@
   "items": [
     {
       "fileModes": {
+        "agentish-styleguide/LICENSE.txt": "0644",
+        "agentish-styleguide/SKILL.md": "0644",
+        "agentish-styleguide/agents/openai.yaml": "0644",
+        "agentish-styleguide/references/agentish.md": "0644",
+        "agentish-styleguide/references/instruction-placement.md": "0644",
+        "agentish-styleguide/references/instruction-selection.md": "0644"
+      },
+      "files": [
+        "agentish-styleguide/LICENSE.txt",
+        "agentish-styleguide/SKILL.md",
+        "agentish-styleguide/agents/openai.yaml",
+        "agentish-styleguide/references/agentish.md",
+        "agentish-styleguide/references/instruction-placement.md",
+        "agentish-styleguide/references/instruction-selection.md"
+      ],
+      "kind": "standalone-skill",
+      "name": "agentish-styleguide",
+      "outputHash": "sha256:db562e060765d922e604473f9e12ce683a39ac52a0df3b91c31b5fedf3a96b6d",
+      "outputPath": "agentish-styleguide/SKILL.md",
+      "sourceHash": "sha256:b2cc3aa51468643790bd334de98043fd51cc144d98d2edba56875210a0bf3c1e",
+      "sourcePath": ".skillset/skills/agentish-styleguide/SKILL.md",
+      "version": "0.1.0"
+    },
+    {
+      "fileModes": {
         "minority-report/LICENSE.txt": "0644",
         "minority-report/SKILL.md": "0644",
         "minority-report/agents/openai.yaml": "0644",
+        "minority-report/references/agentish.md": "0644",
         "minority-report/references/consolidated.schema.json": "0644",
         "minority-report/references/discovery.md": "0644",
+        "minority-report/references/instruction-placement.md": "0644",
+        "minority-report/references/instruction-selection.md": "0644",
         "minority-report/references/output.md": "0644",
         "minority-report/references/review-rubric.md": "0644",
         "minority-report/references/review.schema.json": "0644",
@@ -31,8 +59,11 @@
         "minority-report/LICENSE.txt",
         "minority-report/SKILL.md",
         "minority-report/agents/openai.yaml",
+        "minority-report/references/agentish.md",
         "minority-report/references/consolidated.schema.json",
         "minority-report/references/discovery.md",
+        "minority-report/references/instruction-placement.md",
+        "minority-report/references/instruction-selection.md",
         "minority-report/references/output.md",
         "minority-report/references/review-rubric.md",
         "minority-report/references/review.schema.json",
@@ -50,16 +81,88 @@
       ],
       "kind": "standalone-skill",
       "name": "minority-report",
-      "outputHash": "sha256:1ea4a5e7fa9d883ba41d8fee82ca5fa7e126a2d189a6e1d2778d9313400f693e",
+      "outputHash": "sha256:fff7dcc5846ad7da268c55de5edf279599362a498f423e358ca41210c4b8eb41",
       "outputPath": "minority-report/SKILL.md",
-      "sourceHash": "sha256:fd1a88db1ae3042b177fde3e1d6a79c1e919970a973c4b38b0005d210a6fdc7a",
+      "sourceHash": "sha256:0a320f8e85888145edfad3755e693fc6136184ce103146251e2fdc2b8f865ff9",
       "sourcePath": ".skillset/skills/minority-report/SKILL.md",
+      "version": "0.1.0"
+    },
+    {
+      "fileModes": {
+        "people-words/LICENSE.txt": "0644",
+        "people-words/SKILL.md": "0644",
+        "people-words/agents/openai.yaml": "0644"
+      },
+      "files": [
+        "people-words/LICENSE.txt",
+        "people-words/SKILL.md",
+        "people-words/agents/openai.yaml"
+      ],
+      "kind": "standalone-skill",
+      "name": "people-words",
+      "outputHash": "sha256:d9df04e9d010eec41d0c93878152f27cdee0c446bba931c3f36e5bac0b7b1975",
+      "outputPath": "people-words/SKILL.md",
+      "sourceHash": "sha256:bc7fc30139f0a9145ee8101a8e935a2d33ef90446c2a111e0f9ab690fbbaafc6",
+      "sourcePath": ".skillset/skills/people-words/SKILL.md",
       "version": "0.1.0"
     }
   ],
   "outputRoot": "skills",
-  "provenanceHash": "sha256:83ea7455c897e3f25239efd530c5e33037ad86e19d2b62499660702639868415",
+  "provenanceHash": "sha256:e6f7f3e37787ce15ea69139f9c1bca66e5da10ce73132e03b33d74b5e5001d17",
   "renderResults": [
+    {
+      "destination": "skill",
+      "evidence": [
+        {
+          "kind": "docs",
+          "ref": "docs/reference/features/skills.md"
+        },
+        {
+          "kind": "provider-schema",
+          "note": "sha256:eebe9ca02eec5263cd23ff3945b3d3301e0b57861af2d53c76bd620b83ae355b",
+          "ref": "codex-skill-metadata-schema",
+          "verifiedAt": "2026-06-23"
+        },
+        {
+          "kind": "provider-snapshot",
+          "note": "sha256:7e36cc613d0443fcae2963e276a7994d2b321b04471ae2a8941e290ed2654050",
+          "ref": "codex-skill",
+          "verifiedAt": "2026-06-23"
+        }
+      ],
+      "featureId": "standalone-skills",
+      "outputs": [
+        {
+          "kind": "standalone-skill",
+          "path": "skills/agentish-styleguide/LICENSE.txt"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/agentish-styleguide/SKILL.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/agentish-styleguide/agents/openai.yaml"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/agentish-styleguide/references/agentish.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/agentish-styleguide/references/instruction-placement.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/agentish-styleguide/references/instruction-selection.md"
+        }
+      ],
+      "schema": "skillset-render-result@1",
+      "sourcePath": ".skillset/skills/agentish-styleguide/SKILL.md",
+      "sourceUnit": "skill:agentish-styleguide",
+      "status": "rendered",
+      "target": "codex"
+    },
     {
       "destination": "skill",
       "evidence": [
@@ -96,11 +199,23 @@
         },
         {
           "kind": "standalone-skill",
+          "path": "skills/minority-report/references/agentish.md"
+        },
+        {
+          "kind": "standalone-skill",
           "path": "skills/minority-report/references/consolidated.schema.json"
         },
         {
           "kind": "standalone-skill",
           "path": "skills/minority-report/references/discovery.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/references/instruction-placement.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/references/instruction-selection.md"
         },
         {
           "kind": "standalone-skill",
@@ -162,6 +277,47 @@
       "schema": "skillset-render-result@1",
       "sourcePath": ".skillset/skills/minority-report/SKILL.md",
       "sourceUnit": "skill:minority-report",
+      "status": "rendered",
+      "target": "codex"
+    },
+    {
+      "destination": "skill",
+      "evidence": [
+        {
+          "kind": "docs",
+          "ref": "docs/reference/features/skills.md"
+        },
+        {
+          "kind": "provider-schema",
+          "note": "sha256:eebe9ca02eec5263cd23ff3945b3d3301e0b57861af2d53c76bd620b83ae355b",
+          "ref": "codex-skill-metadata-schema",
+          "verifiedAt": "2026-06-23"
+        },
+        {
+          "kind": "provider-snapshot",
+          "note": "sha256:7e36cc613d0443fcae2963e276a7994d2b321b04471ae2a8941e290ed2654050",
+          "ref": "codex-skill",
+          "verifiedAt": "2026-06-23"
+        }
+      ],
+      "featureId": "standalone-skills",
+      "outputs": [
+        {
+          "kind": "standalone-skill",
+          "path": "skills/people-words/LICENSE.txt"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/people-words/SKILL.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/people-words/agents/openai.yaml"
+        }
+      ],
+      "schema": "skillset-render-result@1",
+      "sourcePath": ".skillset/skills/people-words/SKILL.md",
+      "sourceUnit": "skill:people-words",
       "status": "rendered",
       "target": "codex"
     }
