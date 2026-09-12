@@ -1,4 +1,0 @@
-interface:
-  default_prompt: Use $audit-agent-instructions to comprehensively review this project’s agent instructions and produce consolidated JSON plus a Markdown report.
-  display_name: Audit Agent Instructions
-  short_description: Audit agent guidance with evidence and ranked findings

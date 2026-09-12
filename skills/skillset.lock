@@ -7,58 +7,58 @@
   "items": [
     {
       "fileModes": {
-        "audit-agent-instructions/LICENSE.txt": "0644",
-        "audit-agent-instructions/SKILL.md": "0644",
-        "audit-agent-instructions/agents/openai.yaml": "0644",
-        "audit-agent-instructions/references/consolidated.schema.json": "0644",
-        "audit-agent-instructions/references/discovery.md": "0644",
-        "audit-agent-instructions/references/output.md": "0644",
-        "audit-agent-instructions/references/review-rubric.md": "0644",
-        "audit-agent-instructions/references/review.schema.json": "0644",
-        "audit-agent-instructions/requirements.txt": "0644",
-        "audit-agent-instructions/scripts/consolidate.py": "0644",
-        "audit-agent-instructions/scripts/diffcheck.py": "0644",
-        "audit-agent-instructions/scripts/discover.py": "0644",
-        "audit-agent-instructions/scripts/ownership.py": "0644",
-        "audit-agent-instructions/scripts/provenance.py": "0644",
-        "audit-agent-instructions/scripts/render.py": "0644",
-        "audit-agent-instructions/scripts/validate.py": "0644",
-        "audit-agent-instructions/tests/test_discovery.py": "0644",
-        "audit-agent-instructions/tests/test_ownership.py": "0644",
-        "audit-agent-instructions/tests/test_reports.py": "0644"
+        "minority-report/LICENSE.txt": "0644",
+        "minority-report/SKILL.md": "0644",
+        "minority-report/agents/openai.yaml": "0644",
+        "minority-report/references/consolidated.schema.json": "0644",
+        "minority-report/references/discovery.md": "0644",
+        "minority-report/references/output.md": "0644",
+        "minority-report/references/review-rubric.md": "0644",
+        "minority-report/references/review.schema.json": "0644",
+        "minority-report/requirements.txt": "0644",
+        "minority-report/scripts/consolidate.py": "0644",
+        "minority-report/scripts/diffcheck.py": "0644",
+        "minority-report/scripts/discover.py": "0644",
+        "minority-report/scripts/ownership.py": "0644",
+        "minority-report/scripts/provenance.py": "0644",
+        "minority-report/scripts/render.py": "0644",
+        "minority-report/scripts/validate.py": "0644",
+        "minority-report/tests/test_discovery.py": "0644",
+        "minority-report/tests/test_ownership.py": "0644",
+        "minority-report/tests/test_reports.py": "0644"
       },
       "files": [
-        "audit-agent-instructions/LICENSE.txt",
-        "audit-agent-instructions/SKILL.md",
-        "audit-agent-instructions/agents/openai.yaml",
-        "audit-agent-instructions/references/consolidated.schema.json",
-        "audit-agent-instructions/references/discovery.md",
-        "audit-agent-instructions/references/output.md",
-        "audit-agent-instructions/references/review-rubric.md",
-        "audit-agent-instructions/references/review.schema.json",
-        "audit-agent-instructions/requirements.txt",
-        "audit-agent-instructions/scripts/consolidate.py",
-        "audit-agent-instructions/scripts/diffcheck.py",
-        "audit-agent-instructions/scripts/discover.py",
-        "audit-agent-instructions/scripts/ownership.py",
-        "audit-agent-instructions/scripts/provenance.py",
-        "audit-agent-instructions/scripts/render.py",
-        "audit-agent-instructions/scripts/validate.py",
-        "audit-agent-instructions/tests/test_discovery.py",
-        "audit-agent-instructions/tests/test_ownership.py",
-        "audit-agent-instructions/tests/test_reports.py"
+        "minority-report/LICENSE.txt",
+        "minority-report/SKILL.md",
+        "minority-report/agents/openai.yaml",
+        "minority-report/references/consolidated.schema.json",
+        "minority-report/references/discovery.md",
+        "minority-report/references/output.md",
+        "minority-report/references/review-rubric.md",
+        "minority-report/references/review.schema.json",
+        "minority-report/requirements.txt",
+        "minority-report/scripts/consolidate.py",
+        "minority-report/scripts/diffcheck.py",
+        "minority-report/scripts/discover.py",
+        "minority-report/scripts/ownership.py",
+        "minority-report/scripts/provenance.py",
+        "minority-report/scripts/render.py",
+        "minority-report/scripts/validate.py",
+        "minority-report/tests/test_discovery.py",
+        "minority-report/tests/test_ownership.py",
+        "minority-report/tests/test_reports.py"
       ],
       "kind": "standalone-skill",
-      "name": "audit-agent-instructions",
-      "outputHash": "sha256:a1a02e686cca326746b3f365bc502d50293a317e7cb91c46f892eed56622481a",
-      "outputPath": "audit-agent-instructions/SKILL.md",
-      "sourceHash": "sha256:095a6226ea3861523d18861e47964d78a1281a3f4ae9e0b3bc91cd8d1a41c413",
-      "sourcePath": ".skillset/skills/audit-agent-instructions/SKILL.md",
+      "name": "minority-report",
+      "outputHash": "sha256:1ea4a5e7fa9d883ba41d8fee82ca5fa7e126a2d189a6e1d2778d9313400f693e",
+      "outputPath": "minority-report/SKILL.md",
+      "sourceHash": "sha256:fd1a88db1ae3042b177fde3e1d6a79c1e919970a973c4b38b0005d210a6fdc7a",
+      "sourcePath": ".skillset/skills/minority-report/SKILL.md",
       "version": "0.1.0"
     }
   ],
   "outputRoot": "skills",
-  "provenanceHash": "sha256:62b83fecfa8c1351ef7180b9627d55ee8fc1d1de490e9361862164cf2b9618c7",
+  "provenanceHash": "sha256:83ea7455c897e3f25239efd530c5e33037ad86e19d2b62499660702639868415",
   "renderResults": [
     {
       "destination": "skill",
@@ -84,84 +84,84 @@
       "outputs": [
         {
           "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/LICENSE.txt"
+          "path": "skills/minority-report/LICENSE.txt"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/SKILL.md"
+          "path": "skills/minority-report/SKILL.md"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/agents/openai.yaml"
+          "path": "skills/minority-report/agents/openai.yaml"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/references/consolidated.schema.json"
+          "path": "skills/minority-report/references/consolidated.schema.json"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/references/discovery.md"
+          "path": "skills/minority-report/references/discovery.md"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/references/output.md"
+          "path": "skills/minority-report/references/output.md"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/references/review-rubric.md"
+          "path": "skills/minority-report/references/review-rubric.md"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/references/review.schema.json"
+          "path": "skills/minority-report/references/review.schema.json"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/requirements.txt"
+          "path": "skills/minority-report/requirements.txt"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/scripts/consolidate.py"
+          "path": "skills/minority-report/scripts/consolidate.py"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/scripts/diffcheck.py"
+          "path": "skills/minority-report/scripts/diffcheck.py"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/scripts/discover.py"
+          "path": "skills/minority-report/scripts/discover.py"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/scripts/ownership.py"
+          "path": "skills/minority-report/scripts/ownership.py"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/scripts/provenance.py"
+          "path": "skills/minority-report/scripts/provenance.py"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/scripts/render.py"
+          "path": "skills/minority-report/scripts/render.py"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/scripts/validate.py"
+          "path": "skills/minority-report/scripts/validate.py"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/tests/test_discovery.py"
+          "path": "skills/minority-report/tests/test_discovery.py"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/tests/test_ownership.py"
+          "path": "skills/minority-report/tests/test_ownership.py"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/audit-agent-instructions/tests/test_reports.py"
+          "path": "skills/minority-report/tests/test_reports.py"
         }
       ],
       "schema": "skillset-render-result@1",
-      "sourcePath": ".skillset/skills/audit-agent-instructions/SKILL.md",
-      "sourceUnit": "skill:audit-agent-instructions",
+      "sourcePath": ".skillset/skills/minority-report/SKILL.md",
+      "sourceUnit": "skill:minority-report",
       "status": "rendered",
       "target": "codex"
     }

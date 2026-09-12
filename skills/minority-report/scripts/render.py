@@ -93,7 +93,7 @@ def render(data):
     findings = data["findings"]
     decisions = sum(f["decision_required"] for f in findings)
     routine = len(findings) - decisions
-    lines = ["# Agent instruction audit", "", f"{len(findings)} accepted finding{'s' if len(findings) != 1 else ''}: "
+    lines = ["# The Agent’s Minority Report", "", f"{len(findings)} accepted finding{'s' if len(findings) != 1 else ''}: "
              f"{routine} routine proposal{'s' if routine != 1 else ''} and {decisions} decision{'s' if decisions != 1 else ''}.", "",
              "Rankings describe potential consequences and expected improvement, not measured savings. "
              "No proposed source changes have been applied. Diffs are independent proposals; reconcile overlapping alternatives before applying them.", ""]

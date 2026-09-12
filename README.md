@@ -4,7 +4,7 @@ Shareable agent skills, authored with [Skillset](https://github.com/outfitter-de
 
 ## Skills
 
-- [audit-agent-instructions](skills/audit-agent-instructions/SKILL.md): audit agent guidance for instruction conflicts, excessive triggers, unnecessary work, and premature approval gates. Includes its scripts, reference material, schemas, and tests.
+- [Minority Report](skills/minority-report/SKILL.md): an independent, evidence-backed audit of agent instructions for conflicts, unnecessary work, and unintended consequences. Includes its scripts, reference material, schemas, and tests.
 
 ## Authoring
 
@@ -43,7 +43,7 @@ Once these changes are published to the repository's default branch:
 
 ```bash
 npx skills add galligan/skills --list
-npx skills add galligan/skills --skill audit-agent-instructions
+npx skills add galligan/skills --skill minority-report
 ```
 
 See [publishing notes](docs/publishing.md) for the build contract, validation, and runtime requirements. Building locally does not publish or install anything.

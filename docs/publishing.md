@@ -31,13 +31,13 @@ Skillset owns the generated files through `skills/skillset.lock`. Its checks det
 
 The September 12, 2026 migration verified all 19 source files, including the full MIT license text, in the generated skill. Seventeen payload files were byte-identical; `SKILL.md` retained its body and `agents/openai.yaml` retained its values, with generated metadata and YAML normalization. Separate disposable fixtures verified generated-output and canonical-source drift detection. The repository has no parallel provider or plugin output directories.
 
-## Audit skill runtime and tests
+## Minority Report runtime and tests
 
 Discovery requires Python 3.10+. Validation, consolidation, rendering, and tests also require `jsonschema`, declared in the skill's `requirements.txt`. Install dependencies in an isolated environment outside the skill source directory. If uv is available:
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 uv run --with jsonschema python -m unittest discover \
-  -s .skillset/skills/audit-agent-instructions/tests
+  -s .skillset/skills/minority-report/tests
 ```
 
 The compiler copies sibling files, including runtime debris if it exists. Keep `__pycache__`, `.pyc`, and virtual environments out of source skill directories. Tests above disable bytecode generation.
@@ -47,7 +47,7 @@ The compiler copies sibling files, including runtime debris if it exists. Keep `
 After the source and generated collection are published, users can select a skill with:
 
 ```bash
-npx skills add galligan/skills --skill audit-agent-instructions
+npx skills add galligan/skills --skill minority-report
 ```
 
 This installs an individual skill. It does not install Python dependencies or supply external tools, credentials, plugin services, or permission to perform the skill's actions. Requirements are documented inside each skill.
