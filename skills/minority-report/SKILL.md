@@ -21,7 +21,7 @@ For a named model target, a migration, or a candidate that depends on model beha
 Run the discovery helper before reviewing:
 
 ```sh
-python scripts/discover.py /path/to/project /path/to/authored-skills --output audit/map.json
+python -B scripts/discover.py /path/to/project /path/to/authored-skills --output audit/map.json
 ```
 
 Resolve `scripts/` and `references/` relative to this skill's directory. The map records files, fingerprints, candidate passages, links, exclusions, discovery limits, and advisory ownership signals. Candidate passages are leads, not findings; inspect full relevant sections and account for files without keyword matches.
@@ -45,9 +45,9 @@ The coordinator checks applicability, overrides, duplicate findings, evidence, a
 Discovery uses Python 3.10+ only. Validation, consolidation, and rendering also require `jsonschema`; use an existing environment or install `requirements.txt` in an isolated environment. Script help documents the arguments.
 
 ```sh
-python scripts/consolidate.py audit/reviewer-a.json audit/reviewer-b.json \
+python -B scripts/consolidate.py audit/reviewer-a.json audit/reviewer-b.json \
   --map audit/map.json --output audit/findings.json
-python scripts/render.py audit/findings.json --output audit/report.md
+python -B scripts/render.py audit/findings.json --output audit/report.md
 ```
 
 See [output.md](references/output.md) for the JSON contract, adjudication, validation, and output options. Consolidation checks schema, source fingerprints, exact quotations, diff applicability without source writes, and mapped-file coverage. A passing check verifies structure and evidence, not the reviewer's judgment.

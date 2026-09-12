@@ -4,15 +4,15 @@ Use one review JSON per reviewer, then one consolidated JSON for the audit. Disc
 
 ## Paths and commands
 
-Run commands from the audit workspace with paths to this skill's scripts. Examples below abbreviate that prefix as `scripts/`. Python 3.10+ is required. Discovery has no third-party dependencies; validation, consolidation, rendering, and their tests use `jsonschema` from `requirements.txt`. An isolated virtual environment is sufficient; `uv run --with jsonschema python ...` also works if uv is already available.
+Run commands from the audit workspace with paths to this skill's scripts. Examples below abbreviate that prefix as `scripts/`. Python 3.10+ is required. Discovery has no third-party dependencies; validation, consolidation, rendering, and their tests use `jsonschema` from `requirements.txt`. Use Python's `-B` flag to keep imported helpers from writing bytecode into the skill directory. An isolated virtual environment is sufficient; `uv run --with jsonschema python -B ...` also works if uv is already available.
 
 ```sh
-python scripts/discover.py /path/to/project --output audit/map.json
-python scripts/validate.py audit/reviewer-a.json --map audit/map.json
-python scripts/consolidate.py audit/reviewer-a.json audit/reviewer-b.json \
+python -B scripts/discover.py /path/to/project --output audit/map.json
+python -B scripts/validate.py audit/reviewer-a.json --map audit/map.json
+python -B scripts/consolidate.py audit/reviewer-a.json audit/reviewer-b.json \
   --map audit/map.json --output audit/findings.json
-python scripts/render.py audit/findings.json --output audit/report.md
-python scripts/render.py audit/findings.json --output -
+python -B scripts/render.py audit/findings.json --output audit/report.md
+python -B scripts/render.py audit/findings.json --output -
 ```
 
 `validate.py` checks one review but does not require that reviewer to cover the entire map. `consolidate.py` requires the union of reviewer coverage to account for every mapped file. Conflicting coverage dispositions and duplicate finding IDs must be resolved. Single-reviewer audits use the same pipeline with one input.

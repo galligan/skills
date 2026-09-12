@@ -30,3 +30,9 @@ The [Codex P1 thread](https://github.com/galligan/skills/pull/1#discussion_r3997
 An independent scoped Minority Report checked the changed entrypoints, People Words policy boundary, and repository opt-in. It sharpened one precedence rule: an explicit PR or exact comparison takes precedence over incidental dirty working-tree state. The follow-up confirmed unambiguous paths for bare repository, bare skill directory, home/scratch directory, and explicit PR requests. No remaining finding was identified in that focused check. No live question UI or cross-model behavioral evaluation was run.
 
 All 55 existing Python tests pass. Source/output validation and repeat-build checks pass, all 31 local bundle links resolve in isolated copies, and the release preview verifies the intended minor version without scaffold releases.
+
+## Final review follow-up
+
+The README's PR-only installation warning was removed in `29dc46f`, so the default-branch instructions remain accurate after merge.
+
+A separate Codex review summary identified bytecode writes from the documented audit commands. Running each of discovery, validation, consolidation, and rendering with `--help` in disposable skill copies reproduced `__pycache__` creation. Running the same commands with Python's `-B` flag left every file unchanged and created no cache directories. The entrypoint and output reference now use `python -B` throughout, including the uv example. This preserves the read-only audit contract without changing review scope or approval behavior.

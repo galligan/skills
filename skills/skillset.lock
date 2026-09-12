@@ -89,9 +89,9 @@
       ],
       "kind": "standalone-skill",
       "name": "minority-report",
-      "outputHash": "sha256:2c0017e70d122374539194fe8f379a54d179364824a7d8ee13b6ca701821b50f",
+      "outputHash": "sha256:6152d64c2cff4653bbb65330028a8f3b66c2e3ed4c9fe226c02644bdf159cb13",
       "outputPath": "minority-report/SKILL.md",
-      "sourceHash": "sha256:fd46020550d33e68cca21e681f8bcafe9babf93de0ec2a24305639d7d4e8e5db",
+      "sourceHash": "sha256:9473ccc4f3bef8030edfa2c555c23dc8b2045c36c0d1cf211cf898cac0625093",
       "sourcePath": ".skillset/skills/minority-report/SKILL.md",
       "version": "0.1.0"
     },
@@ -116,7 +116,7 @@
     }
   ],
   "outputRoot": "skills",
-  "provenanceHash": "sha256:854c410900ab2fae844bc50d96ad468234781deec56c7e88d4e4a2f71d95618a",
+  "provenanceHash": "sha256:b7a580c74a7af5ef73a98a5fd3c8f2eaafa46b6edb8279f562f5cebd07fdc310",
   "renderResults": [
     {
       "destination": "skill",
