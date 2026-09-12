@@ -4,7 +4,7 @@ Shareable agent skills, authored with [Skillset](https://github.com/outfitter-de
 
 ## Skills
 
-- [Minority Report](skills/minority-report/SKILL.md): an independent, evidence-backed audit of agent instructions for conflicts, unnecessary work, and unintended consequences. Includes its scripts, reference material, schemas, and tests.
+- [Minority Report](skills/minority-report/SKILL.md): an independent, evidence-backed audit of agent instructions for conflicts, unnecessary work, and unintended consequences. Includes conditional GPT-6 Astra and Claude Fable review profiles, scripts, schemas, and tests.
 - [Agentish](skills/agentish-styleguide/SKILL.md) (`agentish-styleguide`): a language guide for agents. Author skills, agent definitions, prompts, and tool descriptions with precise behavior and boundaries.
 - [People Words](skills/people-words/SKILL.md) (`people-words`): drop mannered, performative prose and lead with substance. Use up front or as a midstream correction, while preserving technical precision and the user's register.
 
@@ -39,6 +39,10 @@ These conventions govern agent-facing instructions. Agentish uses them for autho
 
 People Words has separate, self-contained guidance for human-facing communication. It preserves the direct instruction not to use mannered prose, qualified by the user's register or an explicitly requested style. It does not import Agentish's normative vocabulary or make brevity and informality universal goals. This repository's `AGENTS.md` routes to the skills for their respective work.
 
+Minority Report adapts both [OpenAI's Astra guidance](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra) and [Anthropic's Claude API prompt audit](https://github.com/anthropics/skills/tree/main/skills/claude-api). Model-specific claims require evidence for the actual target; a keyword match is not a finding. See the [self-review and source decisions](docs/reviews/2026-09-12-instruction-review.md).
+
+Repository instructions are also compiled: edit [the shared source](.skillset/partials/repository.md), then build both `AGENTS.md` and `.claude/CLAUDE.md`. They direct future agents to review substantive instruction changes with our own guidance, scoped to the changed source and affected consumers.
+
 ## Layout
 
 | Path | Purpose |
@@ -46,9 +50,13 @@ People Words has separate, self-contained guidance for human-facing communicatio
 | `skillset.yaml` | Workspace metadata and the single `skills/` output configuration |
 | `.skillset/skills/<name>/` | Editable skill source and all supporting files |
 | `.skillset/shared/references/` | Shared conventions for instruction authoring and review |
+| `.skillset/partials/repository.md` | Canonical repository instructions |
+| `.skillset/rules/` and `.skillset/_claude/` | Thin wrappers selecting the Codex and Claude instruction surfaces |
 | `.skillset/changes/` | Skillset change and release evidence |
 | `skills/<name>/` | Generated, self-contained skill for consumers |
 | `skills/skillset.lock` | Generated ownership and drift tracking |
+| `AGENTS.md` and `.claude/CLAUDE.md` | Generated project instructions for Codex and Claude Code |
+| `skillset.lock` | Generated instruction ownership and shared-source dependency tracking |
 
 The Codex renderer emits this collection at a custom path. It preserves the audit skill's body and supporting content while normalizing metadata and its OpenAI sidecar; this is not a claim of provider-neutral rendering.
 

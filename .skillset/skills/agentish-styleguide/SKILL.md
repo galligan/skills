@@ -1,6 +1,6 @@
 ---
 name: agentish-styleguide
-description: Write or revise agent-facing skills, agent definitions, prompts, instruction files, and tool descriptions using Agentish. Use for instruction authoring and targeted wording edits, not ordinary human-facing documentation or conversational style.
+description: Write or revise skills, agent definitions, prompts, and tool descriptions, including instructions for GPT-6 Astra and Claude Fable. Use for agent-facing instruction authoring, not human-facing documentation or conversational style.
 resources:
   references:
     - shared:references/instruction-selection.md

@@ -1,0 +1,112 @@
+{
+  "buildMode": "updated",
+  "features": {
+    "promptArguments": true
+  },
+  "generatedBy": "skillset@0.1.0",
+  "items": [
+    {
+      "fileModes": {
+        ".claude/CLAUDE.md": "0644"
+      },
+      "files": [
+        ".claude/CLAUDE.md"
+      ],
+      "kind": "island",
+      "name": "claude:project:CLAUDE.md",
+      "outputHash": "sha256:bbb095d6eb95f00ad35a5e04c3e1b73dd8f808605b2d8b0fd71215301e981d8e",
+      "outputPath": ".claude/CLAUDE.md",
+      "preprocessDependencies": [
+        ".skillset/partials/repository.md"
+      ],
+      "sourceHash": "sha256:299e2a91a0c163c0d5a1c6dc66dc182c02a0e0cbccd65fff4d10bcb8de1534e7",
+      "sourcePath": ".skillset/_claude/CLAUDE.md",
+      "validation": "structured",
+      "version": "0.1.0"
+    },
+    {
+      "fileModes": {
+        "AGENTS.md": "0644"
+      },
+      "files": [
+        "AGENTS.md"
+      ],
+      "kind": "rule",
+      "name": "AGENTS.md",
+      "outputHash": "sha256:379be6d3db61bd99ed921399252b128313515ff8c686f69237008bc49abcf255",
+      "outputPath": "AGENTS.md",
+      "preprocessDependencies": [
+        ".skillset/partials/repository.md"
+      ],
+      "sourceHash": "sha256:919f77aa6d41ad16a9be94acbe36c2f14d94b5dc20e4c463f5ca5d3c96997ae0",
+      "sourcePath": ".skillset/rules",
+      "version": "0.1.0"
+    }
+  ],
+  "outputRoot": ".",
+  "provenanceHash": "sha256:95de714699a2ebd41c12ceff47f44086f9cb6a9be69ba2ef4bb3e0549fa1121c",
+  "renderResults": [
+    {
+      "destination": "target-native-island",
+      "evidence": [
+        {
+          "kind": "test",
+          "note": "provider source coverage",
+          "ref": "apps/skillset/src/__tests__/skillset.test.ts"
+        }
+      ],
+      "featureId": "target-native-islands",
+      "outputs": [
+        {
+          "kind": "island",
+          "path": ".claude/CLAUDE.md"
+        }
+      ],
+      "schema": "skillset-render-result@1",
+      "sourcePath": ".skillset/_claude/CLAUDE.md",
+      "sourceUnit": "claude.CLAUDEmd:CLAUDE.md",
+      "status": "target_native",
+      "target": "claude"
+    },
+    {
+      "destination": "instruction",
+      "evidence": [
+        {
+          "kind": "docs",
+          "ref": "docs/reference/features/instructions.md"
+        },
+        {
+          "kind": "provider-overlay",
+          "note": "Codex AGENTS.md discovery and merge behavior is currently documented in prose; no adopted JSON Schema source is available.",
+          "ref": "codex-agents-md-overlay"
+        },
+        {
+          "kind": "provider-snapshot",
+          "note": "sha256:3f6a53f45530261b0b2fafa705b1b01b8cc2b7c817eae3263226f2fd89fbae17",
+          "ref": "codex-agents-md",
+          "verifiedAt": "2026-06-23"
+        }
+      ],
+      "featureId": "project-instructions",
+      "outputs": [
+        {
+          "kind": "rule",
+          "path": "AGENTS.md"
+        }
+      ],
+      "schema": "skillset-render-result@1",
+      "sourcePath": ".skillset/rules",
+      "sourceUnit": "instruction:AGENTS.md",
+      "status": "transformed",
+      "target": "codex"
+    }
+  ],
+  "schemaVersion": 2,
+  "selectedTargets": [
+    "claude",
+    "codex"
+  ],
+  "skillsetMetadata": true,
+  "sourceRoot": ".skillset",
+  "target": "workspace"
+}

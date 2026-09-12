@@ -24,9 +24,9 @@
       ],
       "kind": "standalone-skill",
       "name": "agentish-styleguide",
-      "outputHash": "sha256:db562e060765d922e604473f9e12ce683a39ac52a0df3b91c31b5fedf3a96b6d",
+      "outputHash": "sha256:9c8892bf7baded200de25b54e5deb923ba9df807bb090efa58cb6326cd584523",
       "outputPath": "agentish-styleguide/SKILL.md",
-      "sourceHash": "sha256:b2cc3aa51468643790bd334de98043fd51cc144d98d2edba56875210a0bf3c1e",
+      "sourceHash": "sha256:3ee1dd551cd812e8cf431926c1066adf3ab4b2e3374ecb6c519411dc916535f3",
       "sourcePath": ".skillset/skills/agentish-styleguide/SKILL.md",
       "version": "0.1.0"
     },
@@ -36,10 +36,13 @@
         "minority-report/SKILL.md": "0644",
         "minority-report/agents/openai.yaml": "0644",
         "minority-report/references/agentish.md": "0644",
+        "minority-report/references/claude-fable.md": "0644",
         "minority-report/references/consolidated.schema.json": "0644",
         "minority-report/references/discovery.md": "0644",
+        "minority-report/references/gpt-6-astra.md": "0644",
         "minority-report/references/instruction-placement.md": "0644",
         "minority-report/references/instruction-selection.md": "0644",
+        "minority-report/references/model-review.md": "0644",
         "minority-report/references/output.md": "0644",
         "minority-report/references/review-rubric.md": "0644",
         "minority-report/references/review.schema.json": "0644",
@@ -60,10 +63,13 @@
         "minority-report/SKILL.md",
         "minority-report/agents/openai.yaml",
         "minority-report/references/agentish.md",
+        "minority-report/references/claude-fable.md",
         "minority-report/references/consolidated.schema.json",
         "minority-report/references/discovery.md",
+        "minority-report/references/gpt-6-astra.md",
         "minority-report/references/instruction-placement.md",
         "minority-report/references/instruction-selection.md",
+        "minority-report/references/model-review.md",
         "minority-report/references/output.md",
         "minority-report/references/review-rubric.md",
         "minority-report/references/review.schema.json",
@@ -81,9 +87,9 @@
       ],
       "kind": "standalone-skill",
       "name": "minority-report",
-      "outputHash": "sha256:fff7dcc5846ad7da268c55de5edf279599362a498f423e358ca41210c4b8eb41",
+      "outputHash": "sha256:53416f0719ff19134b1f415fe8a75145225de9e74310191df7ace73cc2bb7986",
       "outputPath": "minority-report/SKILL.md",
-      "sourceHash": "sha256:0a320f8e85888145edfad3755e693fc6136184ce103146251e2fdc2b8f865ff9",
+      "sourceHash": "sha256:5e5833e08fbc5613abee6344dea7fe5d3348a97ff253c4687744e6fac4f54de4",
       "sourcePath": ".skillset/skills/minority-report/SKILL.md",
       "version": "0.1.0"
     },
@@ -102,13 +108,13 @@
       "name": "people-words",
       "outputHash": "sha256:d9df04e9d010eec41d0c93878152f27cdee0c446bba931c3f36e5bac0b7b1975",
       "outputPath": "people-words/SKILL.md",
-      "sourceHash": "sha256:bc7fc30139f0a9145ee8101a8e935a2d33ef90446c2a111e0f9ab690fbbaafc6",
+      "sourceHash": "sha256:ff0113fcfb821059ff8d237f78cb26397fdd905e6c6f7d82c4f58a41a3535e3c",
       "sourcePath": ".skillset/skills/people-words/SKILL.md",
       "version": "0.1.0"
     }
   ],
   "outputRoot": "skills",
-  "provenanceHash": "sha256:e6f7f3e37787ce15ea69139f9c1bca66e5da10ce73132e03b33d74b5e5001d17",
+  "provenanceHash": "sha256:160871f6c99b7918471fea5176948888ac0d5e697d78e9a9c822caf642bcaa59",
   "renderResults": [
     {
       "destination": "skill",
@@ -203,6 +209,10 @@
         },
         {
           "kind": "standalone-skill",
+          "path": "skills/minority-report/references/claude-fable.md"
+        },
+        {
+          "kind": "standalone-skill",
           "path": "skills/minority-report/references/consolidated.schema.json"
         },
         {
@@ -211,11 +221,19 @@
         },
         {
           "kind": "standalone-skill",
+          "path": "skills/minority-report/references/gpt-6-astra.md"
+        },
+        {
+          "kind": "standalone-skill",
           "path": "skills/minority-report/references/instruction-placement.md"
         },
         {
           "kind": "standalone-skill",
           "path": "skills/minority-report/references/instruction-selection.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/references/model-review.md"
         },
         {
           "kind": "standalone-skill",
@@ -324,6 +342,7 @@
   ],
   "schemaVersion": 2,
   "selectedTargets": [
+    "claude",
     "codex"
   ],
   "skillsetMetadata": true,

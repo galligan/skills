@@ -9,8 +9,11 @@ Review instruction behavior, not prose style. Flag only distinct, substantive is
 - **Premature confirmation:** a rule stops authorized preparation before producing a useful, reviewable result, despite adequate scope.
 - **Overprescribed workflow:** fixed steps, delegation, tooling, or bookkeeping impose a demonstrated task-specific cost.
 - **Stale reference:** an active instruction routes to missing, retired, or superseded material and impedes work.
+- **Contract mismatch:** a tool description, prompt, schema, or request configuration contradicts the actual supported input/output contract or omits a constraint required for correct use. Cite the contract and implementation or verified provider evidence; an instruction-only keyword match is insufficient.
 
 A long file, strong imperative, mandatory test, safety boundary, or repeated reminder is not intrinsically a finding. Specialized expertise and useful operational invariants belong in skills. Judge whether wording forces irrelevant work or an incorrect decision. Avoid blanket recommendations to weaken testing, ask fewer questions, or remove safeguards.
+
+For model-dependent candidates, use [model-review.md](model-review.md) and only the applicable target profile. Distinguish normative vocabulary from pressure language and working duplication from conflicting requirements. A provider anti-pattern match is a lead; it does not establish applicability, consequence, or confidence by itself. If a candidate does not fit this findings contract, describe the limitation in `unresolved` rather than forcing it into an unrelated category.
 
 ## Instruction design criteria
 
@@ -62,4 +65,4 @@ Each review JSON identifies one `reviewer`, has `schema_version: "1.0"`, and con
 
 No finding quota or early exit after a handful of examples. Consolidate genuinely duplicated policies using related evidence without collapsing distinct owning files or decisions. Hand off the JSON path and any access, provenance, or interpretation limits. Do not apply proposed edits during the audit.
 
-The rubric is informed by [OpenAI's guide to rethinking skills and prompts](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra); this bundled contract is usable without fetching that article for each audit.
+Provider attribution and version-specific review criteria are in [GPT-6 Astra](gpt-6-astra.md) and [Claude Fable](claude-fable.md). This bundled contract does not require fetching those sources for every audit.

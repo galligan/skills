@@ -53,6 +53,26 @@ class ReportsTest(unittest.TestCase):
             self.assertIn(f"**{finding['id']} —", markdown)
         self.assertEqual(self.source.read_text(), self.original)
 
+    def test_contract_mismatch_survives_validation_consolidation_and_rendering(self):
+        original = "# Tool contract\nlookup_user returns an email address.\n"
+        replacement = original.replace("an email address", "a display name")
+        self.source.write_text(original)
+        self.manifest["files"][0].update(sha256=hashlib.sha256(original.encode()).hexdigest(), lines=2)
+        self.finding.update(
+            category="contract_mismatch", title="Tool description declares the wrong return value",
+            confidence_reason="The tool implementation returns a display name.",
+            impact="Consumers may treat a display name as a deliverable email address.",
+            smallest_change="Describe the actual return value.",
+            evidence={"file": self.path, "line_start": 2, "line_end": 2, "quote": original.splitlines()[1]},
+            diff="".join(difflib.unified_diff(original.splitlines(True), replacement.splitlines(True),
+                                             fromfile=self.path, tofile=self.path)).rstrip("\n"),
+        )
+        result = consolidate([self.review], self.manifest, {})
+        self.assertEqual(result["findings"][0]["category"], "contract_mismatch")
+        self.assertIn("`contract_mismatch`", render(result))
+        self.assertEqual(result["findings"][0]["diff"], self.finding["diff"])
+        self.assertEqual(self.source.read_text(), original)
+
     def test_stale_source_and_wrong_quote_fail(self):
         self.source.write_text(self.original + "Changed later.\n")
         with self.assertRaisesRegex(ValueError, "changed since mapping"):

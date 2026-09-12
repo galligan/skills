@@ -154,7 +154,8 @@
             "conflict",
             "premature_confirmation",
             "overprescribed_workflow",
-            "stale_reference"
+            "stale_reference",
+            "contract_mismatch"
           ]
         },
         "severity": {

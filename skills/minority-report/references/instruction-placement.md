@@ -7,7 +7,7 @@ Choose the surface that owns an instruction and verify when the consuming agent 
 | Surface | Owns | Refuses |
 |---|---|---|
 | **User/global instructions** | Personal boundaries, cross-project workflow defaults, routing to personal tools | Repository architecture, project commands, temporary model workarounds |
-| **Root instruction file** (`CLAUDE.md`, `AGENTS.md`) | Non-obvious invariants, repo-wide action boundaries, unusual commands with dangerous alternatives, generated-source relationships, concise routing to scoped rules and skills | Repo tours, tutorials, generic advice, linter settings restated, task checklists, volatile facts, model rituals, output-style preferences |
+| **Root instruction file** (`CLAUDE.md`, `AGENTS.md`) | Non-obvious invariants, repo-wide action boundaries, unusual commands with dangerous alternatives, generated-source relationships, concise routing to scoped rules, skills, and the repository's chosen output style | Repo tours, tutorials, generic advice, linter settings restated, task checklists, volatile facts, model rituals, detailed output-style guidance |
 | **Scoped rules** (subtree files, `.claude/rules/**`) | Rules true throughout one package, service, or path pattern | Anything repo-wide (promote to root) or task-class-specific (move to a skill) |
 | **Skills** | Repeatable task-class procedures: releases, migrations, reviews, debugging playbooks | Repo-wide invariants unrelated to the skill’s task; task-specific invariants may remain with the procedure that needs them |
 | **Tool descriptions** | What the tool does, when it is the correct tool, key input semantics, consequential side effects | Tutorials, duplicated procedure, generic warning walls |
@@ -18,7 +18,7 @@ Choose the surface that owns an instruction and verify when the consuming agent 
 
 ## Model-specific accommodations
 
-There is no dedicated model-profile surface, and this guide does not invent one. When an accommodation for a named model survives Instruction Selection's challenge, keep it in an explicitly scoped block ("Claude Code only", "Codex only") with a review date, or emit it per-provider at compile time when the toolchain supports provider targets (Skillset does). The default disposition remains removal — most model workarounds outlive the behavior they patched.
+There is no dedicated model-profile surface, and this guide does not invent one. When Instruction Selection supports keeping an accommodation, use a block naming the actual model or harness and a review date, or emit it per-provider when that matches the intended scope. A provider target can contain several models; provider-only routing is not a substitute for a model-specific condition. Investigate uncertain accommodations rather than treating them as obsolete.
 
 ## Skill descriptions are compiled policy
 
