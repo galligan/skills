@@ -1,5 +1,5 @@
 ---
-description: Audit agent instructions for conflicts, unnecessary work, and unintended consequences, including model-aware reviews for GPT-6 Astra and Claude Fable. Use for systematic instruction reviews with ranked findings and proposed changes, not to execute the workflows being reviewed.
+description: Audit agent instructions for conflicts, unnecessary work, and unintended consequences. Use for targeted, repository-wide, or multi-project instruction reviews with ranked findings and proposed changes, not to author instructions or execute their workflows.
 metadata:
   skillset.schema: "1"
   version: 0.1.0
@@ -14,9 +14,9 @@ Produce the agent's minority report: an independent, evidence-backed audit of th
 
 ## Map the scope
 
-Use the repositories, directories, or files supplied by the user. If none are supplied, start with the current project. Ask only if the intended scope cannot be inferred. Prior context can suggest additional roots, but do not scan a person's home directory or unrelated projects by default.
+Use [scope-selection.md](references/scope-selection.md) to distinguish audit targets from supporting context. Explicit files, a skill, a repository, or a change set establish scope without another confirmation. For a bare invocation, use the current directory to recommend a bounded scope, ask through the harness's question tool or a concise conversational question, and wait for the answer before inventorying instruction bodies. Do not scan a person's home directory or unrelated projects by default.
 
-For a named model target, a migration, or a candidate that depends on model behavior, use [model-review.md](references/model-review.md) to establish the target and select the applicable profile. A model name alone does not trigger an audit. Complete general instruction checks even when model-specific evidence is unavailable.
+For a named model target, a migration, or a candidate that depends on model behavior, use [model-review.md](references/model-review.md) to establish the target and select the applicable profile. Bundled profiles cover GPT-6 Astra and Claude Fable. A model name alone does not trigger an audit. Complete general instruction checks even when model-specific evidence is unavailable.
 
 Run the discovery helper before reviewing:
 

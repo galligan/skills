@@ -1,6 +1,6 @@
 # Claude Fable review profile
 
-Informed by Anthropic's [Claude API skill](https://github.com/anthropics/skills/tree/main/skills/claude-api), especially its [prompt audit](https://github.com/anthropics/skills/blob/main/skills/claude-api/shared/prompt-audit.md) and [model migration guidance](https://github.com/anthropics/skills/blob/main/skills/claude-api/shared/model-migration.md). Checked September 12, 2026; the supplied prompt-audit attachment matched the public source. The reviewed migration guidance distinguishes Fable versions, including 5.1. Confirm the actual target version before transferring a claim.
+Informed by Anthropic's [Claude API skill](https://github.com/anthropics/skills/tree/main/skills/claude-api), especially its [prompt audit](https://github.com/anthropics/skills/blob/main/skills/claude-api/shared/prompt-audit.md) and [model migration guidance](https://github.com/anthropics/skills/blob/main/skills/claude-api/shared/model-migration.md). Checked against the public source on September 12, 2026. The reviewed migration guidance distinguishes Fable versions, including 5.1. Confirm the actual target version before transferring a claim.
 
 Apply [model-review.md](model-review.md) and the common rubric. This profile adapts the source's useful checks without adopting blanket deletion rules, numerical quotas, or its separate reporting format.
 

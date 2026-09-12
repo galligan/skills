@@ -12,7 +12,7 @@ Paths below are relative to the repository root.
 - Edit repository guidance in `.skillset/partials/repository.md`. Skillset compiles it to `AGENTS.md` and `.claude/CLAUDE.md`; the files in `.skillset/rules/` and `.skillset/_claude/` select the output surfaces.
 - Edit skill source under `.skillset/skills/<name>/` and workspace configuration in `skillset.yaml`.
 - Edit reusable authoring references under `.skillset/shared/references/`. If an installed skill needs a shared reference, declare that reference in the skill’s `resources` so Skillset includes it in the generated bundle.
-- MUST NOT hand-edit the generated `skills/` tree, `AGENTS.md`, `.claude/CLAUDE.md`, or either `skillset.lock`. Change the source and rebuild.
+- Do not hand-edit the generated `skills/` tree, `AGENTS.md`, `.claude/CLAUDE.md`, or either `skillset.lock`. Change the source and rebuild.
 - Keep the single public output root configured by `codex.skills.path: skills`. Do not add plugin bundles or parallel provider skill output roots. Claude compilation supplies project instructions only.
 - If an installed skill needs a file, include that file in the generated skill bundle.
 - Document each skill’s required external tools and services.
@@ -24,7 +24,7 @@ Paths below are relative to the repository root.
 - Before adding or reviewing a persistent directive, apply `.skillset/shared/references/instruction-selection.md` to decide whether the directive earns its place.
 - When choosing or changing an instruction’s owning surface, use `.skillset/shared/references/instruction-placement.md`.
 - When writing skills, agent definitions, prompts, or other agent-facing instructions, use `.skillset/skills/agentish-styleguide/SKILL.md`. It routes to the shared Agentish language guide.
-- For human-facing replies and prose, apply `.skillset/skills/people-words/SKILL.md`. Preserve the intended audience and document form; Agentish's controlled instruction conventions do not apply to ordinary prose.
+- This repository selects People Words as its communication style. For human-facing replies and prose, apply `.skillset/skills/people-words/SKILL.md`. Preserve the intended audience and document form; Agentish's controlled instruction conventions do not apply to ordinary prose.
 - For a requested systematic instruction audit, use `.skillset/skills/minority-report/SKILL.md`.
 
 If a change alters skill activation, required or prohibited behavior, instruction ownership, or provider routing, review the changed canonical source and affected consumers with Minority Report before handoff. Record findings, corrections, and remaining limits. For wording-only edits, check preserved meaning and affected links; do not run a repository-wide audit solely for a typo.

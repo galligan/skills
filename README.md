@@ -37,7 +37,9 @@ Three references guide instruction authoring:
 
 These conventions govern agent-facing instructions. Agentish uses them for authoring; Minority Report uses them as review criteria. Skillset bundles the declared references with each skill so installation does not depend on this checkout or another installed skill.
 
-People Words has separate, self-contained guidance for human-facing communication. It preserves the direct instruction not to use mannered prose, qualified by the user's register or an explicitly requested style. It does not import Agentish's normative vocabulary or make brevity and informality universal goals. This repository's `AGENTS.md` routes to the skills for their respective work.
+People Words has separate, self-contained guidance for human-facing expression. It preserves the direct instruction not to use mannered prose, qualified by the user's register or an explicitly requested style. It does not set verification, questioning, action, or artifact policy. Its description allows explicit project opt-in, and this repository selects it as its communication style. It does not import Agentish's normative vocabulary or make brevity and informality universal goals.
+
+Minority Report supports a named file or skill, the current repository, a specified change set, or explicitly selected repositories. A bare invocation asks for scope using a directory-aware recommendation; explicit scope skips that question. Supporting context is reviewed for applicability without becoming another patch target. See [scope selection](skills/minority-report/references/scope-selection.md).
 
 Minority Report adapts both [OpenAI's Astra guidance](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra) and [Anthropic's Claude API prompt audit](https://github.com/anthropics/skills/tree/main/skills/claude-api). Model-specific claims require evidence for the actual target; a keyword match is not a finding. See the [self-review and source decisions](docs/reviews/2026-09-12-instruction-review.md).
 

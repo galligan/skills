@@ -30,13 +30,15 @@ bun run check
 bun run skillset check --only outputs
 ```
 
-CI runs `bun run check` for source and generated-output validation, then `bun run check:changes --since origin/main` for skill change coverage. Released Skillset 0.26.1 also applies compiler-package Changesets rules in `check --ci`; those npm release rules do not apply to this skills-only repository. The upstream fix is tracked in [SET-535](https://linear.app/outfitter/issue/SET-535).
+CI runs `bun run check` for source and generated-output validation, then `bun run check:changes --since origin/main` for skill change coverage. Released Skillset 0.26.1 also applies compiler-package Changesets rules in `check --ci`; those npm release rules do not apply to this skills-only repository. The upstream fix is tracked in [SET-535](https://linear.app/outfitter/issue/SET-535). Once a released version fixes downstream scoping, verify it here and restore `check --ci` if it preserves the same source, output, and change-evidence coverage.
 
 Skillset identifies source units by selector. Renaming a skill is a removal plus an addition: record both selectors and commit removal of the old generated directory together with the new source, output, and lock. Refresh pending change evidence after source edits, then check against the PR base. For Minority Report, the rename record covers `skill:audit-agent-instructions` and `skill:minority-report`.
 
+The pre-release rename uses a minor bump. The original major record and already-landed scaffold record are ignored through Skillset's CLI and retained as audit history. The release preview excludes scaffold scopes and plans Minority Report at `0.2.0`; this preview does not apply or publish a release.
+
 Skillset owns the generated files through `skills/skillset.lock`. Its checks detect edits to generated files, while `skillset diff` previews changes from canonical source. Do not hand-edit or remove the lock to silence drift.
 
-The generated Minority Report bundle contains 22 skill-local files and three declared shared references. Its model-review guide and Astra/Fable profiles load only when relevant. Skillset copies the shared references into the installed skill, rewrites shared-resource links in `SKILL.md` to bundle-relative links, and tracks the resource content in `skills/skillset.lock`. Put `shared:` links in `SKILL.md`; version 0.26.1 does not rewrite those aliases inside skill-local supporting Markdown. No private repository access is needed to use them.
+The generated Minority Report bundle contains 23 skill-local files and three declared shared references. Its model-review guide and Astra/Fable profiles load only when relevant. Skillset copies the shared references into the installed skill, rewrites shared-resource links in `SKILL.md` to bundle-relative links, and tracks the resource content in `skills/skillset.lock`. Put `shared:` links in `SKILL.md`; version 0.26.1 does not rewrite those aliases inside skill-local supporting Markdown. No private repository access is needed to use them.
 
 Agentish contains its entrypoint, OpenAI metadata, full license, and the same three shared references: Instruction Selection, Instruction Placement, and Agentish. People Words contains only its entrypoint, OpenAI metadata, and full license. Neither new skill requires external tools or services for its guidance; project-specific editing and factual verification use available tools and sources.
 
@@ -47,6 +49,8 @@ The September 12, 2026 validation checked payload completeness and link resoluti
 `.skillset/partials/repository.md` owns the shared guidance. `.skillset/rules/repository.md` includes it for Codex, producing `AGENTS.md`; `claude: false` prevents a redundant Claude rule. `.skillset/_claude/CLAUDE.md` includes the same partial for `.claude/CLAUDE.md`. Root `skillset.lock` tracks both outputs and their partial dependency; `skills/skillset.lock` continues to own standalone skills.
 
 Claude Code supports [`.claude/CLAUDE.md` as a project instruction file](https://code.claude.com/docs/en/memory). Released Skillset 0.26.1 cannot use `claude.projectRoot: .` to emit a root `CLAUDE.md`; it rejects the repository-root destination. Use the supported location instead of an extra copy or symlink step.
+
+Skillset 0.26.1 also serializes frontmatter for every native Markdown file. A headerless Claude source still emits an empty YAML mapping. The wrapper therefore retains a descriptive header until the compiler supports plain-body output; do not treat it as Claude configuration or hand-edit the generated file to remove it.
 
 The shared body uses explicit repository-root-relative code paths. Destination-aware `shared:` links work for portable instructions but are not rewritten correctly in the native Claude wrapper in 0.26.1. Do not introduce broken relative Markdown links into the shared body. Only the small repository partial is expanded at build time; the referenced skills remain conditionally loaded guidance.
 

@@ -24,9 +24,9 @@
       ],
       "kind": "standalone-skill",
       "name": "agentish-styleguide",
-      "outputHash": "sha256:9c8892bf7baded200de25b54e5deb923ba9df807bb090efa58cb6326cd584523",
+      "outputHash": "sha256:ebfbb2b44e8a9a775231143d100f879fcc5699c6495e0def0a32973090021a9b",
       "outputPath": "agentish-styleguide/SKILL.md",
-      "sourceHash": "sha256:3ee1dd551cd812e8cf431926c1066adf3ab4b2e3374ecb6c519411dc916535f3",
+      "sourceHash": "sha256:0a11d12a9d0ef5f046362ee5282e363cad0f9a2c2076b0d7e512136d4810e0d6",
       "sourcePath": ".skillset/skills/agentish-styleguide/SKILL.md",
       "version": "0.1.0"
     },
@@ -46,6 +46,7 @@
         "minority-report/references/output.md": "0644",
         "minority-report/references/review-rubric.md": "0644",
         "minority-report/references/review.schema.json": "0644",
+        "minority-report/references/scope-selection.md": "0644",
         "minority-report/requirements.txt": "0644",
         "minority-report/scripts/consolidate.py": "0644",
         "minority-report/scripts/diffcheck.py": "0644",
@@ -73,6 +74,7 @@
         "minority-report/references/output.md",
         "minority-report/references/review-rubric.md",
         "minority-report/references/review.schema.json",
+        "minority-report/references/scope-selection.md",
         "minority-report/requirements.txt",
         "minority-report/scripts/consolidate.py",
         "minority-report/scripts/diffcheck.py",
@@ -87,9 +89,9 @@
       ],
       "kind": "standalone-skill",
       "name": "minority-report",
-      "outputHash": "sha256:53416f0719ff19134b1f415fe8a75145225de9e74310191df7ace73cc2bb7986",
+      "outputHash": "sha256:a6f8074203dab6abdee8632bb239d848aa3df0900aab7c899c1648fa441db73d",
       "outputPath": "minority-report/SKILL.md",
-      "sourceHash": "sha256:5e5833e08fbc5613abee6344dea7fe5d3348a97ff253c4687744e6fac4f54de4",
+      "sourceHash": "sha256:5bdb6773be183564aa643481c7918e5e133a21808de73e599c045fa53e775344",
       "sourcePath": ".skillset/skills/minority-report/SKILL.md",
       "version": "0.1.0"
     },
@@ -106,15 +108,15 @@
       ],
       "kind": "standalone-skill",
       "name": "people-words",
-      "outputHash": "sha256:d9df04e9d010eec41d0c93878152f27cdee0c446bba931c3f36e5bac0b7b1975",
+      "outputHash": "sha256:00cef02c714b8bc20c8b4101b373a735399f2244b7377fc16116c6f915fb1d84",
       "outputPath": "people-words/SKILL.md",
-      "sourceHash": "sha256:ff0113fcfb821059ff8d237f78cb26397fdd905e6c6f7d82c4f58a41a3535e3c",
+      "sourceHash": "sha256:fc6736d9423d0bb2c150ed296756ed9e3ee1b98d993191b8fe7beb7c2e5413aa",
       "sourcePath": ".skillset/skills/people-words/SKILL.md",
       "version": "0.1.0"
     }
   ],
   "outputRoot": "skills",
-  "provenanceHash": "sha256:160871f6c99b7918471fea5176948888ac0d5e697d78e9a9c822caf642bcaa59",
+  "provenanceHash": "sha256:cb8c376ea834bc34f01393ed6a7b0d029db356d7c949e52d8652b385a71ab1fb",
   "renderResults": [
     {
       "destination": "skill",
@@ -246,6 +248,10 @@
         {
           "kind": "standalone-skill",
           "path": "skills/minority-report/references/review.schema.json"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/minority-report/references/scope-selection.md"
         },
         {
           "kind": "standalone-skill",

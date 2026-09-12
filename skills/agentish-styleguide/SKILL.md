@@ -1,5 +1,5 @@
 ---
-description: Write or revise skills, agent definitions, prompts, and tool descriptions, including instructions for GPT-6 Astra and Claude Fable. Use for agent-facing instruction authoring, not human-facing documentation or conversational style.
+description: Write or revise skills, agent definitions, prompts, and tool descriptions. Use for agent-facing instruction authoring or targeted wording edits, not systematic audits, human-facing documentation, or conversational style.
 metadata:
   skillset.schema: "1"
   version: 0.1.0
@@ -9,6 +9,8 @@ name: agentish-styleguide
 # Agentish
 
 **A Language Guide for Agents.**
+
+Intended consumers include GPT-6 Astra and Claude Fable. Preserve model-specific requirements when they are supported by the target's documented or observed behavior; a model name does not establish that a workaround is obsolete.
 
 Write instructions that make intended behavior clear. Preserve the user's policy and deliberately chosen wording; do not soften a tested prohibition into an open-ended judgment call merely to make it sound smoother.
 
