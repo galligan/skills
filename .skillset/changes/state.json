@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "scopes": {
+    "claude.gitkeep:.gitkeep": {
+      "sourceHash": "sha256:c05ccf30aff2691cc1587783d9a540a39c87a801d8fc6491700d669408c579d6",
+      "updatedAt": "2026-09-12T13:46:05.192Z",
+      "version": "0.1.0"
+    },
+    "codex.gitkeep:.gitkeep": {
+      "sourceHash": "sha256:677a3b1d0c497ba0590be06e26892435af1d40a80987b3cc8c65c2f6622ec59b",
+      "updatedAt": "2026-09-12T13:46:05.192Z",
+      "version": "0.1.0"
+    },
+    "config:root": {
+      "sourceHash": "sha256:b52762d2a5715c9416bd19558b7643f194e97089beeec8e90dbf07e5f7db9ae5",
+      "updatedAt": "2026-09-12T13:46:05.192Z",
+      "version": "0.1.0"
+    },
+    "plugin.mg-skills.config:root": {
+      "sourceHash": "sha256:9389e26962721e320542ad1f01f658cba9de7dbbed6bfb9114b7bb864cdce15b",
+      "updatedAt": "2026-09-12T13:46:05.192Z",
+      "version": "0.1.0"
+    },
+    "plugin:mg-skills": {
+      "sourceHash": "sha256:699e18111a97c3258863f5ec66bd1a2073cdcc06ef7cf9c299524278ee785b21",
+      "updatedAt": "2026-09-12T13:46:05.192Z",
+      "version": "0.1.0"
+    }
+  }
+}

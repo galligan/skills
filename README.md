@@ -1,41 +1,56 @@
-# skillstash
+# Matt Galligan's Skills
 
-**File an issue. Agents research, build, and ship skills.**
+Shareable agent skills, authored once with [Skillset](https://github.com/outfitter-dev/skillset) and packaged as **mg-skills** for Claude, Codex, and Cursor. The marketplace is **galligan**.
 
-```text
-┌─────────────┐     ┌─────────────────────────────────┐     ┌───────────┐
-│ File Issue  │────▶│  Research → Author → Validate   │────▶│  Merged   │
-│ "I need X"  │     │         (agent loop)            │     │  & Live   │
-└─────────────┘     └─────────────────────────────────┘     └───────────┘
+The repository is initialized; the first public skills are still to be added.
+
+## Authoring
+
+Use Bun 1.4.0. The compiler is pinned to `@skillset/cli@0.26.1` in `package.json` and `bun.lock`.
+
+```bash
+bun install --frozen-lockfile --ignore-scripts
+bun run skillset new skill my-skill --in mg-skills --yes
 ```
 
-## What is this?
+Edit `.skillset/plugins/mg-skills/skills/my-skill/SKILL.md`. Keep the skill's runtime resources self-contained, using Skillset `resources` for shared inputs.
 
-A template repo for building your own skill library through GitHub issues. File a skill idea, and skillstash turns it into a vetted `SKILL.md` that’s immediately usable.
+```bash
+bun run skillset change status
+bun run build
+bun run check
+```
 
-**Issue-first**: GitHub issues drive research, authoring, review, and validation.
+Record meaningful changes with Skillset's change commands using the scope reported by `change status`. Use `release plan` and `release apply` to advance versions and changelogs. Commit source, release evidence, and generated output together.
 
-**Validated**: Linting and structure checks catch mistakes before they spread.
+## Layout
 
-**Composable**: Build a library of skills your agents can discover and use.
+| Path | Purpose |
+| --- | --- |
+| `skillset.yaml` | Workspace configuration and the explicit `galligan` catalog |
+| `.skillset/plugins/mg-skills/` | Canonical plugin metadata and skill source |
+| `.skillset/changes/` | Skillset change and release evidence |
+| `plugins/mg-skills/claude/` | Generated Claude plugin |
+| `plugins/mg-skills/codex/` | Generated Codex plugin |
+| `plugins/mg-skills/cursor/` | Generated Cursor plugin |
+| `.claude-plugin/marketplace.json` | Generated Claude catalog, also used by the skills CLI for discovery |
+| `.cursor-plugin/marketplace.json` | Generated Cursor catalog |
 
-**Local-first (optional)**: You can still create `skills/<name>/SKILL.md` manually when you want.
+Generated output is committed for consumers. Edit `.skillset/` and the root configuration, then rebuild.
 
-## Get Started
+## Installation and publication
 
-1. **Scaffold a new repo** → `bunx create-skillstash my-skillstash --create-repo`
-2. **Set up secrets** → `docs/secrets.md`
-3. **File a skill issue** → Use the “Create skill” issue template
+Once the repository and its first skills are published, the intended individual-skill flow is:
 
-## Learn More
+```bash
+npx skills add galligan/skills --list
+npx skills add galligan/skills --skill my-skill
+```
 
-| Doc | What it covers |
-|-----|----------------|
-| [docs/README.md](./docs/README.md) | Quick start and overview |
-| [docs/architecture.md](./docs/architecture.md) | How it all works |
-| [docs/faqs.md](./docs/faqs.md) | Common questions |
-| [docs/secrets.md](./docs/secrets.md) | LLM tokens and GitHub secrets |
+The explicit catalog currently directs that discovery to the generated Claude skill tree. Individual skills offered through this route must be portable and self-contained; choosing another agent in the skills CLI does not recompile a provider-specific skill or install the rest of its plugin.
+
+See [publishing notes](docs/publishing.md) for the verified discovery behavior, limitations, and tracked Skillset improvements.
 
 ## License
 
-MIT
+[MIT](LICENSE).

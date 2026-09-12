@@ -1,21 +1,23 @@
 {
-  "name": "skillstash",
-  "owner": {
-    "name": "Skillstash"
-  },
+  "description": "Shareable agent skills by Matt Galligan.",
   "metadata": {
-    "description": "Skillstash plugin marketplace",
+    "description": "Shareable agent skills by Matt Galligan.",
     "version": "0.1.0"
+  },
+  "name": "galligan",
+  "owner": {
+    "name": "Matt Galligan"
   },
   "plugins": [
     {
-      "name": "skillstash",
-      "source": "./",
-      "description": "Skillstash workflows and skills for authoring agent skills",
-      "version": "0.1.0",
       "author": {
-        "name": "Skillstash"
-      }
+        "name": "Matt Galligan"
+      },
+      "description": "Reusable skills for working with AI agents.",
+      "license": "MIT",
+      "name": "mg-skills",
+      "source": "./plugins/mg-skills/claude",
+      "version": "0.1.0"
     }
   ]
 }

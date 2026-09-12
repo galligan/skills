@@ -1,0 +1,22 @@
+{
+  "author": {
+    "name": "Matt Galligan"
+  },
+  "description": "Reusable skills for working with AI agents.",
+  "interface": {
+    "brandColor": "#B06DFF",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "category": "Productivity",
+    "developerName": "Matt Galligan",
+    "displayName": "Matt Galligan's Skills",
+    "longDescription": "A collection of shareable agent skills by Matt Galligan.",
+    "screenshots": [],
+    "shortDescription": "Reusable skills for working with AI agents."
+  },
+  "license": "MIT",
+  "name": "mg-skills",
+  "version": "0.1.0"
+}

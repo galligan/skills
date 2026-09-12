@@ -1,23 +1,16 @@
 {
-  "name": "skillstash",
-  "version": "0.1.0",
+  "name": "galligan-skills",
+  "private": true,
   "type": "module",
-  "description": "GitHub template repo that turns issues into production-ready agent skills through structured, automated workflows",
-  "workspaces": [
-    "packages/*"
-  ],
+  "license": "MIT",
+  "packageManager": "bun@1.4.0",
   "scripts": {
-    "validate": "bun run scripts/lint/lint-skills.ts",
-    "lint:md": "markdownlint-cli2 --config .markdownlint-cli2.jsonc",
-    "lint:md:fix": "markdownlint-cli2 --config .markdownlint-cli2.jsonc --fix",
-    "labels:setup": "bun run scripts/setup-github-labels.ts",
-    "hooks:install": "bun run scripts/setup-git-hooks.ts",
-    "postinstall": "bun run hooks:install"
+    "skillset": "skillset",
+    "build": "skillset build --yes",
+    "check": "skillset check",
+    "check:ci": "skillset check --ci"
   },
   "devDependencies": {
-    "@types/bun": "latest",
-    "markdownlint": "^0.34.0",
-    "markdownlint-cli": "^0.39.0",
-    "markdownlint-cli2": "^0.14.0"
+    "@skillset/cli": "0.26.1"
   }
 }

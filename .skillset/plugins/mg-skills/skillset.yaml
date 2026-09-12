@@ -1,0 +1,7 @@
+skillset:
+  schema: 1
+  name: mg-skills
+  description: A collection of shareable agent skills by Matt Galligan.
+  listing:
+    display_name: Matt Galligan's Skills
+    summary: Reusable skills for working with AI agents.

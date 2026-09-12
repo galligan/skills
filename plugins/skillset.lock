@@ -1,0 +1,195 @@
+{
+  "buildMode": "updated",
+  "features": {
+    "promptArguments": true
+  },
+  "generatedBy": "skillset@0.1.0",
+  "items": [
+    {
+      "fileModes": {
+        "mg-skills/claude/.claude-plugin/plugin.json": "0644",
+        "mg-skills/claude/LICENSE.txt": "0644"
+      },
+      "files": [
+        "mg-skills/claude/.claude-plugin/plugin.json",
+        "mg-skills/claude/LICENSE.txt"
+      ],
+      "includedSkills": [],
+      "kind": "plugin",
+      "name": "mg-skills",
+      "outputHash": "sha256:50acaf9f88b8812545f866964ea0ea11ac97600c3a92bb1a855fa859df800c8a",
+      "outputPath": "mg-skills/claude/.claude-plugin/plugin.json",
+      "renderInputsHash": "sha256:e2053e36db9cec49c97f6ffa5e32046a70dc1f3e998608147a1598e7e8f9b37a",
+      "skippedSkills": [],
+      "sourceHash": "sha256:ed29b9daa68ff23a914fee07f112d63cd08f763b93600f6bae63acdbb6b9aa11",
+      "sourcePath": ".skillset/plugins/mg-skills",
+      "targetState": "sync",
+      "version": "0.1.0"
+    },
+    {
+      "fileModes": {
+        "mg-skills/codex/.codex-plugin/plugin.json": "0644",
+        "mg-skills/codex/LICENSE.txt": "0644"
+      },
+      "files": [
+        "mg-skills/codex/.codex-plugin/plugin.json",
+        "mg-skills/codex/LICENSE.txt"
+      ],
+      "includedSkills": [],
+      "kind": "plugin",
+      "name": "mg-skills",
+      "outputHash": "sha256:052d947a31a151b31aa86dc1b0e80d8aea264d6ef7a625cabe54ec92fe827ba1",
+      "outputPath": "mg-skills/codex/.codex-plugin/plugin.json",
+      "renderInputsHash": "sha256:e2053e36db9cec49c97f6ffa5e32046a70dc1f3e998608147a1598e7e8f9b37a",
+      "skippedSkills": [],
+      "sourceHash": "sha256:4fa9fd221c195b649741c52e25d03a0115f59d454690de7485b289354b61f900",
+      "sourcePath": ".skillset/plugins/mg-skills",
+      "targetState": "sync",
+      "version": "0.1.0"
+    },
+    {
+      "fileModes": {
+        "mg-skills/cursor/.cursor-plugin/plugin.json": "0644",
+        "mg-skills/cursor/LICENSE.txt": "0644"
+      },
+      "files": [
+        "mg-skills/cursor/.cursor-plugin/plugin.json",
+        "mg-skills/cursor/LICENSE.txt"
+      ],
+      "includedSkills": [],
+      "kind": "plugin",
+      "name": "mg-skills",
+      "outputHash": "sha256:e9ad7766a25787908ea49ccb3a5a3fb18eeb09dbbe5df85d306fa745da6ad828",
+      "outputPath": "mg-skills/cursor/.cursor-plugin/plugin.json",
+      "renderInputsHash": "sha256:e2053e36db9cec49c97f6ffa5e32046a70dc1f3e998608147a1598e7e8f9b37a",
+      "skippedSkills": [],
+      "sourceHash": "sha256:10e929e748d3b93b3e56d1a942b8b9000fa4687e41c6572225c06f043988b3f8",
+      "sourcePath": ".skillset/plugins/mg-skills",
+      "targetState": "sync",
+      "version": "0.1.0"
+    }
+  ],
+  "outputRoot": "plugins",
+  "provenanceHash": "sha256:a9a8698c968b3d3be99faef73f5d3faab82ab6d3628942b525f20d6c8b802b8e",
+  "renderResults": [
+    {
+      "destination": "plugin-manifest",
+      "evidence": [
+        {
+          "kind": "docs",
+          "ref": "docs/reference/features/plugins.md"
+        },
+        {
+          "kind": "provider-schema",
+          "note": "sha256:2a83eaad328540a7850c59cb422d82008e98391d47a1bba386f285c8c6679b14",
+          "ref": "claude-plugin-manifest-schema",
+          "verifiedAt": "2026-06-23"
+        },
+        {
+          "kind": "provider-snapshot",
+          "note": "sha256:c81a4328f9e1cba88b3496ae42181d03692186cefda4abd5d07428e15e835ae4",
+          "ref": "claude-plugin",
+          "verifiedAt": "2026-06-23"
+        }
+      ],
+      "featureId": "plugin-manifests",
+      "outputs": [
+        {
+          "kind": "plugin",
+          "path": "plugins/mg-skills/claude/.claude-plugin/plugin.json"
+        },
+        {
+          "kind": "plugin",
+          "path": "plugins/mg-skills/claude/LICENSE.txt"
+        }
+      ],
+      "schema": "skillset-render-result@1",
+      "sourcePath": ".skillset/plugins/mg-skills",
+      "sourceUnit": "plugin.mg-skills.config:root",
+      "status": "rendered",
+      "target": "claude"
+    },
+    {
+      "destination": "plugin-manifest",
+      "evidence": [
+        {
+          "kind": "docs",
+          "ref": "docs/reference/features/plugins.md"
+        },
+        {
+          "kind": "provider-overlay",
+          "note": "Codex 0.147.0 has no adopted JSON Schema source for plugin manifests; runtime-loader behavior and the separate, stricter plugin-creator handoff preflight are recorded as distinct primary sources for this manual overlay.",
+          "ref": "codex-plugin-manifest-overlay"
+        },
+        {
+          "kind": "provider-snapshot",
+          "note": "sha256:a3f71fd04caea6157453b0cec7a6e6ff1e3ec51ac88a0c96409b9cee8737370b",
+          "ref": "codex-plugin",
+          "verifiedAt": "2026-08-14"
+        }
+      ],
+      "featureId": "plugin-manifests",
+      "outputs": [
+        {
+          "kind": "plugin",
+          "path": "plugins/mg-skills/codex/.codex-plugin/plugin.json"
+        },
+        {
+          "kind": "plugin",
+          "path": "plugins/mg-skills/codex/LICENSE.txt"
+        }
+      ],
+      "schema": "skillset-render-result@1",
+      "sourcePath": ".skillset/plugins/mg-skills",
+      "sourceUnit": "plugin.mg-skills.config:root",
+      "status": "rendered",
+      "target": "codex"
+    },
+    {
+      "destination": "plugin-manifest",
+      "evidence": [
+        {
+          "kind": "docs",
+          "ref": "docs/reference/features/plugins.md"
+        },
+        {
+          "kind": "provider-schema",
+          "note": "sha256:f0b6bf41741bdb523ee0571b42e577deea9eba178691b2843a4b1dafe8947396",
+          "ref": "cursor-plugin-schema",
+          "verifiedAt": "2026-08-14"
+        },
+        {
+          "kind": "provider-snapshot",
+          "note": "sha256:3e1929d4816292e8d1901324d31b4e5cd57857f73217a9951503901e602cfb5b",
+          "ref": "cursor-plugin",
+          "verifiedAt": "2026-08-14"
+        }
+      ],
+      "featureId": "plugin-manifests",
+      "outputs": [
+        {
+          "kind": "plugin",
+          "path": "plugins/mg-skills/cursor/.cursor-plugin/plugin.json"
+        },
+        {
+          "kind": "plugin",
+          "path": "plugins/mg-skills/cursor/LICENSE.txt"
+        }
+      ],
+      "schema": "skillset-render-result@1",
+      "sourcePath": ".skillset/plugins/mg-skills",
+      "sourceUnit": "plugin.mg-skills.config:root",
+      "status": "rendered",
+      "target": "cursor"
+    }
+  ],
+  "schemaVersion": 2,
+  "selectedTargets": [
+    "claude",
+    "codex",
+    "cursor"
+  ],
+  "skillsetMetadata": true,
+  "sourceRoot": ".skillset",
+  "target": "workspace"
+}

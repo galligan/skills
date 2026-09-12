@@ -1,0 +1,30 @@
+name: Skillset CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version-file: .bun-version
+      - run: bun install --frozen-lockfile --ignore-scripts
+      - name: Check source and generated output
+        run: |
+          git rev-parse --verify origin/main
+          if git cat-file -e origin/main:skillset.yaml 2>/dev/null; then
+            bun run check:ci --since origin/main
+          else
+            # The initialization PR has no Skillset source on its base branch.
+            bun run check
+          fi
