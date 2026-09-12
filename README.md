@@ -1,16 +1,14 @@
 # mg skills
 
-A few skills for getting better work out of agents—and better words out of them, too. These grew out of how I work with Claude and Codex. Take the ones that help.
+A few skills for getting better work out of agents and better words out of them, too. These grew out of how I work with Claude and Codex. Take the ones that help.
 
 ## What's in here 🔎
 
-- `minority-report` — A second opinion on your agent instructions. Finds conflicts, unnecessary work, and rules with unintended consequences, then proposes changes with evidence. [Read the skill](skills/minority-report/SKILL.md). Try: “Use minority-report to audit this repo's agent instructions.”
-- `agentish-styleguide` — A language guide for agents. Helps you write skills, prompts, agent definitions, and tool descriptions with clear behavior and boundaries. [Read the skill](skills/agentish-styleguide/SKILL.md). Try: “Use agentish-styleguide to help me write this skill.”
-- `people-words` — Less mannered prose. More substance. Keeps your register and the technical detail, without making everything sound like a press release. [Read the skill](skills/people-words/SKILL.md). Try: “Use people-words and take another pass at that.”
+- `minority-report`: Audit agent instructions for conflicts, unnecessary work, and unintended consequences.
+- `agentish-styleguide`: Write skills, prompts, and other agent instructions with clear behavior and boundaries.
+- `people-words`: Drop mannered prose while keeping the substance, technical detail, and your voice.
 
-`minority-report` produces **the agent's minority report**. Yes, that's the reference. It can review one file, a skill, a repo, a specific diff, or a broader set of projects. Run it without a scope and it'll help you choose. A clean report is fine; dissent isn't a quota.
-
-`agentish-styleguide` is for instructions you give agents. `people-words` is for what they write back to people: replies, docs, and other prose. Use it from the start or midstream when the writing gets a little much.
+[Meet the skills](docs/skills.md) for why each one exists, when to use it, and what to expect.
 
 ## Install a skill 📦
 
