@@ -1,18 +1,16 @@
-# Matt Galligan's Skills
+# mg skills
 
 A few skills for getting better work out of agents—and better words out of them, too. These grew out of how I work with Claude and Codex. Take the ones that help.
 
 ## What's in here 🔎
 
-| Skill | What it's for | Try asking |
-| --- | --- | --- |
-| [Minority Report](skills/minority-report/SKILL.md) | A second opinion on your agent instructions. Finds conflicts, unnecessary work, and rules with unintended consequences, then proposes changes with evidence. | “Use Minority Report to audit this repo's agent instructions.” |
-| [Agentish](skills/agentish-styleguide/SKILL.md) | A language guide for agents. Helps you write skills, prompts, agent definitions, and tool descriptions with clear behavior and boundaries. | “Use Agentish to help me write this skill.” |
-| [People Words](skills/people-words/SKILL.md) | Less mannered prose. More substance. Keeps your register and the technical detail, without making everything sound like a press release. | “Use People Words and take another pass at that.” |
+- `minority-report` — A second opinion on your agent instructions. Finds conflicts, unnecessary work, and rules with unintended consequences, then proposes changes with evidence. [Read the skill](skills/minority-report/SKILL.md). Try: “Use minority-report to audit this repo's agent instructions.”
+- `agentish-styleguide` — A language guide for agents. Helps you write skills, prompts, agent definitions, and tool descriptions with clear behavior and boundaries. [Read the skill](skills/agentish-styleguide/SKILL.md). Try: “Use agentish-styleguide to help me write this skill.”
+- `people-words` — Less mannered prose. More substance. Keeps your register and the technical detail, without making everything sound like a press release. [Read the skill](skills/people-words/SKILL.md). Try: “Use people-words and take another pass at that.”
 
-Minority Report produces **the agent's minority report**. Yes, that's the reference. It can review one file, a skill, a repo, a specific diff, or a broader set of projects. Run it without a scope and it'll help you choose. A clean report is fine; dissent isn't a quota.
+`minority-report` produces **the agent's minority report**. Yes, that's the reference. It can review one file, a skill, a repo, a specific diff, or a broader set of projects. Run it without a scope and it'll help you choose. A clean report is fine; dissent isn't a quota.
 
-Agentish is for instructions you give agents. People Words is for what they write back to people: replies, docs, and other prose. Use it from the start or midstream when the writing gets a little much.
+`agentish-styleguide` is for instructions you give agents. `people-words` is for what they write back to people: replies, docs, and other prose. Use it from the start or midstream when the writing gets a little much.
 
 ## Install a skill 📦
 
@@ -20,7 +18,7 @@ Each directory under `skills/` is a complete bundle. You don't need Bun or Skill
 
 > These skills are currently in [PR #1](https://github.com/galligan/skills/pull/1). The examples below use `main` and apply once it merges. To try the preview, give your agent the PR link and ask it to install from that branch instead.
 
-### Ask Codex
+### Codex
 
 Paste this into a local Codex session:
 
@@ -30,40 +28,33 @@ $skill-installer Install people-words from https://github.com/galligan/skills/tr
 
 Swap `people-words` for `minority-report` or `agentish-styleguide` throughout the prompt to choose another skill. Codex's [built-in installer](https://learn.chatgpt.com/docs/build-skills#install-curated-skills-for-local-use) accepts skills from other GitHub repositories. If the new skill doesn't appear, restart Codex.
 
-### Ask Claude Code
+### ChatGPT desktop
+
+Open a local Codex task in the desktop app and paste:
+
+```text
+Use Skill Installer to install people-words from
+https://github.com/galligan/skills/tree/main/skills/people-words
+```
+
+You can find **Skill Installer** in the app's Skills list. OpenAI supports [standalone skills in the desktop app](https://learn.chatgpt.com/docs/build-skills). For ChatGPT on the web or mobile, installation goes through [plugins](https://learn.chatgpt.com/docs/plugins); this collection isn't packaged as a plugin yet.
+
+### Claude Code
 
 Paste this into Claude Code:
 
 ```text
-Install the people-words skill from https://github.com/galligan/skills
-for my personal use in Claude Code. Copy the complete skills/people-words
-directory from main into ~/.claude/skills/people-words, including all
-supporting files. If it's already installed, show me the differences
+Install people-words from
+https://github.com/galligan/skills/tree/main/skills/people-words
+for my personal use in Claude Code. Download the complete skill directory,
+including its supporting files, into ~/.claude/skills/people-words without
+cloning the repo. If it's already installed, show me the differences
 before replacing it. Confirm where it landed and how to invoke it.
 ```
 
-Then try `/people-words`. Swap the skill name throughout the prompt to install either of the others. For a project-only install, use `.claude/skills/people-words` inside that project instead. These are [Claude Code's native skill locations](https://code.claude.com/docs/en/skills#where-skills-live).
+Then try `/people-words`. Swap the skill name throughout the prompt to install either of the others. For a project-only install, use `.claude/skills/people-words` inside that project instead.
 
-### Do it yourself
-
-Clone the repo, then copy the skill you want into your agent's skills folder. For example, to install People Words for your personal use in Claude Code:
-
-```bash
-git clone https://github.com/galligan/skills.git galligan-skills
-mkdir -p ~/.claude/skills
-cp -R galligan-skills/skills/people-words ~/.claude/skills/
-```
-
-Use the copy command for a fresh install; if the destination already exists, compare the two before replacing it.
-
-| Agent | Personal skills | Project skills |
-| --- | --- | --- |
-| Claude Code | `~/.claude/skills/` | `.claude/skills/` |
-| Codex | `~/.agents/skills/` | `.agents/skills/` |
-
-Copy the **whole skill directory**, including its references and scripts. The personal paths apply across projects on that machine; project paths are relative to the repo where you'll use the skill. See the native [Claude Code](https://code.claude.com/docs/en/skills#where-skills-live) and [Codex](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills) docs for discovery details.
-
-**Using ChatGPT?** The Codex instructions above are for local Codex sessions, including in the desktop app. They don't install a skill into ChatGPT on the web or your phone. ChatGPT's shared install route uses [plugins](https://learn.chatgpt.com/docs/skills-and-plugins); this repo currently ships individual skill folders.
+Claude Code loads standalone skills from these [native skill folders](https://code.claude.com/docs/en/skills#where-skills-live). Its [`/plugin install` command](https://code.claude.com/docs/en/discover-plugins#install-plugins) is for packaged plugins; the prompt above installs the standalone bundle directly.
 
 ### Prefer `npx skills`?
 
@@ -78,7 +69,7 @@ Replace `people-words` with `minority-report` or `agentish-styleguide` as needed
 
 ### A note on requirements
 
-People Words and Agentish need no external tools. Minority Report uses Python 3.10+ for discovery and `jsonschema` for validating and rendering reports. Its [skill instructions](skills/minority-report/SKILL.md) cover setup; copying the folder doesn't install Python dependencies.
+`people-words` and `agentish-styleguide` need no external tools. `minority-report` uses Python 3.10+ for discovery and `jsonschema` for validating and rendering reports. Its [skill instructions](skills/minority-report/SKILL.md) cover setup; installing the skill doesn't install Python dependencies.
 
 ## How these are made
 
@@ -90,9 +81,9 @@ Three references keep the instruction work grounded:
 - [Instruction Placement](.skillset/shared/references/instruction-placement.md): where should it live?
 - [Agentish](.skillset/shared/references/agentish.md): how do we make the intended behavior clear?
 
-Agentish uses these for writing; Minority Report uses them for review. Each gets its own bundled references, so you can install either on its own. People Words keeps its guidance separate and focused on expression.
+`agentish-styleguide` uses these for writing; `minority-report` uses them for review. Each gets its own bundled references, so you can install either on its own. `people-words` keeps its guidance separate and focused on expression.
 
-Minority Report also draws on [OpenAI's Astra guidance](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra) and [Anthropic's Claude API prompt audit](https://github.com/anthropics/skills/tree/main/skills/claude-api), with profiles for GPT-6 Astra and Claude Fable. Those profiles load when relevant; a model name or keyword match isn't evidence of a problem.
+`minority-report` also draws on [OpenAI's Astra guidance](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra) and [Anthropic's Claude API prompt audit](https://github.com/anthropics/skills/tree/main/skills/claude-api), with profiles for GPT-6 Astra and Claude Fable. Those profiles load when relevant; a model name or keyword match isn't evidence of a problem.
 
 We use the guidance here, too. Our generated `AGENTS.md` and `.claude/CLAUDE.md` route substantive instruction changes through a scoped self-review. You can read the [review notes](docs/reviews/2026-09-12-instruction-review.md) and [follow-up corrections](docs/reviews/2026-09-12-scope-and-pr-review.md), including what the first pass missed.
 
