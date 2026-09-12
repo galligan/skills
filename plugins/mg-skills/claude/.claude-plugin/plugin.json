@@ -1,9 +1,0 @@
-{
-  "author": {
-    "name": "Matt Galligan"
-  },
-  "description": "Reusable skills for working with AI agents.",
-  "license": "MIT",
-  "name": "mg-skills",
-  "version": "0.1.0"
-}

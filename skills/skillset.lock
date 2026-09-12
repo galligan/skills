@@ -1,0 +1,176 @@
+{
+  "buildMode": "updated",
+  "features": {
+    "promptArguments": true
+  },
+  "generatedBy": "skillset@0.1.0",
+  "items": [
+    {
+      "fileModes": {
+        "audit-agent-instructions/LICENSE.txt": "0644",
+        "audit-agent-instructions/SKILL.md": "0644",
+        "audit-agent-instructions/agents/openai.yaml": "0644",
+        "audit-agent-instructions/references/consolidated.schema.json": "0644",
+        "audit-agent-instructions/references/discovery.md": "0644",
+        "audit-agent-instructions/references/output.md": "0644",
+        "audit-agent-instructions/references/review-rubric.md": "0644",
+        "audit-agent-instructions/references/review.schema.json": "0644",
+        "audit-agent-instructions/requirements.txt": "0644",
+        "audit-agent-instructions/scripts/consolidate.py": "0644",
+        "audit-agent-instructions/scripts/diffcheck.py": "0644",
+        "audit-agent-instructions/scripts/discover.py": "0644",
+        "audit-agent-instructions/scripts/ownership.py": "0644",
+        "audit-agent-instructions/scripts/provenance.py": "0644",
+        "audit-agent-instructions/scripts/render.py": "0644",
+        "audit-agent-instructions/scripts/validate.py": "0644",
+        "audit-agent-instructions/tests/test_discovery.py": "0644",
+        "audit-agent-instructions/tests/test_ownership.py": "0644",
+        "audit-agent-instructions/tests/test_reports.py": "0644"
+      },
+      "files": [
+        "audit-agent-instructions/LICENSE.txt",
+        "audit-agent-instructions/SKILL.md",
+        "audit-agent-instructions/agents/openai.yaml",
+        "audit-agent-instructions/references/consolidated.schema.json",
+        "audit-agent-instructions/references/discovery.md",
+        "audit-agent-instructions/references/output.md",
+        "audit-agent-instructions/references/review-rubric.md",
+        "audit-agent-instructions/references/review.schema.json",
+        "audit-agent-instructions/requirements.txt",
+        "audit-agent-instructions/scripts/consolidate.py",
+        "audit-agent-instructions/scripts/diffcheck.py",
+        "audit-agent-instructions/scripts/discover.py",
+        "audit-agent-instructions/scripts/ownership.py",
+        "audit-agent-instructions/scripts/provenance.py",
+        "audit-agent-instructions/scripts/render.py",
+        "audit-agent-instructions/scripts/validate.py",
+        "audit-agent-instructions/tests/test_discovery.py",
+        "audit-agent-instructions/tests/test_ownership.py",
+        "audit-agent-instructions/tests/test_reports.py"
+      ],
+      "kind": "standalone-skill",
+      "name": "audit-agent-instructions",
+      "outputHash": "sha256:a1a02e686cca326746b3f365bc502d50293a317e7cb91c46f892eed56622481a",
+      "outputPath": "audit-agent-instructions/SKILL.md",
+      "sourceHash": "sha256:095a6226ea3861523d18861e47964d78a1281a3f4ae9e0b3bc91cd8d1a41c413",
+      "sourcePath": ".skillset/skills/audit-agent-instructions/SKILL.md",
+      "version": "0.1.0"
+    }
+  ],
+  "outputRoot": "skills",
+  "provenanceHash": "sha256:62b83fecfa8c1351ef7180b9627d55ee8fc1d1de490e9361862164cf2b9618c7",
+  "renderResults": [
+    {
+      "destination": "skill",
+      "evidence": [
+        {
+          "kind": "docs",
+          "ref": "docs/reference/features/skills.md"
+        },
+        {
+          "kind": "provider-schema",
+          "note": "sha256:eebe9ca02eec5263cd23ff3945b3d3301e0b57861af2d53c76bd620b83ae355b",
+          "ref": "codex-skill-metadata-schema",
+          "verifiedAt": "2026-06-23"
+        },
+        {
+          "kind": "provider-snapshot",
+          "note": "sha256:7e36cc613d0443fcae2963e276a7994d2b321b04471ae2a8941e290ed2654050",
+          "ref": "codex-skill",
+          "verifiedAt": "2026-06-23"
+        }
+      ],
+      "featureId": "standalone-skills",
+      "outputs": [
+        {
+          "kind": "standalone-skill",
+          "path": "skills/audit-agent-instructions/LICENSE.txt"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/audit-agent-instructions/SKILL.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/audit-agent-instructions/agents/openai.yaml"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/audit-agent-instructions/references/consolidated.schema.json"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/audit-agent-instructions/references/discovery.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/audit-agent-instructions/references/output.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/audit-agent-instructions/references/review-rubric.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/audit-agent-instructions/references/review.schema.json"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/audit-agent-instructions/requirements.txt"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/audit-agent-instructions/scripts/consolidate.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/audit-agent-instructions/scripts/diffcheck.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/audit-agent-instructions/scripts/discover.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/audit-agent-instructions/scripts/ownership.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/audit-agent-instructions/scripts/provenance.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/audit-agent-instructions/scripts/render.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/audit-agent-instructions/scripts/validate.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/audit-agent-instructions/tests/test_discovery.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/audit-agent-instructions/tests/test_ownership.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/audit-agent-instructions/tests/test_reports.py"
+        }
+      ],
+      "schema": "skillset-render-result@1",
+      "sourcePath": ".skillset/skills/audit-agent-instructions/SKILL.md",
+      "sourceUnit": "skill:audit-agent-instructions",
+      "status": "rendered",
+      "target": "codex"
+    }
+  ],
+  "schemaVersion": 2,
+  "selectedTargets": [
+    "codex"
+  ],
+  "skillsetMetadata": true,
+  "sourceRoot": ".skillset",
+  "target": "workspace"
+}

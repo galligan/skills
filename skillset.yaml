@@ -8,14 +8,8 @@ skillset:
   license: MIT
   repository: https://github.com/galligan/skills
 compile:
-  targets:
-    - claude
-    - codex
-    - cursor
-marketplaces:
-  galligan:
-    title: Matt Galligan
-    description: Shareable agent skills by Matt Galligan.
-    targets: [claude, cursor]
-    plugins:
-      - plugin: mg-skills
+  targets: [codex]
+
+codex:
+  skills:
+    path: skills

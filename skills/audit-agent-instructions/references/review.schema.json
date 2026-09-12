@@ -1,0 +1,262 @@
+{
+  "type": "object",
+  "required": [
+    "schema_version",
+    "reviewer",
+    "coverage",
+    "findings",
+    "unresolved"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "reviewer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "coverage": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/coverage"
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/finding"
+      }
+    },
+    "unresolved": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "required": [
+        "file",
+        "line_start",
+        "line_end",
+        "quote"
+      ],
+      "properties": {
+        "file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "line_start": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "line_end": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "quote": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_url": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "finding": {
+      "type": "object",
+      "required": [
+        "id",
+        "project",
+        "title",
+        "category",
+        "severity",
+        "severity_reason",
+        "improvement",
+        "reach",
+        "confidence",
+        "confidence_reason",
+        "evidence",
+        "related_evidence",
+        "impact",
+        "smallest_change",
+        "diff",
+        "decision_required",
+        "decision_reason",
+        "related_findings"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "project": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "broad_trigger",
+            "unconditional_read",
+            "redundant_verification",
+            "conflict",
+            "premature_confirmation",
+            "overprescribed_workflow",
+            "stale_reference"
+          ]
+        },
+        "severity": {
+          "type": "string",
+          "enum": [
+            "critical",
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "severity_reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "improvement": {
+          "type": "object",
+          "required": [
+            "level",
+            "areas",
+            "reason"
+          ],
+          "properties": {
+            "level": {
+              "type": "string",
+              "enum": [
+                "high",
+                "medium",
+                "low"
+              ]
+            },
+            "areas": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "correctness",
+                  "completion",
+                  "context",
+                  "tool_usage",
+                  "maintainability"
+                ]
+              }
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        },
+        "reach": {
+          "type": "string",
+          "enum": [
+            "pervasive",
+            "common",
+            "occasional"
+          ]
+        },
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "confidence_reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence": {
+          "$ref": "#/$defs/evidence"
+        },
+        "related_evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        },
+        "impact": {
+          "type": "string",
+          "minLength": 1
+        },
+        "smallest_change": {
+          "type": "string",
+          "minLength": 1
+        },
+        "diff": {
+          "type": "string",
+          "minLength": 1
+        },
+        "decision_required": {
+          "type": "boolean"
+        },
+        "decision_reason": {
+          "type": "string"
+        },
+        "related_findings": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "coverage": {
+      "type": "object",
+      "required": [
+        "path",
+        "status",
+        "reason"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "reviewed",
+            "duplicate",
+            "context_only",
+            "missing",
+            "blocked"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canonical": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
