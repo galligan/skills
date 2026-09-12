@@ -27,6 +27,8 @@ bun run check
 bun run skillset check --only outputs
 ```
 
+CI runs `bun run check` for source and generated-output validation, then `bun run check:changes --since origin/main` for skill change coverage. Released Skillset 0.26.1 also applies compiler-package Changesets rules in `check --ci`; those npm release rules do not apply to this skills-only repository.
+
 Skillset owns the generated files through `skills/skillset.lock`. Its checks detect edits to generated files, while `skillset diff` previews changes from canonical source. Do not hand-edit or remove the lock to silence drift.
 
 The September 12, 2026 migration verified all 19 source files, including the full MIT license text, in the generated skill. Seventeen payload files were byte-identical; `SKILL.md` retained its body and `agents/openai.yaml` retained its values, with generated metadata and YAML normalization. Separate disposable fixtures verified generated-output and canonical-source drift detection. The repository has no parallel provider or plugin output directories.

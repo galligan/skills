@@ -8,7 +8,7 @@
     "skillset": "skillset",
     "build": "skillset build --yes",
     "check": "skillset check",
-    "check:ci": "skillset check --ci"
+    "check:changes": "skillset change check"
   },
   "devDependencies": {
     "@skillset/cli": "0.26.1"
