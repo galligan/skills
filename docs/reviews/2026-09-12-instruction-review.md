@@ -24,13 +24,13 @@ The supplied review examined commit `a973ce1`, with later edits used only for co
 
 ## How the provider guidance is adapted
 
-Minority Report retains its evidence, coverage, ranking, proposed-diff, and decision requirements. Conditional model profiles add target selection, provenance, tool-contract checks, relevant request-code inspection, and behavioral comparisons for contested removals. Unknown model evidence remains a disclosed limitation.
+Redliner retains its evidence, coverage, ranking, proposed-diff, and decision requirements. Conditional model profiles add target selection, provenance, tool-contract checks, relevant request-code inspection, and behavioral comparisons for contested removals. Unknown model evidence remains a disclosed limitation.
 
 The review does not adopt blanket deletion of prohibitions, working duplicates, useful examples, or required checks. It does not impose minimum description lengths or fixed model-call counts. The user's People Words guidance remains separate from Agentish's controlled instruction language.
 
-## Our own Minority Report
+## Our own Redliner review
 
-An independent reviewer applied Minority Report to the current skill sources and explicitly inventoried shared references. The pre-fix review accounted for 17 files: 15 reviewed instruction surfaces and two schemas checked as contracts. It found two substantive conflicts, both addressed:
+An independent reviewer applied Redliner to the current skill sources and explicitly inventoried shared references. The pre-fix review accounted for 17 files: 15 reviewed instruction surfaces and two schemas checked as contracts. It found two substantive conflicts, both addressed:
 
 | Finding | Correction |
 | --- | --- |

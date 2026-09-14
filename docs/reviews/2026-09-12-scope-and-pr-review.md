@@ -4,7 +4,7 @@ Follow-up to [the initial self-review](2026-09-12-instruction-review.md). The ea
 
 ## Scope behavior
 
-Minority Report now distinguishes named targets from supporting context. Explicit file, skill, repository, PR, or change-set requests establish scope without another confirmation. A bare invocation uses lightweight directory and Git context to recommend a bounded scope, then asks through the harness's input tool or ordinary conversation and waits. Home or scratch directories never imply a recursive sweep. Change-focused reviews record their comparison and distinguish uncommitted work from branch commits.
+Redliner distinguishes named targets from supporting context. Explicit file, skill, repository, PR, or change-set requests establish scope without another confirmation. A bare invocation uses lightweight directory and Git context to recommend a bounded scope, then asks through the harness's input tool or ordinary conversation and waits. Home or scratch directories never imply a recursive sweep. Change-focused reviews record their comparison and distinguish uncommitted work from branch commits.
 
 Supporting files can explain a finding but do not become patch targets without an expanded user scope. Their coverage is marked `context_only`. The scope guide also explains non-interactive runs: a missing scope is reported as required, never inferred from a timeout.
 
@@ -27,7 +27,7 @@ The [Codex P1 thread](https://github.com/galligan/skills/pull/1#discussion_r3997
 
 ## Focused verification
 
-An independent scoped Minority Report checked the changed entrypoints, People Words policy boundary, and repository opt-in. It sharpened one precedence rule: an explicit PR or exact comparison takes precedence over incidental dirty working-tree state. The follow-up confirmed unambiguous paths for bare repository, bare skill directory, home/scratch directory, and explicit PR requests. No remaining finding was identified in that focused check. No live question UI or cross-model behavioral evaluation was run.
+An independent scoped Redliner review checked the changed entrypoints, People Words policy boundary, and repository opt-in. It sharpened one precedence rule: an explicit PR or exact comparison takes precedence over incidental dirty working-tree state. The follow-up confirmed unambiguous paths for bare repository, bare skill directory, home/scratch directory, and explicit PR requests. No remaining finding was identified in that focused check. No live question UI or cross-model behavioral evaluation was run.
 
 All 55 existing Python tests pass. Source/output validation and repeat-build checks pass, all 31 local bundle links resolve in isolated copies, and the release preview verifies the intended minor version without scaffold releases.
 

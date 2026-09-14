@@ -4,7 +4,7 @@ Explicit files, a skill, a repository, a PR, or a change set establish scope. Do
 
 ## Bare invocation
 
-If the user invokes Minority Report without a scope, inspect only enough directory and repository metadata to offer a bounded recommendation before inventorying instruction bodies. Use the harness's question or user-input tool when available; otherwise ask one concise question in conversation. Wait for the answer. A highlighted recommendation, timeout, or unavailable question tool is not an answer.
+If the user invokes Redliner without a scope, inspect only enough directory and repository metadata to offer a bounded recommendation before inventorying instruction bodies. Use the harness's question or user-input tool when available; otherwise ask one concise question in conversation. Wait for the answer. A highlighted recommendation, timeout, or unavailable question tool is not an answer.
 
 - Inside an individual skill, recommend that skill.
 - Elsewhere in a repository, recommend that repository's instruction sources.

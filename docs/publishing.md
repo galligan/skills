@@ -32,13 +32,13 @@ bun run skillset check --only outputs
 
 CI runs `bun run check` for source and generated-output validation, then `bun run check:changes --since origin/main` for skill change coverage. Released Skillset 0.26.1 also applies compiler-package Changesets rules in `check --ci`; those npm release rules do not apply to this skills-only repository. The upstream fix is tracked in [SET-535](https://linear.app/outfitter/issue/SET-535). Once a released version fixes downstream scoping, verify it here and restore `check --ci` if it preserves the same source, output, and change-evidence coverage.
 
-Skillset identifies source units by selector. Renaming a skill is a removal plus an addition: record both selectors and commit removal of the old generated directory together with the new source, output, and lock. Refresh pending change evidence after source edits, then check against the PR base. For Minority Report, the rename record covers `skill:audit-agent-instructions` and `skill:minority-report`.
+Skillset identifies source units by selector. Renaming a skill is a removal plus an addition: record both selectors and commit removal of the old generated directory together with the new source, output, and lock. Refresh pending change evidence after source edits, then check against the PR base. The Redliner rename covers `skill:minority-report` and `skill:redliner`; the earlier `audit-agent-instructions` rename remains in the ledger as history.
 
-The pre-release rename uses a minor bump. The original major record and already-landed scaffold record are ignored through Skillset's CLI and retained as audit history. The release preview excludes scaffold scopes and plans Minority Report at `0.2.0`; this preview does not apply or publish a release.
+Pre-release renames use a minor bump. Ignored records remain in the ledger as audit history. A release preview does not apply or publish a release.
 
 Skillset owns the generated files through `skills/skillset.lock`. Its checks detect edits to generated files, while `skillset diff` previews changes from canonical source. Do not hand-edit or remove the lock to silence drift.
 
-The generated Minority Report bundle includes the complete skill source and its declared shared references. Its model-review guide and Astra/Fable profiles load only when relevant. Skillset copies the shared references into the installed skill, rewrites shared-resource links in `SKILL.md` to bundle-relative links, and tracks the resource content in `skills/skillset.lock`. Put `shared:` links in `SKILL.md`; version 0.26.1 does not rewrite those aliases inside skill-local supporting Markdown. No private repository access is needed to use them.
+The generated Redliner bundle includes the complete skill source and its declared shared references. Its model-review guide and Astra/Fable profiles load only when relevant. Skillset copies the shared references into the installed skill, rewrites shared-resource links in `SKILL.md` to bundle-relative links, and tracks the resource content in `skills/skillset.lock`. Put `shared:` links in `SKILL.md`; version 0.26.1 does not rewrite those aliases inside skill-local supporting Markdown. No private repository access is needed to use them.
 
 Agentish contains its entrypoint, OpenAI metadata, full license, and the same three shared references: Instruction Selection, Instruction Placement, and Agentish. People Words contains only its entrypoint, OpenAI metadata, and full license. Neither new skill requires external tools or services for its guidance; project-specific editing and factual verification use available tools and sources.
 
@@ -54,7 +54,7 @@ Current [`skills@1.5.26`](https://github.com/vercel-labs/skills/blob/v1.5.26/src
 
 Once that blocker is resolved, the upgrade still requires a one-time generated-state rebuild because the checked-in locks use schema version 2. Preserve `skillset.yaml`, `.skillset/`, the change records, and every user-authored file. Before rebuilding, classify the paths recorded by the old locks, move only confirmed generated files to a recoverable backup outside the repository, and inspect the unconfirmed 0.27 build plan. A pre-v3 lock explains why the rebuild is needed but does not authorize cleanup.
 
-After the confirmed rebuild, expect schema-version-3 locks to record standards ownership and provider consumers. Run `check --only outputs`, `status --json`, `diff`, the Minority Report tests, and a disposable `npx skills` list, install, and update before accepting the result. Keep the current split CI commands until a published release has been tested here with `check --ci`.
+After the confirmed rebuild, expect schema-version-3 locks to record standards ownership and provider consumers. Run `check --only outputs`, `status --json`, `diff`, the Redliner tests, and a disposable `npx skills` list, install, and update before accepting the result. Keep the current split CI commands until a published release has been tested here with `check --ci`.
 
 ## Generated repository instructions
 
@@ -68,13 +68,13 @@ The shared body uses explicit repository-root-relative code paths. Destination-a
 
 Changing the partial requires a build and source/output checks. For substantive instruction changes, apply the scoped self-review described in the generated guidance. Document unresolved model-evaluation limits rather than claiming prose checks prove model behavior.
 
-## Minority Report runtime and tests
+## Redliner runtime and tests
 
 Discovery requires Python 3.10+. Validation, consolidation, rendering, and tests also require `jsonschema`, declared in the skill's `requirements.txt`. Install dependencies in an isolated environment outside the skill source directory. If uv is available:
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 uv run --with jsonschema python -m unittest discover \
-  -s .skillset/skills/minority-report/tests
+  -s .skillset/skills/redliner/tests
 ```
 
 The compiler copies sibling files, including runtime debris if it exists. Keep `__pycache__`, `.pyc`, and virtual environments out of source skill directories. Tests above disable bytecode generation.
@@ -84,7 +84,7 @@ The compiler copies sibling files, including runtime debris if it exists. Keep `
 After the source and generated collection are published, users can select a skill with:
 
 ```bash
-npx skills add galligan/skills --skill minority-report
+npx skills@latest add galligan/skills --skill redliner
 ```
 
 This installs an individual skill. It does not install Python dependencies or supply external tools, credentials, plugin services, or permission to perform the skill's actions. Requirements are documented inside each skill.

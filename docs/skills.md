@@ -2,13 +2,13 @@
 
 These skills cover three parts of working with agents: reviewing their instructions, writing those instructions, and improving what they write for people. Each can be installed on its own. You can start with whichever problem is in front of you.
 
-[Installation instructions](../README.md#install-a-skill-)
+[Installation instructions](../README.md#installation-)
 
-## minority-report
+## redliner
 
 Agent instructions tend to accumulate. A workaround helps once, so it becomes a rule. Another file adds an exception. Eventually, an agent is reading four documents before fixing a typo, or asking permission for something you already asked it to do.
 
-`minority-report` exists to give those instructions a second opinion. It follows the relevant guidance, checks how the pieces interact, and produces **the agent's minority report**: findings backed by specific passages, an explanation of the likely consequence, and proposed changes. The name leaves room for dissent. The review still has to earn it.
+`redliner` gives those instructions a second pair of eyes. It follows the relevant guidance, checks how the pieces interact, and produces an instruction redline: findings backed by specific passages, an explanation of the likely consequence, and proposed changes. The review still has to earn every mark it makes.
 
 Use it when:
 
@@ -19,13 +19,13 @@ Use it when:
 
 You can name a file, a skill, a repository, a PR, or a set of instruction roots. For example:
 
-> Use minority-report to review the instruction changes in this PR. Check them against the repo guidance and flag any conflicts introduced by the diff.
+> Use redliner to review the instruction changes in this PR. Check them against the repo guidance and flag any conflicts introduced by the diff.
 
 A bare invocation asks which audit you want, using the current directory to suggest a scope. If you've already supplied the scope, it proceeds. A repo review and a review of recent changes can produce very different work, so that choice matters.
 
 The report includes ranked findings, source excerpts, and proposed diffs, with a machine-readable `findings.json`. It also records missing context and uncertainty. Applying the changes is a separate task, and a report with no findings is a valid result. Long files, strong wording, and safety checks aren't automatically problems.
 
-The review criteria draw on OpenAI and Anthropic guidance, with profiles for GPT-6 Astra and Claude Fable when the target makes them relevant. They're starting points for investigation, not proof that a particular instruction is wrong. The [skill](../skills/minority-report/SKILL.md) links to those sources and documents the Python requirements.
+The review criteria draw on OpenAI and Anthropic guidance, with profiles for GPT-6 Astra and Claude Fable when the target makes them relevant. They're starting points for investigation, not proof that a particular instruction is wrong. The [skill](../skills/redliner/SKILL.md) links to those sources and documents the Python requirements.
 
 ## agentish-styleguide
 
@@ -47,7 +47,7 @@ The result is a draft or an edit, depending on what you asked for. For consequen
 
 Agentish applies to passages that direct agents, including instructions in public files. It doesn't impose its vocabulary on ordinary docs or conversation. Requirement terms such as `MUST` can be useful when their distinction matters, but every sentence doesn't need one.
 
-Use [the skill](../skills/agentish-styleguide/SKILL.md) for instruction authoring. If you want a systematic review of how existing instructions interact, that's `minority-report`.
+Use [the skill](../skills/agentish-styleguide/SKILL.md) for instruction authoring. If you want a systematic review of how existing instructions interact, that's `redliner`.
 
 ## people-words
 
