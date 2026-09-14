@@ -1,0 +1,4 @@
+interface:
+  display_name: "Redliner"
+  short_description: "Audit agent instructions for conflicts and unintended consequences"
+  default_prompt: "Use $redliner to produce an instruction redline for this project, with evidence, ranked findings, proposed changes, consolidated JSON, and a Markdown report."

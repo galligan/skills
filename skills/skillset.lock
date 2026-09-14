@@ -32,71 +32,6 @@
     },
     {
       "fileModes": {
-        "minority-report/LICENSE.txt": "0644",
-        "minority-report/SKILL.md": "0644",
-        "minority-report/agents/openai.yaml": "0644",
-        "minority-report/references/agentish.md": "0644",
-        "minority-report/references/claude-fable.md": "0644",
-        "minority-report/references/consolidated.schema.json": "0644",
-        "minority-report/references/discovery.md": "0644",
-        "minority-report/references/gpt-6-astra.md": "0644",
-        "minority-report/references/instruction-placement.md": "0644",
-        "minority-report/references/instruction-selection.md": "0644",
-        "minority-report/references/model-review.md": "0644",
-        "minority-report/references/output.md": "0644",
-        "minority-report/references/review-rubric.md": "0644",
-        "minority-report/references/review.schema.json": "0644",
-        "minority-report/references/scope-selection.md": "0644",
-        "minority-report/requirements.txt": "0644",
-        "minority-report/scripts/consolidate.py": "0644",
-        "minority-report/scripts/diffcheck.py": "0644",
-        "minority-report/scripts/discover.py": "0644",
-        "minority-report/scripts/ownership.py": "0644",
-        "minority-report/scripts/provenance.py": "0644",
-        "minority-report/scripts/render.py": "0644",
-        "minority-report/scripts/validate.py": "0644",
-        "minority-report/tests/test_discovery.py": "0644",
-        "minority-report/tests/test_ownership.py": "0644",
-        "minority-report/tests/test_reports.py": "0644"
-      },
-      "files": [
-        "minority-report/LICENSE.txt",
-        "minority-report/SKILL.md",
-        "minority-report/agents/openai.yaml",
-        "minority-report/references/agentish.md",
-        "minority-report/references/claude-fable.md",
-        "minority-report/references/consolidated.schema.json",
-        "minority-report/references/discovery.md",
-        "minority-report/references/gpt-6-astra.md",
-        "minority-report/references/instruction-placement.md",
-        "minority-report/references/instruction-selection.md",
-        "minority-report/references/model-review.md",
-        "minority-report/references/output.md",
-        "minority-report/references/review-rubric.md",
-        "minority-report/references/review.schema.json",
-        "minority-report/references/scope-selection.md",
-        "minority-report/requirements.txt",
-        "minority-report/scripts/consolidate.py",
-        "minority-report/scripts/diffcheck.py",
-        "minority-report/scripts/discover.py",
-        "minority-report/scripts/ownership.py",
-        "minority-report/scripts/provenance.py",
-        "minority-report/scripts/render.py",
-        "minority-report/scripts/validate.py",
-        "minority-report/tests/test_discovery.py",
-        "minority-report/tests/test_ownership.py",
-        "minority-report/tests/test_reports.py"
-      ],
-      "kind": "standalone-skill",
-      "name": "minority-report",
-      "outputHash": "sha256:6152d64c2cff4653bbb65330028a8f3b66c2e3ed4c9fe226c02644bdf159cb13",
-      "outputPath": "minority-report/SKILL.md",
-      "sourceHash": "sha256:9473ccc4f3bef8030edfa2c555c23dc8b2045c36c0d1cf211cf898cac0625093",
-      "sourcePath": ".skillset/skills/minority-report/SKILL.md",
-      "version": "0.1.0"
-    },
-    {
-      "fileModes": {
         "people-words/LICENSE.txt": "0644",
         "people-words/SKILL.md": "0644",
         "people-words/agents/openai.yaml": "0644"
@@ -113,10 +48,75 @@
       "sourceHash": "sha256:fc6736d9423d0bb2c150ed296756ed9e3ee1b98d993191b8fe7beb7c2e5413aa",
       "sourcePath": ".skillset/skills/people-words/SKILL.md",
       "version": "0.1.0"
+    },
+    {
+      "fileModes": {
+        "redliner/LICENSE.txt": "0644",
+        "redliner/SKILL.md": "0644",
+        "redliner/agents/openai.yaml": "0644",
+        "redliner/references/agentish.md": "0644",
+        "redliner/references/claude-fable.md": "0644",
+        "redliner/references/consolidated.schema.json": "0644",
+        "redliner/references/discovery.md": "0644",
+        "redliner/references/gpt-6-astra.md": "0644",
+        "redliner/references/instruction-placement.md": "0644",
+        "redliner/references/instruction-selection.md": "0644",
+        "redliner/references/model-review.md": "0644",
+        "redliner/references/output.md": "0644",
+        "redliner/references/review-rubric.md": "0644",
+        "redliner/references/review.schema.json": "0644",
+        "redliner/references/scope-selection.md": "0644",
+        "redliner/requirements.txt": "0644",
+        "redliner/scripts/consolidate.py": "0644",
+        "redliner/scripts/diffcheck.py": "0644",
+        "redliner/scripts/discover.py": "0644",
+        "redliner/scripts/ownership.py": "0644",
+        "redliner/scripts/provenance.py": "0644",
+        "redliner/scripts/render.py": "0644",
+        "redliner/scripts/validate.py": "0644",
+        "redliner/tests/test_discovery.py": "0644",
+        "redliner/tests/test_ownership.py": "0644",
+        "redliner/tests/test_reports.py": "0644"
+      },
+      "files": [
+        "redliner/LICENSE.txt",
+        "redliner/SKILL.md",
+        "redliner/agents/openai.yaml",
+        "redliner/references/agentish.md",
+        "redliner/references/claude-fable.md",
+        "redliner/references/consolidated.schema.json",
+        "redliner/references/discovery.md",
+        "redliner/references/gpt-6-astra.md",
+        "redliner/references/instruction-placement.md",
+        "redliner/references/instruction-selection.md",
+        "redliner/references/model-review.md",
+        "redliner/references/output.md",
+        "redliner/references/review-rubric.md",
+        "redliner/references/review.schema.json",
+        "redliner/references/scope-selection.md",
+        "redliner/requirements.txt",
+        "redliner/scripts/consolidate.py",
+        "redliner/scripts/diffcheck.py",
+        "redliner/scripts/discover.py",
+        "redliner/scripts/ownership.py",
+        "redliner/scripts/provenance.py",
+        "redliner/scripts/render.py",
+        "redliner/scripts/validate.py",
+        "redliner/tests/test_discovery.py",
+        "redliner/tests/test_ownership.py",
+        "redliner/tests/test_reports.py"
+      ],
+      "kind": "standalone-skill",
+      "name": "redliner",
+      "outputHash": "sha256:6b59953ef38b0a15fd3fd8c0a307f5cc027dc7aec2f840a04a940291f7aebf0b",
+      "outputPath": "redliner/SKILL.md",
+      "sourceHash": "sha256:8a35b973d0ff1a9ba8a946d4eebe79046fa644baf4a71335e5b4b7631bdb65d9",
+      "sourcePath": ".skillset/skills/redliner/SKILL.md",
+      "version": "0.1.0"
     }
   ],
   "outputRoot": "skills",
-  "provenanceHash": "sha256:b7a580c74a7af5ef73a98a5fd3c8f2eaafa46b6edb8279f562f5cebd07fdc310",
+  "provenanceHash": "sha256:22e0821c545243ebf42b3fa79dba925717e891766823daa41c537b607096a84f",
   "renderResults": [
     {
       "destination": "skill",
@@ -195,112 +195,20 @@
       "outputs": [
         {
           "kind": "standalone-skill",
-          "path": "skills/minority-report/LICENSE.txt"
+          "path": "skills/people-words/LICENSE.txt"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/minority-report/SKILL.md"
+          "path": "skills/people-words/SKILL.md"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/minority-report/agents/openai.yaml"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/minority-report/references/agentish.md"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/minority-report/references/claude-fable.md"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/minority-report/references/consolidated.schema.json"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/minority-report/references/discovery.md"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/minority-report/references/gpt-6-astra.md"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/minority-report/references/instruction-placement.md"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/minority-report/references/instruction-selection.md"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/minority-report/references/model-review.md"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/minority-report/references/output.md"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/minority-report/references/review-rubric.md"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/minority-report/references/review.schema.json"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/minority-report/references/scope-selection.md"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/minority-report/requirements.txt"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/minority-report/scripts/consolidate.py"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/minority-report/scripts/diffcheck.py"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/minority-report/scripts/discover.py"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/minority-report/scripts/ownership.py"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/minority-report/scripts/provenance.py"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/minority-report/scripts/render.py"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/minority-report/scripts/validate.py"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/minority-report/tests/test_discovery.py"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/minority-report/tests/test_ownership.py"
-        },
-        {
-          "kind": "standalone-skill",
-          "path": "skills/minority-report/tests/test_reports.py"
+          "path": "skills/people-words/agents/openai.yaml"
         }
       ],
       "schema": "skillset-render-result@1",
-      "sourcePath": ".skillset/skills/minority-report/SKILL.md",
-      "sourceUnit": "skill:minority-report",
+      "sourcePath": ".skillset/skills/people-words/SKILL.md",
+      "sourceUnit": "skill:people-words",
       "status": "rendered",
       "target": "codex"
     },
@@ -328,20 +236,112 @@
       "outputs": [
         {
           "kind": "standalone-skill",
-          "path": "skills/people-words/LICENSE.txt"
+          "path": "skills/redliner/LICENSE.txt"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/people-words/SKILL.md"
+          "path": "skills/redliner/SKILL.md"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/people-words/agents/openai.yaml"
+          "path": "skills/redliner/agents/openai.yaml"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/redliner/references/agentish.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/redliner/references/claude-fable.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/redliner/references/consolidated.schema.json"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/redliner/references/discovery.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/redliner/references/gpt-6-astra.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/redliner/references/instruction-placement.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/redliner/references/instruction-selection.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/redliner/references/model-review.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/redliner/references/output.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/redliner/references/review-rubric.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/redliner/references/review.schema.json"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/redliner/references/scope-selection.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/redliner/requirements.txt"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/redliner/scripts/consolidate.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/redliner/scripts/diffcheck.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/redliner/scripts/discover.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/redliner/scripts/ownership.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/redliner/scripts/provenance.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/redliner/scripts/render.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/redliner/scripts/validate.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/redliner/tests/test_discovery.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/redliner/tests/test_ownership.py"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/redliner/tests/test_reports.py"
         }
       ],
       "schema": "skillset-render-result@1",
-      "sourcePath": ".skillset/skills/people-words/SKILL.md",
-      "sourceUnit": "skill:people-words",
+      "sourcePath": ".skillset/skills/redliner/SKILL.md",
+      "sourceUnit": "skill:redliner",
       "status": "rendered",
       "target": "codex"
     }

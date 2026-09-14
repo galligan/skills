@@ -26,9 +26,9 @@ Paths below are relative to the repository root.
 - When choosing or changing an instruction’s owning surface, use `.skillset/shared/references/instruction-placement.md`.
 - When writing skills, agent definitions, prompts, or other agent-facing instructions, use `.skillset/skills/agentish-styleguide/SKILL.md`. It routes to the shared Agentish language guide.
 - This repository selects People Words as its communication style. For human-facing replies and prose, apply `.skillset/skills/people-words/SKILL.md`. Preserve the intended audience and document form; Agentish's controlled instruction conventions do not apply to ordinary prose.
-- For a requested systematic instruction audit, use `.skillset/skills/minority-report/SKILL.md`.
+- For a requested systematic instruction audit, use `.skillset/skills/redliner/SKILL.md`.
 
-If a change alters skill activation, required or prohibited behavior, instruction ownership, or provider routing, review the changed canonical source and affected consumers with Minority Report before handoff. Record findings, corrections, and remaining limits. For wording-only edits, check preserved meaning and affected links; do not run a repository-wide audit solely for a typo.
+If a change alters skill activation, required or prohibited behavior, instruction ownership, or provider routing, review the changed canonical source and affected consumers with Redliner before handoff. Record findings, corrections, and remaining limits. For wording-only edits, check preserved meaning and affected links; do not run a repository-wide audit solely for a typo.
 
 Use the pinned runtime and compiler versions. Follow `README.md` for build and change-record commands and `docs/publishing.md` for validation and distribution. Record version changes through Skillset’s change and release commands. Commit source, change evidence, and generated output together.
 
