@@ -18,9 +18,9 @@ codex:
     path: skills
 ```
 
-No plugin or marketplace declaration is needed. Claude compilation is enabled only for repository instructions; standalone skills still use the single `skills/` output. The small `.skillset/_claude/CLAUDE.md` wrapper is the only provider-native source needed here.
+No plugin or marketplace declaration is needed. Claude compilation is enabled only for repository instructions; standalone skills use the single `skills/` output. The small `.skillset/_claude/CLAUDE.md` wrapper is the only provider-native source needed here.
 
-This uses the Codex renderer at a generic public path. The release has no provider-neutral target. Review any provider-specific frontmatter or services when adding another skill; a directory path does not establish compatibility with every agent.
+This uses the Codex renderer at a generic public path. Version 0.26.1 has no provider-neutral target. Review any provider-specific frontmatter or services when adding another skill; a directory path does not establish compatibility with every agent.
 
 ## Validation
 
@@ -44,9 +44,21 @@ Agentish contains its entrypoint, OpenAI metadata, full license, and the same th
 
 The September 12, 2026 validation checked payload completeness and link resolution. Separate disposable fixtures verified generated-output and canonical-source drift detection. The repository has no parallel provider skill or plugin output directories.
 
+## Upgrade notes for Skillset 0.27
+
+Keep this repository pinned to 0.26.1 even after `@skillset/cli@0.27.0` reaches npm. A disposable check against the 0.27.0 source tree passed on September 14, 2026, but the new output layout is wrong for this repository: the inherent Agent Skills projection adds `.agents/skills/` while the public collection remains under `skills/`.
+
+Those paths serve different jobs here. `skills/` is the public catalog consumed by `npx skills`; `.agents/skills/` is project-scoped agent state for agents working in this checkout. Do not move the catalog into `.agents/skills/` to coalesce the outputs.
+
+Current [`skills@1.5.26`](https://github.com/vercel-labs/skills/blob/v1.5.26/src/skills.ts) discovers `skills/` before `.agents/skills/`, so a normal list or install from a repository containing both selects the public copy. Full-depth discovery preserves duplicate names, and the [update relocation logic](https://github.com/vercel-labs/skills/blob/v1.5.26/src/skill-relocation.ts) fails closed when one name has multiple paths. Committing the second tree would also make the catalog available as project skills inside this repository. Wait for Skillset to support the catalog layout without creating that duplicate project surface.
+
+Once that blocker is resolved, the upgrade still requires a one-time generated-state rebuild because the checked-in locks use schema version 2. Preserve `skillset.yaml`, `.skillset/`, the change records, and every user-authored file. Before rebuilding, classify the paths recorded by the old locks, move only confirmed generated files to a recoverable backup outside the repository, and inspect the unconfirmed 0.27 build plan. A pre-v3 lock explains why the rebuild is needed but does not authorize cleanup.
+
+After the confirmed rebuild, expect schema-version-3 locks to record standards ownership and provider consumers. Run `check --only outputs`, `status --json`, `diff`, the Minority Report tests, and a disposable `npx skills` list, install, and update before accepting the result. Keep the current split CI commands until a published release has been tested here with `check --ci`.
+
 ## Generated repository instructions
 
-`.skillset/partials/repository.md` owns the shared guidance. `.skillset/rules/repository.md` includes it for Codex, producing `AGENTS.md`; `claude: false` prevents a redundant Claude rule. `.skillset/_claude/CLAUDE.md` includes the same partial for `.claude/CLAUDE.md`. Root `skillset.lock` tracks both outputs and their partial dependency; `skills/skillset.lock` continues to own standalone skills.
+`.skillset/partials/repository.md` owns the shared guidance. `.skillset/rules/repository.md` includes it for Codex, producing `AGENTS.md`; `claude: false` prevents a redundant Claude rule. `.skillset/_claude/CLAUDE.md` includes the same partial for `.claude/CLAUDE.md`. Root `skillset.lock` tracks both outputs and their partial dependency; `skills/skillset.lock` owns standalone skills.
 
 Claude Code supports [`.claude/CLAUDE.md` as a project instruction file](https://code.claude.com/docs/en/memory). Released Skillset 0.26.1 cannot use `claude.projectRoot: .` to emit a root `CLAUDE.md`; it rejects the repository-root destination. Use the supported location instead of an extra copy or symlink step.
 
