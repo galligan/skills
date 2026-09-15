@@ -24,9 +24,9 @@
       ],
       "kind": "standalone-skill",
       "name": "agentish",
-      "outputHash": "sha256:b8609ce9b68c438cdcf15b889fdb9dd609dd09a1f9905d6fca14153eff4a2832",
+      "outputHash": "sha256:cd95f4220fa76f4c08274e5b99356fefe195d5a01f4746762b376f86806770ec",
       "outputPath": "agentish/SKILL.md",
-      "sourceHash": "sha256:5a80d0ebfc5b7d0d175b19d9f419565fee521abb67b8d570af28721332051ab4",
+      "sourceHash": "sha256:186de5a7e828c612ae1ac0f4e77a2c6b551506c593b8a14a5e753b57ba5ff793",
       "sourcePath": ".skillset/skills/agentish/SKILL.md",
       "version": "0.1.0"
     },
@@ -116,7 +116,7 @@
     }
   ],
   "outputRoot": "skills",
-  "provenanceHash": "sha256:3423f14497b9c6f754826fb1907feee314e8c0c83ed165edfaf55fcd3630fe7b",
+  "provenanceHash": "sha256:da02bc0863c73769ff666400ff589e40d596a70de81e8a4cb4fba23bfbb300bf",
   "renderResults": [
     {
       "destination": "skill",

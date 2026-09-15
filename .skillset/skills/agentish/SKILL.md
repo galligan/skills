@@ -1,6 +1,6 @@
 ---
 name: agentish
-description: Write or revise skills, agent definitions, prompts, and tool descriptions. Use for agent-facing instruction authoring or targeted wording edits, not systematic audits, human-facing documentation, or conversational style.
+description: Write or revise agent-facing instructions, including instruction passages in mixed documents. Use for authoring or targeted wording edits in skills, agent definitions, prompts, and tool descriptions, not systematic audits, ordinary human-facing prose, or conversational style.
 resources:
   references:
     - shared:references/instruction-selection.md
