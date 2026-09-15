@@ -113,10 +113,35 @@
       "sourceHash": "sha256:191b1472ecb29f6c6f6e1ff532c499b3162946e8113e295a86c7fa1a2f7c60c7",
       "sourcePath": ".skillset/skills/redliner/SKILL.md",
       "version": "0.1.0"
+    },
+    {
+      "fileModes": {
+        "skill-audit/LICENSE.txt": "0644",
+        "skill-audit/SKILL.md": "0644",
+        "skill-audit/context-report.md": "0644",
+        "skill-audit/context.example.json": "0644",
+        "skill-audit/context.schema.json": "0644",
+        "skill-audit/trial-output.md": "0644"
+      },
+      "files": [
+        "skill-audit/LICENSE.txt",
+        "skill-audit/SKILL.md",
+        "skill-audit/context-report.md",
+        "skill-audit/context.example.json",
+        "skill-audit/context.schema.json",
+        "skill-audit/trial-output.md"
+      ],
+      "kind": "standalone-skill",
+      "name": "skill-audit",
+      "outputHash": "sha256:60af3d47e7f84ec039e8d3db111176690452e68e60e76bfac00fb624f7d89d0e",
+      "outputPath": "skill-audit/SKILL.md",
+      "sourceHash": "sha256:1dc5a7ce650e509df8fa8fe7de8aada35e55405571d6041c20f34115e8798eed",
+      "sourcePath": ".skillset/skills/skill-audit/SKILL.md",
+      "version": "0.1.0"
     }
   ],
   "outputRoot": "skills",
-  "provenanceHash": "sha256:da02bc0863c73769ff666400ff589e40d596a70de81e8a4cb4fba23bfbb300bf",
+  "provenanceHash": "sha256:f20cf8e945b78404e5d237c004de4b6b90c167bc6df3bcc782827042d029a37a",
   "renderResults": [
     {
       "destination": "skill",
@@ -342,6 +367,59 @@
       "schema": "skillset-render-result@1",
       "sourcePath": ".skillset/skills/redliner/SKILL.md",
       "sourceUnit": "skill:redliner",
+      "status": "rendered",
+      "target": "codex"
+    },
+    {
+      "destination": "skill",
+      "evidence": [
+        {
+          "kind": "docs",
+          "ref": "docs/reference/features/skills.md"
+        },
+        {
+          "kind": "provider-schema",
+          "note": "sha256:eebe9ca02eec5263cd23ff3945b3d3301e0b57861af2d53c76bd620b83ae355b",
+          "ref": "codex-skill-metadata-schema",
+          "verifiedAt": "2026-06-23"
+        },
+        {
+          "kind": "provider-snapshot",
+          "note": "sha256:7e36cc613d0443fcae2963e276a7994d2b321b04471ae2a8941e290ed2654050",
+          "ref": "codex-skill",
+          "verifiedAt": "2026-06-23"
+        }
+      ],
+      "featureId": "standalone-skills",
+      "outputs": [
+        {
+          "kind": "standalone-skill",
+          "path": "skills/skill-audit/LICENSE.txt"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/skill-audit/SKILL.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/skill-audit/context-report.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/skill-audit/context.example.json"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/skill-audit/context.schema.json"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/skill-audit/trial-output.md"
+        }
+      ],
+      "schema": "skillset-render-result@1",
+      "sourcePath": ".skillset/skills/skill-audit/SKILL.md",
+      "sourceUnit": "skill:skill-audit",
       "status": "rendered",
       "target": "codex"
     }

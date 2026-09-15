@@ -1,0 +1,140 @@
+{
+  "schema_version": "skill-audit.context/v1",
+  "run": {
+    "reviewer": "context-reviewer",
+    "model": null,
+    "effort": null,
+    "condition": "illustrative incomplete investigation"
+  },
+  "scope": {
+    "description": "Two illustrative candidates: one inspected source and one inaccessible source.",
+    "candidate_ids": [
+      "sample-helper",
+      "example-skill"
+    ]
+  },
+  "sources": [
+    {
+      "id": "sample-source",
+      "kind": "record",
+      "locator": "illustration:sample-helper",
+      "observed_at": null,
+      "sha256": null,
+      "parent_id": null,
+      "coverage": "Invented example excerpt: \"Inspect workspace status.\" No real file was inspected."
+    }
+  ],
+  "searches": [
+    {
+      "scope": "Illustrative supplied excerpt for sample-helper",
+      "outcome": "found",
+      "reason": "The example supplies one purpose statement; no other records are available.",
+      "locator": "illustration:provided-source",
+      "observed_at": null
+    },
+    {
+      "scope": "Supplied example-skill location",
+      "outcome": "unavailable",
+      "reason": "No file access or supplied export.",
+      "locator": "illustration:provided-source",
+      "observed_at": null
+    }
+  ],
+  "candidates": [
+    {
+      "id": "sample-helper",
+      "locations": [
+        "illustration:sample-helper"
+      ],
+      "status": "partial",
+      "coverage_reason": "Only the supplied purpose excerpt was inspected; other areas need records.",
+      "claims": [
+        {
+          "id": "sample-purpose",
+          "area": "purpose",
+          "basis": "observed",
+          "statement": "The supplied excerpt describes inspecting workspace status.",
+          "evidence": [
+            {
+              "source_id": "sample-source",
+              "locator": "Sentence 1: Inspect workspace status."
+            }
+          ],
+          "uncertainty": "Actual runtime behavior was not observed.",
+          "metric": null
+        }
+      ],
+      "questions": [
+        {
+          "area": "provenance",
+          "question": "What evidence establishes provenance?",
+          "next_evidence": "A scoped source export or accessible record covering provenance."
+        },
+        {
+          "area": "resources",
+          "question": "What evidence establishes resources?",
+          "next_evidence": "A scoped source export or accessible record covering resources."
+        },
+        {
+          "area": "consumers",
+          "question": "What evidence establishes consumers?",
+          "next_evidence": "A scoped source export or accessible record covering consumers."
+        },
+        {
+          "area": "usage",
+          "question": "What evidence establishes usage?",
+          "next_evidence": "A scoped source export or accessible record covering usage."
+        },
+        {
+          "area": "history",
+          "question": "What evidence establishes history?",
+          "next_evidence": "A scoped source export or accessible record covering history."
+        }
+      ]
+    },
+    {
+      "id": "example-skill",
+      "locations": [
+        "/example/skills/example-skill"
+      ],
+      "status": "blocked",
+      "coverage_reason": "Source access unavailable; no claims about content or usage.",
+      "claims": [],
+      "questions": [
+        {
+          "area": "purpose",
+          "question": "What evidence establishes purpose?",
+          "next_evidence": "A scoped source export or accessible record covering purpose."
+        },
+        {
+          "area": "provenance",
+          "question": "What evidence establishes provenance?",
+          "next_evidence": "A scoped source export or accessible record covering provenance."
+        },
+        {
+          "area": "resources",
+          "question": "What evidence establishes resources?",
+          "next_evidence": "A scoped source export or accessible record covering resources."
+        },
+        {
+          "area": "consumers",
+          "question": "What evidence establishes consumers?",
+          "next_evidence": "A scoped source export or accessible record covering consumers."
+        },
+        {
+          "area": "usage",
+          "question": "What evidence establishes usage?",
+          "next_evidence": "A scoped source export or accessible record covering usage."
+        },
+        {
+          "area": "history",
+          "question": "What evidence establishes history?",
+          "next_evidence": "A scoped source export or accessible record covering history."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Illustrative example only. No real skill was inspected."
+  ]
+}
