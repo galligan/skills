@@ -32,7 +32,7 @@ bun run skillset check --only outputs
 
 CI runs `bun run check` for source and generated-output validation, then `bun run check:changes --since origin/main` for skill change coverage. Released Skillset 0.26.1 also applies compiler-package Changesets rules in `check --ci`; those npm release rules do not apply to this skills-only repository. The upstream fix is tracked in [SET-535](https://linear.app/outfitter/issue/SET-535). Once a released version fixes downstream scoping, verify it here and restore `check --ci` if it preserves the same source, output, and change-evidence coverage.
 
-Skillset identifies source units by selector. Renaming a skill is a removal plus an addition: record both selectors and commit removal of the old generated directory together with the new source, output, and lock. Refresh pending change evidence after source edits, then check against the PR base. The Redliner rename covers `skill:minority-report` and `skill:redliner`; the earlier `audit-agent-instructions` rename remains in the ledger as history.
+Skillset identifies source units by selector. Renaming a skill is a removal plus an addition: record both selectors and commit removal of the old generated directory together with the new source, output, and lock. Refresh pending change evidence after source edits, then check against the PR base. Rename records cover the old and new selectors; earlier selectors remain in the ledger as history.
 
 Pre-release renames use a minor bump. Ignored records remain in the ledger as audit history. A release preview does not apply or publish a release.
 
@@ -40,7 +40,9 @@ Skillset owns the generated files through `skills/skillset.lock`. Its checks det
 
 The generated Redliner bundle includes the complete skill source and its declared shared references. Its model-review guide and Astra/Fable profiles load only when relevant. Skillset copies the shared references into the installed skill, rewrites shared-resource links in `SKILL.md` to bundle-relative links, and tracks the resource content in `skills/skillset.lock`. Put `shared:` links in `SKILL.md`; version 0.26.1 does not rewrite those aliases inside skill-local supporting Markdown. No private repository access is needed to use them.
 
-Agentish contains its entrypoint, OpenAI metadata, full license, and the same three shared references: Instruction Selection, Instruction Placement, and Agentish. People Words contains only its entrypoint, OpenAI metadata, and full license. Neither new skill requires external tools or services for its guidance; project-specific editing and factual verification use available tools and sources.
+The `agentish` bundle contains its entrypoint, OpenAI metadata, full license, and the same three shared references: Instruction Selection, Instruction Placement, and Agentish. The `people-words` bundle contains only its entrypoint, OpenAI metadata, and full license. Neither skill requires external tools or services for its guidance; project-specific editing and factual verification use available tools and sources.
+
+Use **Agentish** in prose for the named language or skill. Use `agentish` for the exact skill identifier, install target, command argument, or path segment. Say “the Agentish skill” when a sentence could otherwise confuse the installable bundle with the language itself.
 
 The September 12, 2026 validation checked payload completeness and link resolution. Separate disposable fixtures verified generated-output and canonical-source drift detection. The repository has no parallel provider skill or plugin output directories.
 

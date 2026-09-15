@@ -1,19 +1,33 @@
 # mg skills
 
-A few skills for getting better work out of agents and better words out of them, too. These grew out of how I work with Claude and Codex. Take the ones that help.
+Hey I'm [@mg](https://x.com/mg). Here are a few skills for getting better work out of agents and better words out of them, too. These grew out of how I work with my agents. Take the ones that might help and give them a test run.
 
-## Skills 🔎
+## The Skills 🔍
 
-- [`redliner`](skills/redliner/SKILL.md): Audit agent instructions for conflicts, unnecessary work, and unintended consequences.
-- [`agentish-styleguide`](skills/agentish-styleguide/SKILL.md): Write skills, prompts, and other agent instructions with clear behavior and boundaries.
-- [`people-words`](skills/people-words/SKILL.md): Drop mannered prose while keeping the substance, technical detail, and your voice.
+Check out [the skills](docs/skills.md) for why each one exists, when to use it, and what to expect. Here's the tl;dr:
 
-[Meet the skills](docs/skills.md) for why each one exists, when to use it, and what to expect.
+### [`/redliner`](skills/redliner/SKILL.md)
+
+Audit the instructions behind your agents for conflicts, stale workarounds, and accidental busywork. Especially useful with frontier models like GPT-6 Astra and Claude Fable, where older prompting tricks can get in the way.
+
+🖍️ **Try:** Fire up a session with Astra or Fable, and tell them to run `/redliner` in a project, or globally across your system. And don't worry about wasting context, the skill has been designed to keep usage under control.
+
+### [`/agentish`](skills/agentish/SKILL.md)
+
+Help agents say more with less, without losing the plot. Agentish is a language style to use where agents are writing for other agents, e.g. `AGENTS.md`, `CLAUDE.md`, skills, and prompts.
+
+✍🏻 **Try:** Ask your agent "How would you write @AGENTS.md using /agentish?"
+
+### [`/people-words`](skills/people-words/SKILL.md)
+
+When every detail is "load-bearing" and every insight is "hiding in plain sight," the agentisms have taken over. Cut the mannered prose while keeping the substance, technical detail, and your voice.
+
+🤦🏻 **Try:** After seeing annoying outputs, just run `/people-words` and watch the agent speak more naturally.
 
 ## Installation 📦
 
 <details open>
-<summary><strong>npx skills</strong></summary>
+<summary><strong><code>npx skills</code></strong></summary>
 
 ```bash
 npx skills@latest add galligan/skills
@@ -54,10 +68,7 @@ Swap `redliner` for either of the other skill names.
 Ask Claude Code to install the bundle in its [native skills folder](https://code.claude.com/docs/en/skills#where-skills-live):
 
 ```text
-Install redliner from
-https://github.com/galligan/skills/tree/main/skills/redliner
-into ~/.claude/skills/redliner. Include all supporting files without
-cloning the repo. Check with me before replacing an existing installation.
+Install the `/redliner` skill from https://github.com/galligan/skills/tree/main/skills/redliner into `~/.claude/skills/redliner`. Include all supporting files without cloning the repo. Check with me before replacing an existing installation.
 ```
 
 Then invoke `/redliner`. Use `.claude/skills/redliner` for a project-only install. Swap the skill name and paths to install another.
@@ -66,9 +77,9 @@ Then invoke `/redliner`. Use `.claude/skills/redliner` for a project-only instal
 
 Each skill is a complete bundle. You don't need Bun or Skillset to use one. ChatGPT web and mobile use [plugins](https://learn.chatgpt.com/docs/plugins); this collection currently ships standalone skills.
 
-## How these are made
+## How these are made 🛠️
 
-I built [Skillset](https://github.com/outfitter-dev/skillset) to manage agent instructions and skills, and use it to author and build this collection. The source lives in `.skillset/`; the complete, installable versions land in `skills/`.
+I built [Skillset](https://github.com/outfitter-dev/skillset) to manage agent instructions and skills, and use it to author and build this collection. Source files for the skills live in [`.skillset/`](https://github.com/galligan/skills/tree/main/.skillset/); the complete, installable versions land in [`skills/`](https://github.com/galligan/skills/tree/main/skills/).
 
 Three references keep the instruction work grounded:
 
@@ -76,15 +87,13 @@ Three references keep the instruction work grounded:
 - [Instruction Placement](.skillset/shared/references/instruction-placement.md): where should it live?
 - [Agentish](.skillset/shared/references/agentish.md): how do we make the intended behavior clear?
 
-`agentish-styleguide` uses these for writing; `redliner` uses them for review. Each gets its own bundled references, so you can install either on its own. `people-words` stays focused on expression.
-
-`redliner` also draws on [OpenAI's Astra guidance](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra) and [Anthropic's Claude API prompt audit](https://github.com/anthropics/skills/tree/main/skills/claude-api), with profiles for GPT-6 Astra and Claude Fable. Those profiles load when relevant; a model name or keyword match isn't evidence of a problem.
+`agentish` uses these for writing; `redliner` uses them for review. Each gets its own bundled references, so you can install either on its own. `people-words` stays focused on expression.
 
 We use the guidance here, too. Our generated `AGENTS.md` and `.claude/CLAUDE.md` route substantive instruction changes through a scoped Redliner review. The [review notes](docs/reviews/2026-09-12-instruction-review.md) and [follow-up corrections](docs/reviews/2026-09-12-scope-and-pr-review.md) show what the first passes found and missed.
 
-## Working on the collection
+## Working on the collection 🏗️
 
-Use Bun 1.4.0. Skillset is pinned to `@skillset/cli@0.26.1`.
+Use [Bun 1.4.0](https://bun.sh). Skillset is pinned to `@skillset/cli@0.26.1`.
 
 ```bash
 bun install --frozen-lockfile --ignore-scripts
@@ -103,6 +112,6 @@ Record meaningful changes through Skillset's change commands, using the scope re
 
 Edit the source and rebuild; let Skillset manage `skills/`, `AGENTS.md`, `.claude/CLAUDE.md`, and the locks. Building doesn't publish or install anything.
 
-## License
+## License 📝
 
 [MIT](LICENSE). Use what helps, make it your own.

@@ -10,6 +10,12 @@ Agent-facing instructions are closer to configuration than prose. Their goal is 
 
 Agentish is for agent-speak: skills, agent definitions, prompts, and other text that directs agent behavior. Human-facing replies and documentation are outside its scope. In a mixed document, apply it only to the passages that instruct agents.
 
+### Match the document and its audience
+
+Identify both the intended agent behavior and everyone who will read the document. Apply this guide most strictly to agent-only control surfaces such as `AGENTS.md`, `CLAUDE.md`, skill instructions, tool descriptions, invariants, and procedures.
+
+In `docs/` and other material written for people as well as agents, keep the prose readable for people. Apply Agentish only to passages that direct agent behavior, and use the lightest wording that preserves the instruction's meaning. Do not make surrounding explanation sound like a compliance specification merely because an agent may read it.
+
 This guide is a styleguide, not policy:
 
 - It governs **how to write** an instruction. Whether an instruction earns its place, and which surface owns it, are separate decisions governed by the [Instruction Selection](instruction-selection.md) and [Instruction Placement](instruction-placement.md).
@@ -22,7 +28,12 @@ One note on self-application: this guide contains rules and explanation. The rul
 
 ## Normative vocabulary
 
-Use normative terms consistently when a statement controls behavior.
+Use normative terms consistently when a statement controls behavior. Match their formality to the document and its audience.
+
+On an agent-only control surface, uppercase terms can make distinct requirement levels explicit. In human-facing or mixed documentation, prefer plain language such as *must*, *should*, *can*, and *do not* unless the document is a specification, policy, or contract where RFC-style requirement levels carry formal meaning. Do not add uppercase terms only for emphasis.
+
+> Agent-only control surface: `MUST NOT edit generated files.`
+> Human-facing guide: `Do not edit generated files directly. Update the source and rebuild.`
 
 - **MUST** — the behavior is required. Violation is a failure. `MUST NOT edit generated files.`
 - **MUST NOT** — the behavior is prohibited. Violation is a failure. `MUST NOT refactor unrelated code.`
@@ -296,7 +307,7 @@ When applying the full guide is impractical, use this subset:
 - Name targets and boundaries when they are not obvious.
 - Avoid pronouns with more than one plausible antecedent.
 - Remove or define vague decision qualifiers.
-- Use `MUST`, `MUST NOT`, `SHOULD`, and `MAY` consistently.
+- Match normative vocabulary to the document's audience. Use `MUST`, `MUST NOT`, `SHOULD`, and `MAY` consistently when their formal distinction matters.
 - State the safe path for important prohibitions, and escalation when no safe path exists.
 - Write consequential rules so they can produce behavioral eval cases.
 

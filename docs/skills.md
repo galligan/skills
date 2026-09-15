@@ -27,11 +27,11 @@ The report includes ranked findings, source excerpts, and proposed diffs, with a
 
 The review criteria draw on OpenAI and Anthropic guidance, with profiles for GPT-6 Astra and Claude Fable when the target makes them relevant. They're starting points for investigation, not proof that a particular instruction is wrong. The [skill](../skills/redliner/SKILL.md) links to those sources and documents the Python requirements.
 
-## agentish-styleguide
+## agentish
 
 Writing agent instructions is a small design problem. You have to decide what behavior you want, when it applies, and where the instruction belongs. “Be thorough” leaves a lot open. “Before changing the API, check its existing callers” gives the agent a condition and an action.
 
-`agentish-styleguide` brings those decisions together through three references:
+The Agentish skill brings those decisions together through three references:
 
 - **Instruction Selection** asks whether a directive earns its place. A useful instruction addresses a real need without adding unnecessary work to every task.
 - **Instruction Placement** identifies the surface that owns it. A repository rule, a skill's activation description, and a reference file have different jobs.
@@ -41,13 +41,13 @@ Use it to write a new skill, sharpen a vague tool description, or revise an inst
 
 For example:
 
-> Use agentish-styleguide to revise this skill's instructions. Preserve the existing policy, but make its activation conditions and approval boundary explicit.
+> Use agentish to revise this skill's instructions. Preserve the existing policy, but make its activation conditions and approval boundary explicit.
 
 The result is a draft or an edit, depending on what you asked for. For consequential rules, the skill checks both a case where the rule applies and one where it doesn't. That helps catch wording that sounds clear until an agent has to act on it.
 
-Agentish applies to passages that direct agents, including instructions in public files. It doesn't impose its vocabulary on ordinary docs or conversation. Requirement terms such as `MUST` can be useful when their distinction matters, but every sentence doesn't need one.
+Agentish applies to passages that direct agents, including instructions in public files. It doesn't impose its vocabulary on ordinary docs or conversation. When a file in `docs/` is meant for people as well as agents, keep it readable for people and go lighter on uppercase requirement terms. Terms such as `MUST` still belong in specifications, policies, and other places where their formal distinction matters.
 
-Use [the skill](../skills/agentish-styleguide/SKILL.md) for instruction authoring. If you want a systematic review of how existing instructions interact, that's `redliner`.
+Use [the Agentish skill](../skills/agentish/SKILL.md) for instruction authoring. If you want a systematic review of how existing instructions interact, that's `redliner`.
 
 ## people-words
 

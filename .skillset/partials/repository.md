@@ -20,7 +20,7 @@ Paths below are relative to the repository root.
 
 - Before adding or reviewing a persistent directive, apply `.skillset/shared/references/instruction-selection.md` to decide whether the directive earns its place.
 - When choosing or changing an instruction’s owning surface, use `.skillset/shared/references/instruction-placement.md`.
-- When writing skills, agent definitions, prompts, or other agent-facing instructions, use `.skillset/skills/agentish-styleguide/SKILL.md`. It routes to the shared Agentish language guide.
+- When writing skills, agent definitions, prompts, or other agent-facing instructions, use `.skillset/skills/agentish/SKILL.md`. It routes to the shared Agentish language guide.
 - This repository selects People Words as its communication style. For human-facing replies and prose, apply `.skillset/skills/people-words/SKILL.md`. Preserve the intended audience and document form; Agentish's controlled instruction conventions do not apply to ordinary prose.
 - For a requested systematic instruction audit, use `.skillset/skills/redliner/SKILL.md`.
 

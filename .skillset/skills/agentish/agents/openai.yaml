@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agentish"
+  short_description: "Write precise skills and agent instructions"
+  default_prompt: "Use $agentish to write or revise these agent instructions while preserving their intended behavior."
