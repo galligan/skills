@@ -1,4 +1,0 @@
-interface:
-  default_prompt: Use $agentish-styleguide to write or revise these agent instructions while preserving their intended behavior.
-  display_name: Agentish
-  short_description: Write precise skills and agent instructions

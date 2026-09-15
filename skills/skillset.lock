@@ -7,27 +7,27 @@
   "items": [
     {
       "fileModes": {
-        "agentish-styleguide/LICENSE.txt": "0644",
-        "agentish-styleguide/SKILL.md": "0644",
-        "agentish-styleguide/agents/openai.yaml": "0644",
-        "agentish-styleguide/references/agentish.md": "0644",
-        "agentish-styleguide/references/instruction-placement.md": "0644",
-        "agentish-styleguide/references/instruction-selection.md": "0644"
+        "agentish/LICENSE.txt": "0644",
+        "agentish/SKILL.md": "0644",
+        "agentish/agents/openai.yaml": "0644",
+        "agentish/references/agentish.md": "0644",
+        "agentish/references/instruction-placement.md": "0644",
+        "agentish/references/instruction-selection.md": "0644"
       },
       "files": [
-        "agentish-styleguide/LICENSE.txt",
-        "agentish-styleguide/SKILL.md",
-        "agentish-styleguide/agents/openai.yaml",
-        "agentish-styleguide/references/agentish.md",
-        "agentish-styleguide/references/instruction-placement.md",
-        "agentish-styleguide/references/instruction-selection.md"
+        "agentish/LICENSE.txt",
+        "agentish/SKILL.md",
+        "agentish/agents/openai.yaml",
+        "agentish/references/agentish.md",
+        "agentish/references/instruction-placement.md",
+        "agentish/references/instruction-selection.md"
       ],
       "kind": "standalone-skill",
-      "name": "agentish-styleguide",
-      "outputHash": "sha256:ebfbb2b44e8a9a775231143d100f879fcc5699c6495e0def0a32973090021a9b",
-      "outputPath": "agentish-styleguide/SKILL.md",
-      "sourceHash": "sha256:0a11d12a9d0ef5f046362ee5282e363cad0f9a2c2076b0d7e512136d4810e0d6",
-      "sourcePath": ".skillset/skills/agentish-styleguide/SKILL.md",
+      "name": "agentish",
+      "outputHash": "sha256:b8609ce9b68c438cdcf15b889fdb9dd609dd09a1f9905d6fca14153eff4a2832",
+      "outputPath": "agentish/SKILL.md",
+      "sourceHash": "sha256:5a80d0ebfc5b7d0d175b19d9f419565fee521abb67b8d570af28721332051ab4",
+      "sourcePath": ".skillset/skills/agentish/SKILL.md",
       "version": "0.1.0"
     },
     {
@@ -108,15 +108,15 @@
       ],
       "kind": "standalone-skill",
       "name": "redliner",
-      "outputHash": "sha256:6b59953ef38b0a15fd3fd8c0a307f5cc027dc7aec2f840a04a940291f7aebf0b",
+      "outputHash": "sha256:3465778b9bbc3eba77b197ff265ed4d6af22b32324cea3687c65d85f327c5eae",
       "outputPath": "redliner/SKILL.md",
-      "sourceHash": "sha256:8a35b973d0ff1a9ba8a946d4eebe79046fa644baf4a71335e5b4b7631bdb65d9",
+      "sourceHash": "sha256:191b1472ecb29f6c6f6e1ff532c499b3162946e8113e295a86c7fa1a2f7c60c7",
       "sourcePath": ".skillset/skills/redliner/SKILL.md",
       "version": "0.1.0"
     }
   ],
   "outputRoot": "skills",
-  "provenanceHash": "sha256:22e0821c545243ebf42b3fa79dba925717e891766823daa41c537b607096a84f",
+  "provenanceHash": "sha256:3423f14497b9c6f754826fb1907feee314e8c0c83ed165edfaf55fcd3630fe7b",
   "renderResults": [
     {
       "destination": "skill",
@@ -142,32 +142,32 @@
       "outputs": [
         {
           "kind": "standalone-skill",
-          "path": "skills/agentish-styleguide/LICENSE.txt"
+          "path": "skills/agentish/LICENSE.txt"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/agentish-styleguide/SKILL.md"
+          "path": "skills/agentish/SKILL.md"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/agentish-styleguide/agents/openai.yaml"
+          "path": "skills/agentish/agents/openai.yaml"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/agentish-styleguide/references/agentish.md"
+          "path": "skills/agentish/references/agentish.md"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/agentish-styleguide/references/instruction-placement.md"
+          "path": "skills/agentish/references/instruction-placement.md"
         },
         {
           "kind": "standalone-skill",
-          "path": "skills/agentish-styleguide/references/instruction-selection.md"
+          "path": "skills/agentish/references/instruction-selection.md"
         }
       ],
       "schema": "skillset-render-result@1",
-      "sourcePath": ".skillset/skills/agentish-styleguide/SKILL.md",
-      "sourceUnit": "skill:agentish-styleguide",
+      "sourcePath": ".skillset/skills/agentish/SKILL.md",
+      "sourceUnit": "skill:agentish",
       "status": "rendered",
       "target": "codex"
     },

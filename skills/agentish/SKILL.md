@@ -3,7 +3,7 @@ description: Write or revise skills, agent definitions, prompts, and tool descri
 metadata:
   skillset.schema: "1"
   version: 0.1.0
-name: agentish-styleguide
+name: agentish
 ---
 
 # Agentish
@@ -15,6 +15,8 @@ Intended consumers include GPT-6 Astra and Claude Fable. Preserve model-specific
 Write instructions that make intended behavior clear. Preserve the user's policy and deliberately chosen wording; do not soften a tested prohibition into an open-ended judgment call merely to make it sound smoother.
 
 Apply Agentish to text that directs agents, regardless of whether the file is public or private. In a mixed document, apply it to instruction passages only. It does not prescribe how an agent speaks to people.
+
+Consider everyone who will read the document. Apply Agentish most strictly to agent-only control surfaces such as `AGENTS.md`, `CLAUDE.md`, skill instructions, and tool descriptions. In `docs/` and other material people also read, keep instruction passages natural and use uppercase requirement terms only when their formal distinction matters.
 
 ## Select, place, express
 

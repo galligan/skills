@@ -14,12 +14,12 @@
       ],
       "kind": "island",
       "name": "claude:project:CLAUDE.md",
-      "outputHash": "sha256:b71dfd9c902784e1aa50f21a29157b9c03ced919b3207667a030ada2b93fb0fa",
+      "outputHash": "sha256:b5d40f8e47e00bd2ad4ecbc7e3f73914fbefc526ddeb953cd2fd23c7798086dd",
       "outputPath": ".claude/CLAUDE.md",
       "preprocessDependencies": [
         ".skillset/partials/repository.md"
       ],
-      "sourceHash": "sha256:64cb188b37774f9503afa8d06e6599b3185e23d69ceea52acf9c48f45ed8f279",
+      "sourceHash": "sha256:4cf58c752bd217c5e62a6b91939edd2085a034a8e592ad7a1f3150c7f9ac5b63",
       "sourcePath": ".skillset/_claude/CLAUDE.md",
       "validation": "structured",
       "version": "0.1.0"
@@ -33,18 +33,18 @@
       ],
       "kind": "rule",
       "name": "AGENTS.md",
-      "outputHash": "sha256:e747cb81feaea05064721e55676e0a8483d333bcd73456676626034ccfccecc1",
+      "outputHash": "sha256:224b7088112312ae77ba5e63912c5e9303d0e4b7c155ae0a5a73f3a69ddd98e0",
       "outputPath": "AGENTS.md",
       "preprocessDependencies": [
         ".skillset/partials/repository.md"
       ],
-      "sourceHash": "sha256:90f6cd7f9c844e1955a2d6778905c0513b9e99933c2e0d67a36262f24efde814",
+      "sourceHash": "sha256:40c9334403d9a208075e70604cb10011def07e7fcbcbc86c768363c3da554a7a",
       "sourcePath": ".skillset/rules",
       "version": "0.1.0"
     }
   ],
   "outputRoot": ".",
-  "provenanceHash": "sha256:2a96d3bbdc3c8d49aa9b1d746ce7ad0fbfd1b2a21bf68866b84dcd53bbf859ba",
+  "provenanceHash": "sha256:499db3b0c80af2e1fdd0a00482679e285af475190e0f81c85322ec7324584dd4",
   "renderResults": [
     {
       "destination": "target-native-island",
