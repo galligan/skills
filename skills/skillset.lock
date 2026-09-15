@@ -118,24 +118,30 @@
       "fileModes": {
         "skill-audit/LICENSE.txt": "0644",
         "skill-audit/SKILL.md": "0644",
+        "skill-audit/context-report.md": "0644",
+        "skill-audit/context.example.json": "0644",
+        "skill-audit/context.schema.json": "0644",
         "skill-audit/trial-output.md": "0644"
       },
       "files": [
         "skill-audit/LICENSE.txt",
         "skill-audit/SKILL.md",
+        "skill-audit/context-report.md",
+        "skill-audit/context.example.json",
+        "skill-audit/context.schema.json",
         "skill-audit/trial-output.md"
       ],
       "kind": "standalone-skill",
       "name": "skill-audit",
-      "outputHash": "sha256:7433836db6c3e6375d8d229ffb60e78586718f993dd72583cc2df007c1580a81",
+      "outputHash": "sha256:60af3d47e7f84ec039e8d3db111176690452e68e60e76bfac00fb624f7d89d0e",
       "outputPath": "skill-audit/SKILL.md",
-      "sourceHash": "sha256:f0615cfb32a5530fe82ef4cb0d23c8b2bcabb8bf082c9582cacb7b39bb827e16",
+      "sourceHash": "sha256:1dc5a7ce650e509df8fa8fe7de8aada35e55405571d6041c20f34115e8798eed",
       "sourcePath": ".skillset/skills/skill-audit/SKILL.md",
       "version": "0.1.0"
     }
   ],
   "outputRoot": "skills",
-  "provenanceHash": "sha256:aedb665fc5263cbc698c7c3b07bab7c51b9106db5a58eac952abbc4bbb182b53",
+  "provenanceHash": "sha256:f20cf8e945b78404e5d237c004de4b6b90c167bc6df3bcc782827042d029a37a",
   "renderResults": [
     {
       "destination": "skill",
@@ -393,6 +399,18 @@
         {
           "kind": "standalone-skill",
           "path": "skills/skill-audit/SKILL.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/skill-audit/context-report.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/skill-audit/context.example.json"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/skill-audit/context.schema.json"
         },
         {
           "kind": "standalone-skill",

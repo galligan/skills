@@ -18,6 +18,8 @@ npm exec --yes --package=/tmp/skill-audit-package/skill-audit-lab-0.0.0.tgz -- s
 
 The canonical prototype skill is `.skillset/skills/skill-audit/`; Skillset generates its public-layout copy. The generated copy is experimental and not installed by this experiment.
 
+Context reviewers now use the bundled `context-report.md` contract and `context.schema.json`, with `context.example.json` as an example. Collector inventory, context JSON, and coordinator assessment remain separate. Schema validation checks structure; source-reference resolution, assigned-candidate coverage, and evidence checks are still explicit reviewer responsibilities. This CLI does not yet validate or render context reports.
+
 ## Trial
 
 1. Verify inventory behavior on temporary fixtures: canonical aliases, broken links, identical copies, same-name divergent files, externally sourced entries, and unknown ownership.
