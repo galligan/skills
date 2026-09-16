@@ -32,6 +32,25 @@
     },
     {
       "fileModes": {
+        "discover-unknowns/LICENSE.txt": "0644",
+        "discover-unknowns/SKILL.md": "0644",
+        "discover-unknowns/agents/openai.yaml": "0644"
+      },
+      "files": [
+        "discover-unknowns/LICENSE.txt",
+        "discover-unknowns/SKILL.md",
+        "discover-unknowns/agents/openai.yaml"
+      ],
+      "kind": "standalone-skill",
+      "name": "discover-unknowns",
+      "outputHash": "sha256:fdcfaffb8c3f9d893241e13443afde7bb659599afb18513418701edae78fda8c",
+      "outputPath": "discover-unknowns/SKILL.md",
+      "sourceHash": "sha256:1c99da8bf256e7fd56096b52038838442e72ba4103b27ced89a21f625114d1f3",
+      "sourcePath": ".skillset/skills/discover-unknowns/SKILL.md",
+      "version": "0.1.0"
+    },
+    {
+      "fileModes": {
         "people-words/LICENSE.txt": "0644",
         "people-words/SKILL.md": "0644",
         "people-words/agents/openai.yaml": "0644"
@@ -116,7 +135,7 @@
     }
   ],
   "outputRoot": "skills",
-  "provenanceHash": "sha256:da02bc0863c73769ff666400ff589e40d596a70de81e8a4cb4fba23bfbb300bf",
+  "provenanceHash": "sha256:5f212d16466bfd48bb4606ab01eb06ca1e20955040ab294d8a05ffc747a70f60",
   "renderResults": [
     {
       "destination": "skill",
@@ -168,6 +187,47 @@
       "schema": "skillset-render-result@1",
       "sourcePath": ".skillset/skills/agentish/SKILL.md",
       "sourceUnit": "skill:agentish",
+      "status": "rendered",
+      "target": "codex"
+    },
+    {
+      "destination": "skill",
+      "evidence": [
+        {
+          "kind": "docs",
+          "ref": "docs/reference/features/skills.md"
+        },
+        {
+          "kind": "provider-schema",
+          "note": "sha256:eebe9ca02eec5263cd23ff3945b3d3301e0b57861af2d53c76bd620b83ae355b",
+          "ref": "codex-skill-metadata-schema",
+          "verifiedAt": "2026-06-23"
+        },
+        {
+          "kind": "provider-snapshot",
+          "note": "sha256:7e36cc613d0443fcae2963e276a7994d2b321b04471ae2a8941e290ed2654050",
+          "ref": "codex-skill",
+          "verifiedAt": "2026-06-23"
+        }
+      ],
+      "featureId": "standalone-skills",
+      "outputs": [
+        {
+          "kind": "standalone-skill",
+          "path": "skills/discover-unknowns/LICENSE.txt"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/discover-unknowns/SKILL.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/discover-unknowns/agents/openai.yaml"
+        }
+      ],
+      "schema": "skillset-render-result@1",
+      "sourcePath": ".skillset/skills/discover-unknowns/SKILL.md",
+      "sourceUnit": "skill:discover-unknowns",
       "status": "rendered",
       "target": "codex"
     },
