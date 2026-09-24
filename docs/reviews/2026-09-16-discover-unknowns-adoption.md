@@ -25,3 +25,7 @@ The skill compiles to an ordinary provider-neutral bundle. Provider-specific dis
 ## Limits
 
 This was an instruction, naming, and ownership review, not a new behavioral evaluation of every workflow mode. The global plugin portfolio and other unmanaged skills remain separate follow-up work.
+
+## Follow-up corrections
+
+A pre-PR pass on 2026-09-24 found three gaps. The entrypoint still used "goal packet" and "goal loop," terms from a private workflow that the bundle never defines; the wording now states the same limits without them. The catalog summary claimed the collection covers implementation review, which no skill provides. The publishing guide did not list this bundle's contents or requirements. All three are corrected. The wording edits keep the skill's behavior: blindspot prompts still carry a completion condition, and the skill still builds multi-file planning artifacts only on request.

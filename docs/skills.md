@@ -1,6 +1,6 @@
 # The skills
 
-These skills cover instruction review, instruction writing, human-facing prose, implementation review, and discovery of the assumptions an agent run may be missing. Each can be installed on its own. Start with whichever problem is in front of you.
+These skills cover instruction review, instruction writing, human-facing prose, and discovery of the assumptions an agent run may be missing. Each can be installed on its own. Start with whichever problem is in front of you.
 
 [Installation instructions](../README.md#installation-)
 

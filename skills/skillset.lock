@@ -43,9 +43,9 @@
       ],
       "kind": "standalone-skill",
       "name": "discover-unknowns",
-      "outputHash": "sha256:fdcfaffb8c3f9d893241e13443afde7bb659599afb18513418701edae78fda8c",
+      "outputHash": "sha256:27664b2bfbc53bd1206c45198676266e70967871fd15dc04e4790f862b0ea191",
       "outputPath": "discover-unknowns/SKILL.md",
-      "sourceHash": "sha256:1c99da8bf256e7fd56096b52038838442e72ba4103b27ced89a21f625114d1f3",
+      "sourceHash": "sha256:c61357769d61c624ba3b0ba9867fd342578365c5bcdd3da7ecfce0a02c44cdad",
       "sourcePath": ".skillset/skills/discover-unknowns/SKILL.md",
       "version": "0.1.0"
     },
@@ -135,7 +135,7 @@
     }
   ],
   "outputRoot": "skills",
-  "provenanceHash": "sha256:5f212d16466bfd48bb4606ab01eb06ca1e20955040ab294d8a05ffc747a70f60",
+  "provenanceHash": "sha256:763fc52114a312448a82e3caff3101fdbcd713c95d8bf010f89b526b8a99a8ba",
   "renderResults": [
     {
       "destination": "skill",

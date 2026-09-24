@@ -80,10 +80,9 @@ subagent a narrow question, the user's goal, the relevant scope fence, and the
 same evidence requirement. Synthesize their results into the main report; do not
 dump parallel notes raw.
 
-When writing a prompt for a blindspots run, include a goal-shaped completion
-condition even if you are not creating a goal packet. The condition should state
-what the agent must surface, what evidence proves it looked deeply enough, what
-is out of scope, and when to stop.
+When writing a prompt for a blindspots run, include a completion condition. The
+condition should state what the agent must surface, what evidence proves it
+looked deeply enough, what is out of scope, and when to stop.
 
 ### brainstorm
 
@@ -217,10 +216,10 @@ checklist for the user to fill in. If facts are missing, either make the smalles
 reasonable assumption and mark it as an assumption, or ask only the question that
 materially changes the prompt.
 
-This skill writes prompts. It does not build goal packets, planning packets, task
-folders, or multi-file harnesses unless the user explicitly asks for those
-artifacts. The premise of a goal loop is still useful: express the objective,
-success evidence, scope constraints, and stopping condition inside the prompt.
+This skill writes prompts. It does not build multi-file planning artifacts, such
+as spec folders, task folders, or run harnesses, unless the user explicitly asks
+for them. Put the objective, success evidence, scope constraints, and stop
+condition inside the prompt instead.
 
 Include:
 
