@@ -1,0 +1,4 @@
+interface:
+  display_name: "Discover Unknowns"
+  short_description: "Surface hidden assumptions and blind spots"
+  default_prompt: "Use $discover-unknowns to identify the highest-leverage unknowns, blind spots, and unresolved decisions in this work."

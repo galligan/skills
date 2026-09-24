@@ -24,6 +24,12 @@ When every detail is "load-bearing" and every insight is "hiding in plain sight,
 
 🤦🏻 **Try:** After seeing annoying outputs, just run `/people-words` and watch the agent speak more naturally.
 
+### [`/discover-unknowns`](skills/discover-unknowns/SKILL.md)
+
+Surface the assumptions, blind spots, taste decisions, and missing references that can make an agent run go sideways. Use it before a large task, while a plan is changing, or when a handoff needs to say what remains uncertain.
+
+🧭 **Try:** Ask `/discover-unknowns` what your implementation prompt is still missing before you hand it to another agent.
+
 ## Installation 📦
 
 <details open>
@@ -58,7 +64,7 @@ Use the [built-in skill installer](https://learn.chatgpt.com/docs/build-skills#i
 $skill-installer Install redliner from https://github.com/galligan/skills/tree/main/skills/redliner
 ```
 
-Swap `redliner` for either of the other skill names.
+Swap `redliner` for another skill name.
 
 </details>
 

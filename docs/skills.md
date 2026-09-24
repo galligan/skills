@@ -1,6 +1,6 @@
 # The skills
 
-These skills cover three parts of working with agents: reviewing their instructions, writing those instructions, and improving what they write for people. Each can be installed on its own. You can start with whichever problem is in front of you.
+These skills cover instruction review, instruction writing, human-facing prose, and discovery of the assumptions an agent run may be missing. Each can be installed on its own. Start with whichever problem is in front of you.
 
 [Installation instructions](../README.md#installation-)
 
@@ -70,3 +70,21 @@ As a correction, it restates the substance and carries the adjustment forward in
 The aim is to preserve what matters while improving how it's expressed. A detailed engineering explanation can stay detailed. A formal document can stay formal. Citations, qualifications, and exact technical terms stay intact. Natural writing doesn't require slang, forced brevity, or a personality transplant.
 
 [The skill](../skills/people-words/SKILL.md) governs expression. Decisions about verification, permissions, and when to ask questions still come from the task's governing instructions. It can work alongside a specific writing voice or editorial guide when you have one.
+
+## discover-unknowns
+
+Prompts describe a map of the work. Repositories, products, and running systems supply the territory. `discover-unknowns` looks for the gaps between them before those gaps turn into wrong assumptions or expensive implementation detours.
+
+Use it when:
+
+- You want a blindspot pass before starting unfamiliar work.
+- A plan has unresolved architecture, product, safety, or ownership decisions.
+- Another agent needs a better prompt and concrete references.
+- Implementation has diverged from the plan and the learning needs to survive the handoff.
+- You need to understand a large completed run well enough to approve or steer it.
+
+For example:
+
+> Use discover-unknowns to inspect this implementation prompt and repository. Surface only the missing assumptions or references that could change the approach, verification, or risk.
+
+The skill can produce a compact blindspot report, several concrete directions, a cheap prototype brief, a focused interview, a decision-oriented plan, a deviation log, an explainer, or an understanding check. It stops at discovery unless the task also authorizes implementation. [The skill](../skills/discover-unknowns/SKILL.md) documents those modes and their evidence requirements.
