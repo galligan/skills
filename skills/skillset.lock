@@ -113,10 +113,33 @@
       "sourceHash": "sha256:191b1472ecb29f6c6f6e1ff532c499b3162946e8113e295a86c7fa1a2f7c60c7",
       "sourcePath": ".skillset/skills/redliner/SKILL.md",
       "version": "0.1.0"
+    },
+    {
+      "fileModes": {
+        "slack-decisions/LICENSE.txt": "0644",
+        "slack-decisions/SKILL.md": "0644",
+        "slack-decisions/agents/openai.yaml": "0644",
+        "slack-decisions/references/capabilities.md": "0644",
+        "slack-decisions/references/examples.md": "0644"
+      },
+      "files": [
+        "slack-decisions/LICENSE.txt",
+        "slack-decisions/SKILL.md",
+        "slack-decisions/agents/openai.yaml",
+        "slack-decisions/references/capabilities.md",
+        "slack-decisions/references/examples.md"
+      ],
+      "kind": "standalone-skill",
+      "name": "slack-decisions",
+      "outputHash": "sha256:c1011032701c1ec58df54d9159c17116d17e43447696e7a901f41e811c7668c5",
+      "outputPath": "slack-decisions/SKILL.md",
+      "sourceHash": "sha256:113a51e51979ccce0e322cdd9df696ea5f64bb39b39450bcbdb1ec8951552848",
+      "sourcePath": ".skillset/skills/slack-decisions/SKILL.md",
+      "version": "0.1.0"
     }
   ],
   "outputRoot": "skills",
-  "provenanceHash": "sha256:da02bc0863c73769ff666400ff589e40d596a70de81e8a4cb4fba23bfbb300bf",
+  "provenanceHash": "sha256:892bcfd2eba8b237d2088bf0fa3e8c3ab3dbff7e780f85a15021f41f20b6b25e",
   "renderResults": [
     {
       "destination": "skill",
@@ -342,6 +365,55 @@
       "schema": "skillset-render-result@1",
       "sourcePath": ".skillset/skills/redliner/SKILL.md",
       "sourceUnit": "skill:redliner",
+      "status": "rendered",
+      "target": "codex"
+    },
+    {
+      "destination": "skill",
+      "evidence": [
+        {
+          "kind": "docs",
+          "ref": "docs/reference/features/skills.md"
+        },
+        {
+          "kind": "provider-schema",
+          "note": "sha256:eebe9ca02eec5263cd23ff3945b3d3301e0b57861af2d53c76bd620b83ae355b",
+          "ref": "codex-skill-metadata-schema",
+          "verifiedAt": "2026-06-23"
+        },
+        {
+          "kind": "provider-snapshot",
+          "note": "sha256:7e36cc613d0443fcae2963e276a7994d2b321b04471ae2a8941e290ed2654050",
+          "ref": "codex-skill",
+          "verifiedAt": "2026-06-23"
+        }
+      ],
+      "featureId": "standalone-skills",
+      "outputs": [
+        {
+          "kind": "standalone-skill",
+          "path": "skills/slack-decisions/LICENSE.txt"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/slack-decisions/SKILL.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/slack-decisions/agents/openai.yaml"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/slack-decisions/references/capabilities.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/slack-decisions/references/examples.md"
+        }
+      ],
+      "schema": "skillset-render-result@1",
+      "sourcePath": ".skillset/skills/slack-decisions/SKILL.md",
+      "sourceUnit": "skill:slack-decisions",
       "status": "rendered",
       "target": "codex"
     }

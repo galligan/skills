@@ -1,0 +1,4 @@
+interface:
+  display_name: "Slack Decisions"
+  short_description: "Concise Slack choices and pending decision links"
+  default_prompt: "Use $slack-decisions to ask for or follow up on the Slack decisions I need to make, with scoped choices and one pending-links line."

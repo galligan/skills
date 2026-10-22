@@ -1,6 +1,6 @@
 # The skills
 
-These skills cover three parts of working with agents: reviewing their instructions, writing those instructions, and improving what they write for people. Each can be installed on its own. You can start with whichever problem is in front of you.
+These skills cover reviewing agent instructions, writing those instructions, improving what agents write for people, and handling decisions in Slack. Each can be installed on its own. You can start with whichever problem is in front of you.
 
 [Installation instructions](../README.md#installation-)
 
@@ -70,3 +70,15 @@ As a correction, it restates the substance and carries the adjustment forward in
 The aim is to preserve what matters while improving how it's expressed. A detailed engineering explanation can stay detailed. A formal document can stay formal. Citations, qualifications, and exact technical terms stay intact. Natural writing doesn't require slang, forced brevity, or a personality transplant.
 
 [The skill](../skills/people-words/SKILL.md) governs expression. Decisions about verification, permissions, and when to ask questions still come from the task's governing instructions. It can work alongside a specific writing voice or editorial guide when you have one.
+
+## slack-decisions
+
+A decision request should be easy to answer and easy to find later. `slack-decisions` puts each ask on one line with a mention, explicitly scoped emoji choices, a bold recommendation, and a short reason. Follow-ups keep unresolved asks in one comma-separated line of links to the original messages rather than repeating the questions.
+
+Reactions belong to messages, not lines. The skill checks the named decider's reaction on the original ask and handles conflicting or withdrawn choices without guessing. A checkmark to continue edits is not approval to release something else. Extra context uses a verified collapse feature or a labeled thread/source link when the sender cannot collapse it.
+
+Use it for a new Slack decision or a reminder about decisions that still need you. It does not add approval steps or promise that a reaction will wake a sleeping agent. Drafting needs no tools; sending and verification need an existing authorized Slack connection with message, permalink, and reaction-reading capabilities.
+
+> Use slack-decisions to ask which approach I prefer, then keep pending decisions linked in one waiting line.
+
+[The skill](../skills/slack-decisions/SKILL.md) includes portable examples and capability notes. It needs no custom app or undeclared plugin.
