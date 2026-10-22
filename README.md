@@ -24,6 +24,10 @@ When every detail is "load-bearing" and every insight is "hiding in plain sight,
 
 🤦🏻 **Try:** After seeing annoying outputs, just run `/people-words` and watch the agent speak more naturally.
 
+### [`/slack-decisions`](skills/slack-decisions/SKILL.md)
+
+Ask for Slack decisions with one-line recommendations, scoped emoji choices, and a single running line of pending links. Checks reactions against the named decider and original ask without treating them as blanket approval.
+
 ## Installation 📦
 
 <details open>
@@ -58,7 +62,7 @@ Use the [built-in skill installer](https://learn.chatgpt.com/docs/build-skills#i
 $skill-installer Install redliner from https://github.com/galligan/skills/tree/main/skills/redliner
 ```
 
-Swap `redliner` for either of the other skill names.
+Swap `redliner` for another skill name.
 
 </details>
 
