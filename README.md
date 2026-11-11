@@ -64,7 +64,7 @@ Use the [built-in skill installer](https://learn.chatgpt.com/docs/build-skills#i
 $skill-installer Install redliner from https://github.com/galligan/skills/tree/main/skills/redliner
 ```
 
-Swap `redliner` for either of the other skill names.
+Swap `redliner` for any of the other skill names.
 
 </details>
 

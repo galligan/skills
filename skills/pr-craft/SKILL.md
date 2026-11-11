@@ -182,7 +182,7 @@ Closes #351, closes [ENG-123](https://linear.app/acme/issue/ENG-123), part of [O
 - If several PRs serve one issue, use `Part of` on every PR except the one whose merge finishes the issue.
 - If the PR will merge into a branch other than the default branch, use `Part of`. GitHub ignores closing keywords on such a PR, and Linear completes a `Closes` issue on merge into any branch. A stacked PR that merges into the default branch keeps `Closes`.
 - If the branch name carries an issue ID that the PR must not link, write `Ignore ENG-123` in the description.
-- If the repository is public and the Linear issue's title or description is not meant to be public, ask the user before adding the link. Linear posts both in a comment on the PR.
+- Linear posts the issue's title and description in a comment on the PR. If the repository is public, or people who cannot read the Linear issue can read the repository, and the issue's title or description is not meant for them, ask the user before adding the link.
 
 ### Creating the Linear issue from the PR
 
