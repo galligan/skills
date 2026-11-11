@@ -64,9 +64,9 @@
       ],
       "kind": "standalone-skill",
       "name": "pr-craft",
-      "outputHash": "sha256:b19ee8e003a19342d23b30145c7b0835900e85c9601cffe7f890a7327ea669db",
+      "outputHash": "sha256:b02e85bb2df1fe2d88cc627ab3cddf9c0fbda194d4c63ea78dd4333a3b32deec",
       "outputPath": "pr-craft/SKILL.md",
-      "sourceHash": "sha256:8054005a171ed79b2cd47fd43e43eb21c1fdb098ad60d1d6d4d351a889571b77",
+      "sourceHash": "sha256:6edc627855c0b6650175d67b485330a0ca69a1569d958ea0c1719fc8d85b939b",
       "sourcePath": ".skillset/skills/pr-craft/SKILL.md",
       "version": "0.1.0"
     },
@@ -137,7 +137,7 @@
     }
   ],
   "outputRoot": "skills",
-  "provenanceHash": "sha256:b33cbdb9c7663ae9d596880843751df7f39ae321820f533574ff62de3d49775b",
+  "provenanceHash": "sha256:aeb9de9d1f893b937c2053bd0b9b55d068dfad1cffa30e74b52f6428cef473e9",
   "renderResults": [
     {
       "destination": "skill",
