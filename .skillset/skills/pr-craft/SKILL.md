@@ -87,7 +87,7 @@ One unheaded paragraph of up to three sentences. Say what the change does and wh
 
 - Start with a verb that carries the kind of change: "Adds", "Fixes", "Removes", "Renames", "Moves". Do not lead with a label such as "Feature" or "Fix:".
 - If the change reduces a problem without fully fixing it, use "Addresses" in place of "Fixes".
-- End with what the change affects or leaves alone: "Nothing existing changes.", "Docs only."
+- If it is known, end with what the change affects, leaves alone, or does not yet fix: "Nothing existing changes.", "Docs only."
 - Do not state line or file counts. GitHub shows them, and a count in the body goes stale on the next push.
 - If a number is the point of the change, state it: a benchmark result, or "all 40 call sites".
 
@@ -111,7 +111,7 @@ What happens now, one bullet per change. Put the behavior first, then the file o
 - Put the cases or details of one change in sub-bullets, one level deep.
 
 - Name a file only where the reviewer needs it to find the change. The diff holds the inventory.
-- If the reason for the approach is not obvious, give it here in one sentence.
+- If the reason for the approach is not obvious, give it in a sub-bullet.
 
 ### Verify
 
@@ -150,7 +150,7 @@ Use it when something is still unfinished after merge: a question for the review
 
 - Start each bullet with its kind and who acts on it: `Question (reviewer):`, `Follow-up (author):`, `Not included:`.
 - What was not tested goes on the last line of Verify, not here.
-- The status of another issue or PR is not an open item. Link it on the link line with `Related to`, or leave it out.
+- The status of another issue or PR is not an open item. If the reviewer must act on it, use a callout. Otherwise link it on the link line with `Related to`, or leave it out. Do not list stack siblings.
 
 ## Callouts
 
@@ -238,11 +238,13 @@ If all of the following hold, rewrite the PR body into this shape:
 3. The body follows neither this shape nor the repository's PR template.
 4. The agent's access allows editing the PR.
 
-- Keep every fact a reviewer needs. State each fact once, in the section that owns it. Drop only what `### Leave out` lists.
-- Restate each verification claim in this skill's form: the command or check, and its result. Do not re-run the checks.
+- Keep every fact a reviewer needs. Below the opening paragraph, state each fact once, in the section that owns it. Drop only what `### Leave out` lists.
+- Restate each verification claim in this skill's form: the command or check, and its result. If the original names no command, keep the claim as worded. Treat the original's claims as observed, and do not re-run the checks.
 - Do not mention the rewrite, the previous body, or what was not re-run.
-- Do not make the body longer than the original, unless the original lacked a core section.
+- Do not make the body longer than the original. Exception: if the original has no content for the opening paragraph, Context, Changes, or Verify, add only that content.
 - If the body names a tracker issue, move the issue to the link line. If the body does not say how the PR relates to the issue, use `Related to`. Do not guess `Closes`.
+- If the repository is not the user's and the body names an issue in the user's tracker, drop that reference.
+- Do not add `<TEAM>-NEW` in a rewrite.
 - Leave any block a tool manages as that tool wrote it, such as a stack list or a session link.
 - Do not search for other PRs to rewrite.
 - Do not rewrite a PR that someone else authored.
@@ -260,7 +262,7 @@ Agents write most descriptions, and both people and agents read them. Keep the t
 
 ### Sentences
 
-- Describe the software, not the author. The subject is the product, the user, or the file. It is not "I", "we", or "this PR".
+- Describe the software, not the author. The subject is the product, the user, or the file. It is not "I", "we", or "this PR". Exception: the opening paragraph starts with its verb.
 - Use the present tense. Context says what happens today. Changes says what happens with the PR merged: "The guide says", not "Updated the guide to say".
 - For a fact about the software, give the number, not the adjective: "nine times", "40 ms". This does not apply to the size of the diff; see `### Opening paragraph`.
 - Write American English, unless the repository's own text uses another variety.
@@ -310,7 +312,7 @@ The headings stay the same for every kind of PR. What goes under them shifts.
 
 Read the draft once as the reviewer, without the diff. It must answer three questions: what happens today, what changes, and how to check. In that one read, confirm:
 
-- No heading is empty and no section restates another.
+- No heading is empty and no section restates another. The opening paragraph may summarize what the sections detail.
 - Every Verify step has an expected result, and the "Ran" line lists only what ran.
 - Every identifier and interface label is written as it appeared in the code or on screen during the work.
 

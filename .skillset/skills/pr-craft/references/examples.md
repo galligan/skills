@@ -210,11 +210,11 @@ Each strong item is one thing still open, with who acts on it. The weak version 
 
 | Phrase | Problem | Write instead |
 | --- | --- | --- |
-| "This PR adds", "This PR fixes" | The subject is the PR, not the software | Start with the software: "Search trims the query" |
+| "This PR adds", "This PR fixes" | The subject is the PR, not the software | In a section, start with the software: "Search trims the query". In the opening paragraph, start with the verb: "Fixes search" |
 | "Updated X to", "Refactored Y" | Describes the edit, not the behavior | "X now does" |
 | comprehensive, robust, seamless, clean | Cannot be checked | The number, or nothing |
 | minor, small, quick | The reviewer decides that | What the change affects |
-| various, several, some files | Names nothing | The count, or the names |
+| various, several, some files | Names nothing | The names, or what they share |
 | "should now work", "hopefully fixes" | Hedges something that can be checked | What was run and what it showed, or "Not verified" |
 | "works as expected" | States no expectation | The step and its result |
 | "All tests pass" with a tick | No command and no scope | "`pnpm test` passes" |
