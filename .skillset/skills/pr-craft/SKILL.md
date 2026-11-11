@@ -239,7 +239,8 @@ If all of the following hold, rewrite the PR body into this shape:
 4. The agent's access allows editing the PR.
 
 - Keep every fact a reviewer needs. Below the opening paragraph, state each fact once, in the section that owns it. Drop only what `### Leave out` lists.
-- Restate each verification claim in this skill's form: the command or check, and its result. If the original names no command, keep the claim as worded. Treat the original's claims as observed, and do not re-run the checks.
+- Restate each verification claim in this skill's form: the command or check, and its result. Treat the original's claims as observed, and do not re-run the checks.
+- If a verification claim names no command, keep the claim on the `Ran:` line and add "command not stated". Do not invent a command.
 - Do not mention the rewrite, the previous body, or what was not re-run.
 - Do not make the body longer than the original. Exception: if the original has no content for the opening paragraph, Context, Changes, or Verify, add only that content.
 - If the body names a tracker issue, move the issue to the link line. If the body does not say how the PR relates to the issue, use `Related to`. Do not guess `Closes`.
