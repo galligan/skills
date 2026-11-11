@@ -24,6 +24,12 @@ When every detail is "load-bearing" and every insight is "hiding in plain sight,
 
 🤦🏻 **Try:** After seeing annoying outputs, just run `/people-words` and watch the agent speak more naturally.
 
+### [`/pr-craft`](skills/pr-craft/SKILL.md)
+
+Pull request titles and descriptions a reviewer can act on: how big the change is, what happens today, what changes, and how to check it. Covers issue links for GitHub and Linear, before-and-after media, and everything that should stay out.
+
+📬 **Try:** Before your agent opens a PR, tell it to use `/pr-craft` for the title and description.
+
 ## Installation 📦
 
 <details open>
@@ -58,7 +64,7 @@ Use the [built-in skill installer](https://learn.chatgpt.com/docs/build-skills#i
 $skill-installer Install redliner from https://github.com/galligan/skills/tree/main/skills/redliner
 ```
 
-Swap `redliner` for either of the other skill names.
+Swap `redliner` for any of the other skill names.
 
 </details>
 

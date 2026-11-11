@@ -1,0 +1,4 @@
+interface:
+  display_name: "PR Craft"
+  short_description: "Write PR titles and descriptions a reviewer can act on"
+  default_prompt: "Use $pr-craft to write the title and description for this branch's pull request."
