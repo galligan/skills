@@ -26,7 +26,7 @@ When every detail is "load-bearing" and every insight is "hiding in plain sight,
 
 ### [`/pr-craft`](skills/pr-craft/SKILL.md)
 
-Pull request titles and descriptions a reviewer can act on: how big the change is, what happens today, what changes, and how to check it. Covers issue links for GitHub and Linear, before-and-after media, and everything that should stay out.
+Pull request titles and descriptions a reviewer can act on: what the change does, what happens today, what changes, and how to check it. Covers issue links for GitHub and Linear, before-and-after media, and everything that should stay out.
 
 📬 **Try:** Before your agent opens a PR, tell it to use `/pr-craft` for the title and description.
 

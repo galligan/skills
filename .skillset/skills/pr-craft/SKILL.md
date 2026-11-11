@@ -5,7 +5,7 @@ description: Write or rewrite a pull request's title and description so a review
 
 # PR Craft
 
-Write the PR title and description for a reader who has not seen the session. A description has a one-line scope statement and three sections: Context, Changes, and Verify. Four more sections appear only when the change calls for them.
+Write the PR title and description for a reader who has not seen the session. A description has an opening paragraph and three sections: Context, Changes, and Verify. Four more sections appear only when the change calls for them.
 
 This skill governs the text of a PR. It does not decide whether to open, push, or merge. Follow the task and the repository's instructions for those decisions.
 
@@ -24,11 +24,11 @@ This skill governs the text of a PR. It does not decide whether to open, push, o
 
 ## Shape
 
-Sections appear in this order. Delete every optional part the change does not need. Most descriptions keep only the scope line, Context, Changes, and Verify.
+Sections appear in this order. Delete every optional part the change does not need. Most descriptions keep only the opening paragraph, Context, Changes, and Verify.
 
 | Part | When | Holds |
 | --- | --- | --- |
-| Scope line (no heading) | Always | Kind of change, size, whether behaviour changes |
+| Opening paragraph (no heading) | Always | What the change does and what it affects |
 | Link line (no heading) | The PR has an issue | A keyword and each issue it applies to |
 | Callout | Rarely | The one thing the reader must see first |
 | Context | Always | What happens today, and when |
@@ -40,7 +40,7 @@ Sections appear in this order. Delete every optional part the change does not ne
 | Open items | Something is unfinished after merge | Questions, decisions, follow-ups, what was left out |
 
 ```markdown
-<scope line: kind of change, size, whether behaviour changes>
+<opening paragraph: what the change does and what it affects; up to three sentences>
 
 <link line: Closes #12, closes [ENG-123](https://linear.app/<workspace>/issue/ENG-123)>
 
@@ -81,9 +81,17 @@ Weak and strong versions of each part, and one whole description, are in [exampl
 
 ## Core sections
 
-### Scope line
+### Opening paragraph
 
-One unheaded line: the kind of change, its size, and whether behaviour changes. Example: `Docs only, 11 lines in one file, no behaviour change.` The reviewer uses it to decide when to look.
+One unheaded paragraph of up to three sentences. Say what the change does and what it means for someone using or running the software.
+
+- Start with a verb that carries the kind of change: "Adds", "Fixes", "Removes", "Renames", "Moves". Do not lead with a label such as "Feature" or "Fix:".
+- If the change reduces a problem without fully fixing it, use "Addresses" in place of "Fixes".
+- If it is known, end with what the change affects, leaves alone, or does not yet fix: "Nothing existing changes.", "Docs only."
+- Do not state line or file counts. GitHub shows them, and a count in the body goes stale on the next push.
+- If a number is the point of the change, state it: a benchmark result, or "all 40 call sites".
+
+Example: `Fixes search for queries that end in a space, which returned no results. Results for every other query are unchanged.`
 
 ### Context
 
@@ -97,11 +105,13 @@ Leave out how the problem was found. If a fact is in the linked issue, link the 
 
 ### Changes
 
-What happens now, one bullet per change. Put the behaviour first, then the file or function in backticks.
+What happens now, one bullet per change. Put the behavior first, then the file or function in backticks.
+
+- Write each bullet as one sentence with the software as its subject: "A query is trimmed before it is split", not "Trim the query".
+- Put the cases or details of one change in sub-bullets, one level deep.
 
 - Name a file only where the reviewer needs it to find the change. The diff holds the inventory.
-- If the reason for the approach is not obvious, give it here in one sentence.
-- Use one level of sub-bullets where detail belongs to one item.
+- If the reason for the approach is not obvious, give it in a sub-bullet.
 
 ### Verify
 
@@ -140,6 +150,7 @@ Use it when something is still unfinished after merge: a question for the review
 
 - Start each bullet with its kind and who acts on it: `Question (reviewer):`, `Follow-up (author):`, `Not included:`.
 - What was not tested goes on the last line of Verify, not here.
+- The status of another issue or PR is not an open item. If the reviewer must act on it, use a callout. Otherwise link it on the link line with `Related to`, or leave it out. Do not list stack siblings.
 
 ## Callouts
 
@@ -151,14 +162,14 @@ A callout shows something the reader must see before anything else. Use three ty
 | `[!IMPORTANT]` | The reviewer must do or decide something before merge | "Merge after #12." |
 | `[!NOTE]` | Context that changes how to read the PR | "Part of a stack." |
 
-- Place a callout directly under the scope line and link line, never inside a section.
+- Place a callout directly under the opening paragraph and link line, never inside a section.
 - Most descriptions have no callout. Two is the limit.
 - Keep it to one or two sentences. If a section holds the detail, point to that section.
 - Do not use a callout for emphasis on ordinary content.
 
 ## Linking issues
 
-Put issue links on one line directly under the scope line. The keyword decides what happens to the issue when the PR merges, in GitHub and in Linear alike.
+Put issue links on one line directly under the opening paragraph. The keyword decides what happens to the issue when the PR merges, in GitHub and in Linear alike.
 
 ```text
 Closes #351, closes [ENG-123](https://linear.app/acme/issue/ENG-123), part of [OPS-45](https://linear.app/acme/issue/OPS-45)
@@ -213,7 +224,7 @@ gh pr create --title "<title>" --body-file body.md \
 ## Repositories the user does not own
 
 - Follow the project's PR template, title convention, and contribution guide before anything here.
-- Add an opener of one or two sentences above the scope line: who the contributor is and why they made the change. Draft it from what the user has said. Do not invent a motive.
+- Add an introduction of one or two sentences above the opening paragraph: who the contributor is and why they made the change. Draft it from what the user has said. Do not invent a motive.
 - Reference only that project's own issues. Do not add a link to the user's tracker, do not put a tracker ID in the title, and do not use `<TEAM>-NEW`.
 - If the change is breaking or has several workable designs, tell the user that an issue or discussion on the project comes before the PR.
 - Expect `--attach` to fail without push access. Use the fallback in `## Media`.
@@ -227,8 +238,14 @@ If all of the following hold, rewrite the PR body into this shape:
 3. The body follows neither this shape nor the repository's PR template.
 4. The agent's access allows editing the PR.
 
-- Keep every fact a reviewer needs, and move each to the section that owns it. Drop only what `### Leave out` lists.
-- Carry over the body's existing verification claims as written. Do not re-run them.
+- Keep every fact a reviewer needs. Below the opening paragraph, state each fact once, in the section that owns it. Drop only what `### Leave out` lists.
+- Restate each verification claim in this skill's form: the command or check, and its result. Treat the original's claims as observed, and do not re-run the checks.
+- If a verification claim names neither a command nor an action a reviewer could repeat, keep the claim on the `Ran:` line and add "command not stated". Do not invent a command. A manual check that names its action is carried over as a step.
+- Do not mention the rewrite, the previous body, or what was not re-run.
+- Do not make the body longer than the original. Exception: if the original has no content for the opening paragraph, Context, Changes, or Verify, add only that content.
+- If the body names a tracker issue, move the issue to the link line. If the body does not say how the PR relates to the issue, use `Related to`. Do not guess `Closes`.
+- If the repository is not the user's and the body names an issue in the user's tracker, drop that reference.
+- Do not add `<TEAM>-NEW` in a rewrite.
 - Leave any block a tool manages as that tool wrote it, such as a stack list or a session link.
 - Do not search for other PRs to rewrite.
 - Do not rewrite a PR that someone else authored.
@@ -239,16 +256,17 @@ Agents write most descriptions, and both people and agents read them. Keep the t
 
 ### Order
 
-- Put the bottom line first. The scope line, link line, and callout tell a reader who stops there what the PR is, how big it is, and what it needs from them.
+- Put the bottom line first. The opening paragraph, link line, and callout tell a reader who stops there what the PR does, what it affects, and what it needs from them.
 - Make the first sentence of each section that section's point.
 - Do not label the bottom line with "Summary:" or "TL;DR".
 - Do not end with a closing summary.
 
 ### Sentences
 
-- Describe the software, not the author. The subject is the product, the user, or the file. It is not "I", "we", or "this PR".
+- Describe the software, not the author. The subject is the product, the user, or the file. It is not "I", "we", or "this PR". Exception: the opening paragraph starts with its verb.
 - Use the present tense. Context says what happens today. Changes says what happens with the PR merged: "The guide says", not "Updated the guide to say".
-- Give the number, not the adjective: "nine times", "11 lines", "40 ms".
+- For a fact about the software, give the number, not the adjective: "nine times", "40 ms". This does not apply to the size of the diff; see `### Opening paragraph`.
+- Write American English, unless the repository's own text uses another variety.
 - Use the exact name. Identifiers, commands, and paths go in backticks, as written in the code. Interface labels go in quotes, as they appear on screen.
 - Repeat the noun when "it" or "this" could point at two things.
 - Refer to a section by name: "See Upgrading", not "see below".
@@ -268,6 +286,8 @@ A description is as long as its reader needs. Say each thing once, in the fewest
 ### Leave out
 
 - How the work was done: the order of attempts, the dead ends, the tools used.
+- Review history: which findings were addressed, in which commit, and which threads were resolved.
+- The size of the diff: line counts and file counts.
 - A file-by-file or function-by-function inventory.
 - Text repeated from the title or the commit messages.
 - Test totals, pass counts, and terminal output. Name the command and its result.
@@ -284,16 +304,16 @@ The headings stay the same for every kind of PR. What goes under them shifts.
 | --- | --- | --- | --- | --- |
 | Fix | What breaks, for whom, how to see it | The fix, and the test that fails without it | The repro steps, now passing | Comparison, when the bug is visible |
 | Docs | What the docs say against what is true | The lines corrected | A search command, or a page to look at | Comparison, as text |
-| Feature | What someone cannot do today | The new behaviour, then the files | A click path with the expected result | Comparison; Alternatives if the design was a choice |
-| Refactor | What the current shape makes hard | What moved where, stated as move-only | The suite passes with no behaviour change | Open items, for the moves still to come |
+| Feature | What someone cannot do today | The new behavior, then the files | A click path with the expected result | Comparison; Alternatives if the design was a choice |
+| Refactor | What the current shape makes hard | What moved where, stated as move-only | The suite passes with no behavior change | Open items, for the moves still to come |
 | Performance | What is slow, with a number | The change | The benchmark command | Comparison, as numbers |
-| Breaking | What the current behaviour costs | The new behaviour | Steps on an existing install | Upgrading, and a `[!WARNING]` callout |
+| Breaking | What the current behavior costs | The new behavior | Steps on an existing install | Upgrading, and a `[!WARNING]` callout |
 
 ## Before requesting review
 
 Read the draft once as the reviewer, without the diff. It must answer three questions: what happens today, what changes, and how to check. In that one read, confirm:
 
-- No heading is empty and no section restates another.
+- No heading is empty and no section restates another. The opening paragraph may summarize what the sections detail.
 - Every Verify step has an expected result, and the "Ran" line lists only what ran.
 - Every identifier and interface label is written as it appeared in the code or on screen during the work.
 

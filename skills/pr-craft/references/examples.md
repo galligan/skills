@@ -20,7 +20,7 @@ fix(search): trim the query before splitting it
 
 The strong title names the area and says what the software does now. With one issue that identifies the PR, the ID goes at the end: `fix(search): trim the query before splitting it ENG-140`.
 
-### Scope line
+### Opening paragraph
 
 Weak:
 
@@ -28,13 +28,25 @@ Weak:
 This PR introduces a comprehensive fix for an important search issue and significantly improves the overall user experience.
 ```
 
-Strong:
+Also weak:
 
 ```text
 Fix, 14 lines in two files; search results change for queries that end in a space.
 ```
 
-The strong line gives the kind, the size, and the behaviour as facts. Nothing in the weak line can be checked.
+Strong:
+
+```text
+Fixes search for queries that end in a space, which returned no results. Results for every other query are unchanged.
+```
+
+The strong paragraph says what the change does and what it leaves alone. Nothing in the first weak version can be checked. The second leads with a label and with counts that GitHub already shows and that go stale on the next push.
+
+A change that reduces a problem without fully fixing it says so:
+
+```text
+Addresses slow search on large catalogs by caching parsed queries. Queries over 200 terms are still slow.
+```
 
 ### Link line
 
@@ -198,11 +210,11 @@ Each strong item is one thing still open, with who acts on it. The weak version 
 
 | Phrase | Problem | Write instead |
 | --- | --- | --- |
-| "This PR adds", "This PR fixes" | The subject is the PR, not the software | Start with the software: "Search trims the query" |
-| "Updated X to", "Refactored Y" | Describes the edit, not the behaviour | "X now does" |
+| "This PR adds", "This PR fixes" | The subject is the PR, not the software | In a section, start with the software: "Search trims the query". In the opening paragraph, start with the verb: "Fixes search" |
+| "Updated X to", "Refactored Y" | Describes the edit, not the behavior | "X now does" |
 | comprehensive, robust, seamless, clean | Cannot be checked | The number, or nothing |
-| minor, small, quick | The reviewer decides that | Lines and files |
-| various, several, some files | Names nothing | The count, or the names |
+| minor, small, quick | The reviewer decides that | What the change affects |
+| various, several, some files | Names nothing | The names, or what they share |
 | "should now work", "hopefully fixes" | Hedges something that can be checked | What was run and what it showed, or "Not verified" |
 | "works as expected" | States no expectation | The step and its result |
 | "All tests pass" with a tick | No command and no scope | "`pnpm test` passes" |
@@ -223,7 +235,7 @@ fix(search): trim the query before splitting it
 Body:
 
 ```markdown
-Fix, 14 lines in two files; search results change for queries that end in a space.
+Fixes search for queries that end in a space, which returned no results. Results for every other query are unchanged.
 
 Closes #208, closes [ENG-140](https://linear.app/acme/issue/ENG-140)
 
@@ -252,16 +264,16 @@ A search that ends in a space returns no results. `parseQuery` reads the trailin
 - Follow-up (author): the API docs still say trailing spaces are significant. Separate PR.
 ```
 
-This description uses three optional sections because the fix has a visible before and after, a real alternative, and two things still open. A docs fix usually keeps only the scope line, Context, Changes, and Verify.
+This description uses three optional sections because the fix has a visible before and after, a real alternative, and two things still open. A docs fix usually keeps only the opening paragraph, Context, Changes, and Verify.
 
 ## A contribution to someone else's project
 
-The same fix, sent to a project the contributor does not maintain. The opener comes first, the link line references only that project's issue, and the Comparison is text because attaching media needs push access.
+The same fix, sent to a project the contributor does not maintain. The introduction comes first, the link line references only that project's issue, and the Comparison is text because attaching media needs push access.
 
 ```markdown
-I run this for a small tea shop's catalogue, and customers on phones kept reporting empty searches.
+I run this for a small tea shop's catalog, and customers on phones kept reporting empty searches.
 
-Fix, 14 lines in two files; search results change for queries that end in a space.
+Fixes search for queries that end in a space, which returned no results. Results for every other query are unchanged.
 
 Closes #208
 
