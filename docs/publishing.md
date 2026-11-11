@@ -42,6 +42,8 @@ The generated Redliner bundle includes the complete skill source and its declare
 
 The `agentish` bundle contains its entrypoint, OpenAI metadata, full license, and the same three shared references: Instruction Selection, Instruction Placement, and Agentish. The `people-words` bundle contains only its entrypoint, OpenAI metadata, and full license. Neither skill requires external tools or services for its guidance; project-specific editing and factual verification use available tools and sources.
 
+The `pr-craft` bundle contains its entrypoint, OpenAI metadata, full license, and one skill-local reference with examples. Its guidance needs no external tools. Opening a PR and attaching media use the GitHub CLI, and `--attach` needs `gh` 2.99.0 or later; Linear links need Linear's GitHub integration on the target repository.
+
 Use **Agentish** in prose for the named language or skill. Use `agentish` for the exact skill identifier, install target, command argument, or path segment. Say “the Agentish skill” when a sentence could otherwise confuse the installable bundle with the language itself.
 
 The September 12, 2026 validation checked payload completeness and link resolution. Separate disposable fixtures verified generated-output and canonical-source drift detection. The repository has no parallel provider skill or plugin output directories.

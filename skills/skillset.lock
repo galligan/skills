@@ -51,6 +51,27 @@
     },
     {
       "fileModes": {
+        "pr-craft/LICENSE.txt": "0644",
+        "pr-craft/SKILL.md": "0644",
+        "pr-craft/agents/openai.yaml": "0644",
+        "pr-craft/references/examples.md": "0644"
+      },
+      "files": [
+        "pr-craft/LICENSE.txt",
+        "pr-craft/SKILL.md",
+        "pr-craft/agents/openai.yaml",
+        "pr-craft/references/examples.md"
+      ],
+      "kind": "standalone-skill",
+      "name": "pr-craft",
+      "outputHash": "sha256:e6a0beea180eabad8a75163c754d33b71f0ab5177783fb30244c7c25fe1d91ae",
+      "outputPath": "pr-craft/SKILL.md",
+      "sourceHash": "sha256:b26b6407c874e56124a36509ba2b1c8170d07defb2c742d7832f463f7009b564",
+      "sourcePath": ".skillset/skills/pr-craft/SKILL.md",
+      "version": "0.1.0"
+    },
+    {
+      "fileModes": {
         "redliner/LICENSE.txt": "0644",
         "redliner/SKILL.md": "0644",
         "redliner/agents/openai.yaml": "0644",
@@ -116,7 +137,7 @@
     }
   ],
   "outputRoot": "skills",
-  "provenanceHash": "sha256:da02bc0863c73769ff666400ff589e40d596a70de81e8a4cb4fba23bfbb300bf",
+  "provenanceHash": "sha256:10d0f4e429e3524f520c69eefe65157f7d378e7dbf0ad55b4c7a2e5a06bae2a7",
   "renderResults": [
     {
       "destination": "skill",
@@ -209,6 +230,51 @@
       "schema": "skillset-render-result@1",
       "sourcePath": ".skillset/skills/people-words/SKILL.md",
       "sourceUnit": "skill:people-words",
+      "status": "rendered",
+      "target": "codex"
+    },
+    {
+      "destination": "skill",
+      "evidence": [
+        {
+          "kind": "docs",
+          "ref": "docs/reference/features/skills.md"
+        },
+        {
+          "kind": "provider-schema",
+          "note": "sha256:eebe9ca02eec5263cd23ff3945b3d3301e0b57861af2d53c76bd620b83ae355b",
+          "ref": "codex-skill-metadata-schema",
+          "verifiedAt": "2026-06-23"
+        },
+        {
+          "kind": "provider-snapshot",
+          "note": "sha256:7e36cc613d0443fcae2963e276a7994d2b321b04471ae2a8941e290ed2654050",
+          "ref": "codex-skill",
+          "verifiedAt": "2026-06-23"
+        }
+      ],
+      "featureId": "standalone-skills",
+      "outputs": [
+        {
+          "kind": "standalone-skill",
+          "path": "skills/pr-craft/LICENSE.txt"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/pr-craft/SKILL.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/pr-craft/agents/openai.yaml"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/pr-craft/references/examples.md"
+        }
+      ],
+      "schema": "skillset-render-result@1",
+      "sourcePath": ".skillset/skills/pr-craft/SKILL.md",
+      "sourceUnit": "skill:pr-craft",
       "status": "rendered",
       "target": "codex"
     },

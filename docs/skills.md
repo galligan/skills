@@ -1,6 +1,6 @@
 # The skills
 
-These skills cover three parts of working with agents: reviewing their instructions, writing those instructions, and improving what they write for people. Each can be installed on its own. You can start with whichever problem is in front of you.
+These skills cover four parts of working with agents: reviewing their instructions, writing those instructions, improving what they write for people, and describing the changes they ship. Each can be installed on its own. You can start with whichever problem is in front of you.
 
 [Installation instructions](../README.md#installation-)
 
@@ -70,3 +70,24 @@ As a correction, it restates the substance and carries the adjustment forward in
 The aim is to preserve what matters while improving how it's expressed. A detailed engineering explanation can stay detailed. A formal document can stay formal. Citations, qualifications, and exact technical terms stay intact. Natural writing doesn't require slang, forced brevity, or a personality transplant.
 
 [The skill](../skills/people-words/SKILL.md) governs expression. Decisions about verification, permissions, and when to ask questions still come from the task's governing instructions. It can work alongside a specific writing voice or editorial guide when you have one.
+
+## pr-craft
+
+Agents open a lot of pull requests now, and most of the descriptions are longer than the change deserves. They narrate how the work went, list every file, and finish with a row of green ticks. The reviewer still has to open the diff to learn what the PR does and whether anyone checked it.
+
+`pr-craft` gives the description a fixed shape. One line says what kind of change it is, how big, and whether behaviour changes. Then come three sections: Context for what happens today, Changes for what happens now, and Verify for steps the reviewer can run and what was run already. Upgrading, Comparison, Alternatives, and Open items appear only when the change calls for them.
+
+Use it when:
+
+- An agent is about to open a PR and you want the title and description written for the reviewer.
+- A PR you or your agent opened has a body that rambles, and you want it rewritten without losing a fact.
+- The PR should link issues in GitHub or Linear and the keyword matters: `Closes`, `Part of`, or `Related to`.
+- The change has a before and an after worth showing, and you want both sides captured the same way and attached from the command line.
+
+For example:
+
+> Use pr-craft to write the title and description for this branch, then open the PR as a draft.
+
+Titles default to Conventional Commits, and a repository's own template and conventions come first. When an agent is already working on a PR that you or one of your agents opened, and the body follows neither this shape nor the repository's template, it rewrites the body without being asked. On a project you don't maintain, the skill adds a short opener, sticks to that project's issues, and leaves your tracker out of it.
+
+[The skill](../skills/pr-craft/SKILL.md) covers the text of a PR. Whether to open, push, or merge is still decided by the task and the repository's instructions. Attaching media uses the GitHub CLI, version 2.99.0 or later, and Linear links need Linear's GitHub integration on the repository.
