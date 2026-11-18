@@ -134,10 +134,29 @@
       "sourceHash": "sha256:191b1472ecb29f6c6f6e1ff532c499b3162946e8113e295a86c7fa1a2f7c60c7",
       "sourcePath": ".skillset/skills/redliner/SKILL.md",
       "version": "0.1.0"
+    },
+    {
+      "fileModes": {
+        "team-readiness/LICENSE.txt": "0644",
+        "team-readiness/SKILL.md": "0644",
+        "team-readiness/agents/openai.yaml": "0644"
+      },
+      "files": [
+        "team-readiness/LICENSE.txt",
+        "team-readiness/SKILL.md",
+        "team-readiness/agents/openai.yaml"
+      ],
+      "kind": "standalone-skill",
+      "name": "team-readiness",
+      "outputHash": "sha256:d8373e727e1d73e8b1e0cb6fb6dabe790c16311993a68943e11ef7eeb0f27ebc",
+      "outputPath": "team-readiness/SKILL.md",
+      "sourceHash": "sha256:1004d8cef1103f7dea61e420a1732cfe85142fed3bc09fd09694564f796038b6",
+      "sourcePath": ".skillset/skills/team-readiness/SKILL.md",
+      "version": "0.1.0"
     }
   ],
   "outputRoot": "skills",
-  "provenanceHash": "sha256:872b61dcaf73c755346f123293e9b36c0a70027582af5d9bc93d22f61b1712df",
+  "provenanceHash": "sha256:b28525737adcc6a4e8e89f90a5abd854030527ba1484dc4ca2cef719f9d50010",
   "renderResults": [
     {
       "destination": "skill",
@@ -408,6 +427,47 @@
       "schema": "skillset-render-result@1",
       "sourcePath": ".skillset/skills/redliner/SKILL.md",
       "sourceUnit": "skill:redliner",
+      "status": "rendered",
+      "target": "codex"
+    },
+    {
+      "destination": "skill",
+      "evidence": [
+        {
+          "kind": "docs",
+          "ref": "docs/reference/features/skills.md"
+        },
+        {
+          "kind": "provider-schema",
+          "note": "sha256:eebe9ca02eec5263cd23ff3945b3d3301e0b57861af2d53c76bd620b83ae355b",
+          "ref": "codex-skill-metadata-schema",
+          "verifiedAt": "2026-06-23"
+        },
+        {
+          "kind": "provider-snapshot",
+          "note": "sha256:7e36cc613d0443fcae2963e276a7994d2b321b04471ae2a8941e290ed2654050",
+          "ref": "codex-skill",
+          "verifiedAt": "2026-06-23"
+        }
+      ],
+      "featureId": "standalone-skills",
+      "outputs": [
+        {
+          "kind": "standalone-skill",
+          "path": "skills/team-readiness/LICENSE.txt"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/team-readiness/SKILL.md"
+        },
+        {
+          "kind": "standalone-skill",
+          "path": "skills/team-readiness/agents/openai.yaml"
+        }
+      ],
+      "schema": "skillset-render-result@1",
+      "sourcePath": ".skillset/skills/team-readiness/SKILL.md",
+      "sourceUnit": "skill:team-readiness",
       "status": "rendered",
       "target": "codex"
     }

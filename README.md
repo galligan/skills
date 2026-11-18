@@ -30,6 +30,10 @@ Pull request titles and descriptions a reviewer can act on: what the change does
 
 📬 **Try:** Before your agent opens a PR, tell it to use `/pr-craft` for the title and description.
 
+### [`/team-readiness`](skills/team-readiness/SKILL.md)
+
+Check whether agents have the peer access, tools, and settings their roles need. The report separates verified configuration from gaps and what a read-only check can't prove.
+
 ## Installation 📦
 
 <details open>

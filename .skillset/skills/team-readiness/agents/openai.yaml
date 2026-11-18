@@ -1,0 +1,4 @@
+interface:
+  display_name: "Team Readiness"
+  short_description: "Check an agent team's setup without making changes"
+  default_prompt: "Use $team-readiness to check this team's required handoffs, tools, and settings using authorized read-only metadata."
