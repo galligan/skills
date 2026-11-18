@@ -99,7 +99,7 @@ We use the guidance here, too. Our generated `AGENTS.md` and `.claude/CLAUDE.md`
 
 ## Working on the collection 🏗️
 
-Use [Bun 1.4.0](https://bun.sh). Skillset is pinned to `@skillset/cli@0.26.1`.
+Use [Bun 1.4.4](https://bun.sh). Skillset is pinned to `@skillset/cli@0.26.1`.
 
 ```bash
 bun install --frozen-lockfile --ignore-scripts
