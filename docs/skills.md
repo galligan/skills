@@ -1,6 +1,6 @@
 # The skills
 
-These skills cover four parts of working with agents: reviewing their instructions, writing those instructions, improving what they write for people, and describing the changes they ship. Each can be installed on its own. You can start with whichever problem is in front of you.
+These skills cover reviewing and writing agent instructions, improving what agents write for people, describing the changes they ship, and checking their team setup. Each can be installed on its own.
 
 [Installation instructions](../README.md#installation-)
 
@@ -91,3 +91,11 @@ For example:
 Titles default to Conventional Commits, and a repository's own template and conventions come first. When an agent is already working on a PR that you or one of your agents opened, and the body follows neither this shape nor the repository's template, it rewrites the body without being asked. On a project you don't maintain, the skill adds a short introduction, sticks to that project's issues, and leaves your tracker out of it.
 
 [The skill](../skills/pr-craft/SKILL.md) covers the text of a PR. Whether to open, push, or merge is still decided by the task and the repository's instructions. Attaching media uses the GitHub CLI, version 2.99.0 or later, and Linear links need Linear's GitHub integration on the repository.
+
+## team-readiness
+
+A grant in one direction doesn't prove the reverse grant exists. And an integration in a tool list doesn't prove the bot can use it for its job.
+
+Use [team-readiness](../skills/team-readiness/SKILL.md) for a one-off or scheduled check against the handoffs and capabilities the team owner expects. It uses authorized configuration metadata to separate confirmed setup, gaps, and checks that couldn't be verified. Without a baseline, it reports what it can see without guessing what the team needs.
+
+The skill doesn't send test messages, change access, or set up a schedule. It needs a platform that exposes read-only metadata for the configuration being checked; it includes an example using Devin's built-in tools.
